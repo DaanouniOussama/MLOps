@@ -1,0 +1,53 @@
+import logging
+import pandas as pd
+import numpy as np
+from abc import ABC, abstractclassmethod
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.base import ClassifierMixin
+
+class Model(ABC):
+
+    @abstractclassmethod
+    def train_model(self, X_train : pd.DataFrame, Y_train : pd.Series):
+        pass
+
+
+class LogisticRegressionModel(Model):
+
+    def train_model(self, X_train : pd.DataFrame, Y_train : pd.Series) -> ClassifierMixin:
+        try :
+            LR = LogisticRegression()
+            LR.fit(X_train,Y_train)
+            logging.info('Training LogisticRegression Model finished')
+            return LR
+        
+        except Exception as e :
+            logging.error('Error while training LogisticRegression Model : {}'.format(e))
+
+
+class RandomForestModel(Model):
+
+    def train_model(self, X_train : pd.DataFrame, Y_train : pd.Series) -> ClassifierMixin:
+        try :
+            RF = RandomForestClassifier()
+            RF.fit(X_train, Y_train)
+            logging.info('Training RandomForest Model finished')
+            return RF
+        
+        except Exception as e :
+            logging.error('Error while training RandomForest Model : {}'.format(e))
+
+
+class Training:
+
+    def __init__(self,X_train : pd.DataFrame, Y_train : pd.Series, model : Model):
+
+        self.X_train = X_train
+        self.Y_train = Y_train
+        self.model = model
+
+    def training(self):
+
+        return self.model.train_model(self.X_train, self.Y_train)
+

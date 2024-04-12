@@ -1,21 +1,23 @@
 import logging
 import pandas as pd
 import numpy as np
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.base import ClassifierMixin
+from typing import Union
 
+# The abstract class
 class Model(ABC):
 
-    @abstractclassmethod
-    def train_model(self, X_train : pd.DataFrame, Y_train : pd.Series):
+    @abstractmethod
+    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : pd.Series) -> ClassifierMixin:
         pass
 
-
+# First strategy
 class LogisticRegressionModel(Model):
 
-    def train_model(self, X_train : pd.DataFrame, Y_train : pd.Series) -> ClassifierMixin:
+    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : pd.Series) -> ClassifierMixin:
         try :
             LR = LogisticRegression()
             LR.fit(X_train,Y_train)
@@ -24,11 +26,12 @@ class LogisticRegressionModel(Model):
         
         except Exception as e :
             logging.error('Error while training LogisticRegression Model : {}'.format(e))
+            raise e
 
-
+# Second strategy
 class RandomForestModel(Model):
 
-    def train_model(self, X_train : pd.DataFrame, Y_train : pd.Series) -> ClassifierMixin:
+    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : pd.Series) -> ClassifierMixin:
         try :
             RF = RandomForestClassifier()
             RF.fit(X_train, Y_train)
@@ -37,11 +40,12 @@ class RandomForestModel(Model):
         
         except Exception as e :
             logging.error('Error while training RandomForest Model : {}'.format(e))
+            raise e
 
-
+# The main class
 class Training:
 
-    def __init__(self,X_train : pd.DataFrame, Y_train : pd.Series, model : Model):
+    def __init__(self, X_train : Union[pd.DataFrame, np.ndarray], Y_train : pd.Series, model : Model):
 
         self.X_train = X_train
         self.Y_train = Y_train

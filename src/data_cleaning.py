@@ -16,11 +16,12 @@ class Strategy(ABC):
 # First algorithm strategy
 class DataSplitingStrategy(Strategy):
 
-    def handle_data(self,data : pd.DataFrame) -> Union[pd.DataFrame , pd.Series]:
+    def handle_data(self,data : pd.DataFrame) -> Union[pd.DataFrame , np.ndarray]:
         try:
             X_train, X_test, Y_train, Y_test = train_test_split(data.iloc[:,:-1], data.iloc[:,-1], test_size=0.2 , 
                                                                 shuffle=True, random_state=123
                                                                 )
+            Y_train, Y_test = Y_train.to_numpy(), Y_test.to_numpy()
             logging.info('Spliting data finished')
             return  X_train, X_test, Y_train, Y_test
         

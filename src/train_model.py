@@ -11,13 +11,13 @@ from typing import Union
 class Model(ABC):
 
     @abstractmethod
-    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : pd.Series) -> ClassifierMixin:
+    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : np.ndarray) -> ClassifierMixin:
         pass
 
 # First strategy
 class LogisticRegressionModel(Model):
 
-    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : pd.Series) -> ClassifierMixin:
+    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : np.ndarray) -> ClassifierMixin:
         try :
             LR = LogisticRegression()
             LR.fit(X_train,Y_train)
@@ -25,13 +25,13 @@ class LogisticRegressionModel(Model):
             return LR
         
         except Exception as e :
-            logging.error('Error while training LogisticRegression Model : {}'.format(e))
+            logging.error(f'Error while training LogisticRegression Model : {e}')
             raise e
 
 # Second strategy
 class RandomForestModel(Model):
 
-    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : pd.Series) -> ClassifierMixin:
+    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : np.ndarray) -> ClassifierMixin:
         try :
             RF = RandomForestClassifier()
             RF.fit(X_train, Y_train)
@@ -39,13 +39,13 @@ class RandomForestModel(Model):
             return RF
         
         except Exception as e :
-            logging.error('Error while training RandomForest Model : {}'.format(e))
+            logging.error(f'Error while training RandomForest Model : {e}')
             raise e
 
 # The main class
 class Training:
 
-    def __init__(self, X_train : Union[pd.DataFrame, np.ndarray], Y_train : pd.Series, model : Model):
+    def __init__(self, X_train : Union[pd.DataFrame, np.ndarray], Y_train : np.ndarray, model : Model):
 
         self.X_train = X_train
         self.Y_train = Y_train

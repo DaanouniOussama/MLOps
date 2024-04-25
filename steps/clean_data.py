@@ -9,8 +9,8 @@ from typing import Tuple
 @step
 def clean_df(df: pd.DataFrame)-> Tuple[Annotated[pd.DataFrame,'X_train'],
                                        Annotated[pd.DataFrame,"X_test"],
-                                       Annotated[pd.Series,"Y_train"],
-                                       Annotated[pd.Series,"Y_test"],
+                                       Annotated[np.ndarray,"Y_train"],
+                                       Annotated[np.ndarray,"Y_test"],
                                        Annotated[np.ndarray, "X_train_scaled"],
                                        Annotated[np.ndarray, "X_test_scaled"]
                                        ] :

@@ -36,7 +36,7 @@ def main(
     mlflow_model_deployer_component = MLFlowModelDeployer.get_active_model_deployer()
     if deploy:
         continuous_deployment_pipeline(
-            data_path='C:/Users/DELL XPS/Documents/MLops/MLOps/data/iris.csv',
+            data_path='/home/oussama/MLOps/data/iris.csv',
             min_accuracy=min_accuracy,
             workers=3,
             timeout=60

@@ -43,7 +43,6 @@ def deployment_trigger(
 @pipeline(enable_cache=False,settings={"docker":docker_settings})
 def continuous_deployment_pipeline(
     data_path:str,
-    min_accuracy:float = 0.95,
     workers: int = 1,
     timeout: int = DEFAULT_SERVICE_START_STOP_TIMEOUT
 ):
@@ -52,7 +51,7 @@ def continuous_deployment_pipeline(
     X_train, X_test, Y_train, Y_test, X_train_scaled, X_test_scaled = clean_df(df)
     model = model_train(X_train_scaled, Y_train)
     accuracy_Score, precision_Score, recall_Score, f1_Score = evaluate(X_test_scaled, Y_test, model) 
-    deployment_decision = deployment_trigger(accuracy=accuracy_Score)
+    deployment_decision = deployment_trigger(accuracy=accuracy_Score) # returning True or False depending on if accuracy >= config.min_accuracy
     mlflow_model_deployer_step(
         model=model,
         deploy_decision = deployment_decision,
@@ -61,21 +60,23 @@ def continuous_deployment_pipeline(
     )
 
 
-####### Inference pipeline ######
+########################################### Inference pipeline ##############################################
 
+# class will serve for changing parameters of steps
 class MLFlowDeploymentLoaderStepParameters(BaseParameters):
     pipeline_name: str
     step_name: str
     running: bool = True
 
 
+# Fetching data to be served for the deployed model
 @step(enable_cache=False)
-def dynamic_importer() -> str:
+def dynamic_importer() -> np.ndarray:
     data = get_data_for_test()
     return data    
 
 
-
+# Fetching the MLFlow server with params
 @step(enable_cache=False)
 def prediction_service_loader(
     pipeline_name: str,
@@ -83,6 +84,7 @@ def prediction_service_loader(
     running: bool = True,
     model_name: str = "model",
 ) -> MLFlowDeploymentService:
+    # get the MLflow model deployer stack component
     model_deployer = MLFlowModelDeployer.get_active_model_deployer()
     existing_services = model_deployer.find_model_server(
         pipeline_name=pipeline_name,
@@ -99,10 +101,10 @@ def prediction_service_loader(
         )
     return existing_services[0]
 
+# Starting server and running predictions
 @step(enable_cache=False)
-def predictor(service: MLFlowDeploymentService, data: str) -> np.ndarray:
+def predictor(service: MLFlowDeploymentService, data: np.ndarray) -> np.ndarray:
     service.start(timeout=10)
-    data = json.loads(data)
     prediction = service.predict(data)
     return prediction
 

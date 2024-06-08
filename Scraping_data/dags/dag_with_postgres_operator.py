@@ -17,20 +17,25 @@ default_args = {
     #'retry_delay': timedelta(minutes=1),
 }
 
-with DAG(dag_id = 'dag_postgres_operator', default_args=default_args, schedule_interval=timedelta(days=1)) as dag :
+with DAG(dag_id = 'dag_data_engineering_', default_args=default_args, schedule_interval=timedelta(days=1)) as dag :
 
     Connexion = PostgresOperator(
         task_id = 'create_postgres_table',
         postgres_conn_id = 'postgres_db',
         sql ="""
-            CREATE TABLE IF NOT EXISTS Real_estate (
+            CREATE TABLE IF NOT EXISTS Real_Estate_table (
                 id SERIAL PRIMARY KEY,
-                title VARCHAR(255),
+                Title VARCHAR(255),
                 Real_estate_type VARCHAR(30),
                 Price INT,
                 Superficie INT,
+                Rooms INT,
+                Bath_room INT,
                 Floor INT,
-                City VARCHAR(30)
+                Age VARCHAR(30),
+                neighbourhood VARCHAR(100),
+                City VARCHAR(30),
+                unix_time BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
             );
         """
     )
@@ -38,6 +43,7 @@ with DAG(dag_id = 'dag_postgres_operator', default_args=default_args, schedule_i
     scrape_task = PythonOperator(
         task_id='scrape_website',
         python_callable=scrapper,
+        op_args = ['rabat']
     )
 
     # Define the task

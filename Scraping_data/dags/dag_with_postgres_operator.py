@@ -17,7 +17,7 @@ default_args = {
     #'retry_delay': timedelta(minutes=1),
 }
 
-with DAG(dag_id = 'dag_data_engineering_', default_args=default_args, schedule_interval=timedelta(days=1)) as dag :
+with DAG(dag_id = 'dag_data_engineering_', default_args=default_args, schedule_interval=timedelta(days=10)) as dag :
 
     Connexion = PostgresOperator(
         task_id = 'create_postgres_table',

@@ -1,39 +1,37 @@
 import logging
 import pandas as pd
-import numpy as np
 from abc import ABC, abstractmethod
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.base import ClassifierMixin
-from typing import Union
+from sklearn.svm import SVR
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.base import RegressorMixin
 
 # The abstract class
 class Model(ABC):
 
     @abstractmethod
-    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : np.ndarray) -> ClassifierMixin:
+    def train_model(self, X_train : pd.DataFrame, Y_train : pd.Series) -> RegressorMixin:
         pass
 
 # First strategy
-class LogisticRegressionModel(Model):
+class SupportVectorRegressionModel(Model):
 
-    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : np.ndarray) -> ClassifierMixin:
+    def train_model(self, X_train : pd.DataFrame, Y_train : pd.Series) -> RegressorMixin:
         try :
-            LR = LogisticRegression()
-            LR.fit(X_train,Y_train)
-            logging.info('Training LogisticRegression Model finished')
-            return LR
+            SVM = SVR()
+            SVM.fit(X_train,Y_train)
+            logging.info('Training Support Vector Regression Model finished')
+            return SVM
         
         except Exception as e :
-            logging.error(f'Error while training LogisticRegression Model : {e}')
+            logging.error(f'Error while training Support Vector Regression Model : {e}')
             raise e
 
 # Second strategy
 class RandomForestModel(Model):
 
-    def train_model(self, X_train : Union[pd.DataFrame,np.ndarray], Y_train : np.ndarray) -> ClassifierMixin:
+    def train_model(self, X_train : pd.DataFrame, Y_train : pd.Series) -> RegressorMixin:
         try :
-            RF = RandomForestClassifier()
+            RF = RandomForestRegressor(random_state = 125, max_depth=10, n_estimators = 10, max_features = 3)
             RF.fit(X_train, Y_train)
             logging.info('Training RandomForest Model finished')
             return RF
@@ -45,7 +43,7 @@ class RandomForestModel(Model):
 # The main class
 class Training:
 
-    def __init__(self, X_train : Union[pd.DataFrame, np.ndarray], Y_train : np.ndarray, model : Model):
+    def __init__(self, X_train : pd.DataFrame, Y_train : pd.Series, model : Model):
 
         self.X_train = X_train
         self.Y_train = Y_train

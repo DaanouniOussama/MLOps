@@ -1,26 +1,18 @@
 import logging
 from zenml import step
+from src.conn_ingest import IngestData
 import pandas as pd
-
-class IngestData:
-    def __init__(self, data_path: str):
-        self.data_path = data_path
-        
-
-    def get_data(self):
-        logging.info(f"Ingesting data from {self.data_path}")
-        return pd.read_csv(self.data_path)
     
 
 @step
-def ingest_df(data_path: str) -> pd.DataFrame:
+def import_df(host: str, dbname : str, user : str, password : str, port : str) -> pd.DataFrame:
 
     try :
-        ingest_data = IngestData(data_path)
-        df = ingest_data.get_data()
+        ingest_data = IngestData(host, dbname , user, password, port)
+        df = ingest_data.connextion()
         return df
     except Exception as e :
-        logging.error(f"Error while ingesting data : {e}")
+        logging.error(f"Error while importing data : {e}")
         raise e
 
        

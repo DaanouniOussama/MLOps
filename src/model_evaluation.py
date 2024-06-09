@@ -1,49 +1,39 @@
 import logging
 import pandas as pd
-import numpy as np
 from abc import ABC, abstractmethod
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+import math
+from sklearn.metrics import mean_squared_error
+from sklearn.base import RegressorMixin
 
 class StrategyEvaluation(ABC):
 
     @abstractmethod
-    def evaluate(self,  Y_test : np.ndarray, Y_pred : np.ndarray) -> tuple[float,float,float,float]:
+    def evaluate(self,  Y_test : pd.Series, X_test : pd.DataFrame, model : RegressorMixin) -> float:
 
         pass
 
 
 class ClassificationEvaluation(StrategyEvaluation):
 
-    def evaluate(self,  Y_test : np.ndarray, Y_pred : np.ndarray) -> tuple[float,float,float,float]:
+    def evaluate(self,  Y_test : pd.Series, X_test : pd.DataFrame, model : RegressorMixin) -> float:
         try:
-            accuracyScore = accuracy_score(Y_test, Y_pred)
-            precisionScore = precision_score(Y_test, Y_pred,average='weighted')
-            recallScore = recall_score(Y_test, Y_pred,average='weighted')
-            f1Score = f1_score(Y_test, Y_pred,average='weighted')
+            Y_pred = model.predict(X_test)
+            mse = mean_squared_error(Y_test, Y_pred)
+            rmse = math.sqrt(mse)
             logging.info('Evaluation finished')
-            return (accuracyScore, precisionScore, recallScore, f1Score)
+            return rmse
         except Exception as e:
-            logging.error(f'Error while calculating evaluations {e}')
+            logging.error(f'Error while calculating evaluations : {e}')
             raise e
 
 class Evaluation:
 
-    def __init__(self, Y_test : np.ndarray, Y_pred : np.ndarray, typeevaluation : StrategyEvaluation):
+    def __init__(self, Y_test : pd.Series, X_test : pd.DataFrame, model : RegressorMixin, typeevaluation : StrategyEvaluation):
         self.Y_test = Y_test
-        self.Y_pred = Y_pred
+        self.X_test = X_test
+        self.model = model
         self.typeevaluation = typeevaluation
 
     def evaluation_calcul(self):
 
-        return self.typeevaluation.evaluate(self.Y_test, self.Y_pred)
-
-
-        
-
-
-
-
-
-
-
-
+        return self.typeevaluation.evaluate(self.Y_test, self.X_test, self.model)

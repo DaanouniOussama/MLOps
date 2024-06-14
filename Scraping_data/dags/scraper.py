@@ -13,7 +13,7 @@ def scrapper(city : str)->pd.DataFrame:
     real_estate = ['appartements']
     floor = [0,1,2,3]
     room = [1,2,3]
-    bathroom = [1,2] # 1 , 2
+    bathroom = [2] # 1 , 2
 
     # My DataFrame
     my_df = pd.DataFrame()

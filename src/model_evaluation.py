@@ -13,7 +13,7 @@ class StrategyEvaluation(ABC):
         pass
 
 
-class ClassificationEvaluation(StrategyEvaluation):
+class RMSE_Evaluation(StrategyEvaluation):
 
     def evaluate(self,  Y_test : pd.Series, X_test : pd.DataFrame, model : RegressorMixin) -> float:
         try:

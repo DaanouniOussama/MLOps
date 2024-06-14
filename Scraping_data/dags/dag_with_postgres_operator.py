@@ -10,7 +10,7 @@ from ingestdata import copy_csv_to_table
 default_args = {
     'owner': 'admin',
     'depends_on_past': False,
-    'start_date': datetime(2024, 5, 10),
+    'start_date': datetime(2024, 6, 11),
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 0,

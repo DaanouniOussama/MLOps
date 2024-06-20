@@ -2,7 +2,7 @@ from pipelines.training_pipeline import train_pipeline
 import mlflow
 from zenml.client import Client
 
-# host : 'localhost'
+# host : '172.17.111.99
 # dbname : 'test_DB'
 # user : 'airflow'
 # password : 'airflow'

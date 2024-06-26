@@ -3,7 +3,7 @@ from airflow.providers.postgres.hooks.postgres import PostgresHook
 
 def copy_csv_to_table():
     try:
-        postgres_hook = PostgresHook(postgres_conn_id="postgres_db")
+        postgres_hook = PostgresHook(postgres_conn_id="real_estate_connexion")
         conn = postgres_hook.get_conn()
         cur = conn.cursor()
         with open('/opt/airflow/dags/processed_scraped.csv', "r") as file:

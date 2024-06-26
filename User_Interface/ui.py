@@ -3,9 +3,9 @@ import streamlit as st
 import plotly.express as px
 import psycopg2
 import pandas as pd
-import folium
-from geopy.geocoders import Nominatim
-from folium import plugins
+#import folium
+#from geopy.geocoders import Nominatim
+#from folium import plugins
 
 
 
@@ -35,20 +35,20 @@ df['adress'] = df['neighbourhood'] + ', ' + df['city']
 
 
 
-geolocator = Nominatim(user_agent="Real-estate Monitor")
-maps_data = pd.DataFrame()
-maps_data['adresses'] = df['adress'].unique()
-maps_data['location'] = maps_data['adresses'].apply(lambda x: geolocator.geocode(x,language = 'fr'))
-maps_data['latitude'] = maps_data['location'].apply(lambda x: x.latitude if x else None)
-maps_data['longitude'] = maps_data['location'].apply(lambda x: x.longitude if x else None)
+#geolocator = Nominatim(user_agent="Real-estate Monitor")
+#maps_data = pd.DataFrame()
+#maps_data['adresses'] = df['adress'].unique()
+#maps_data['location'] = maps_data['adresses'].apply(lambda x: geolocator.geocode(x,language = 'fr'))
+#maps_data['latitude'] = maps_data['location'].apply(lambda x: x.latitude if x else None)
+#maps_data['longitude'] = maps_data['location'].apply(lambda x: x.longitude if x else None)
 
-final = pd.merge(df,maps_data,left_on='adress', right_on='adresses')
+#final = pd.merge(df,maps_data,left_on='adress', right_on='adresses')
 #df['location'] = df['adress'].apply(lambda x: geolocator.geocode(x))
 #df['latitude'] = df['location'].apply(lambda x: x.latitude if x else None)
 #df['longitude'] = df['location'].apply(lambda x: x.longitude if x else None)
 
 
-st.write(final)
+st.write(df)
 
 #location = geolocator.geocode("")
 

@@ -1,0 +1,86 @@
+import streamlit as st
+import plotly.express as px
+import pandas as pd
+import pydeck as pdk
+import altair as alt
+
+def dashboard(df_merged):
+
+    with st.sidebar:
+        
+        # Add "All Cities" to the city list
+        city_list = ['All Cities'] + list(df_merged.city.unique())[::-1]
+        
+        selected_city = st.selectbox('Select a city', city_list)
+        
+        # Modify filtering logic to handle "All Cities" option
+        if selected_city == 'All Cities':
+            df_selected_city = df_merged
+        else:
+            df_selected_city = df_merged[df_merged.city == selected_city]
+
+
+
+    # Define the layer for the map
+    layer = pdk.Layer(
+        'HeatmapLayer',
+        data=df_merged,
+        get_position='[longitude, latitude]',
+        get_radius=2000,  # Fixed radius, can be adjusted as needed
+        get_fill_color='color',
+        pickable=True
+    )
+
+    # Set the view state
+    view_state = pdk.ViewState(
+        latitude=31.7917,
+        longitude=-7.0926,
+        zoom=3,
+        pitch=0
+    )
+
+    # Create the deck.gl map
+    r = pdk.Deck(
+        layers=[layer],
+        initial_view_state=view_state,
+        tooltip={"text": "Price: {price}"}
+    )
+    # Dashboard Main Panel
+    col = st.columns((1.5, 4.5, 2), gap='medium')
+    with col[0]:
+        st.markdown('#### Mean price by city')
+        #st.write(df_selected_city)
+        st.metric(str(df_selected_city.city.unique()[0]),int(df_selected_city.price.mean()),delta='10K',delta_color='normal')
+        neighbourhood = st.selectbox('Select neighbourhood',df_selected_city.neighbourhood.unique())
+        st.metric('Neighbourhood Mean price', int(df_selected_city[df_selected_city['neighbourhood']==neighbourhood].price.mean()),delta='10K',delta_color='normal')
+
+
+    with col[1]:
+        st.markdown('#### Geographic Distribution of Property Prices in Morocco')
+        # Render the map in Streamlit
+        st.pydeck_chart(r)
+
+        #st.write(df_merged)
+
+        # Create a histogram with KDE line using Plotly
+        fig = px.histogram(df_selected_city, x='price', nbins=50, marginal='box', title=f'Price Distribution in {selected_city}')
+
+        # Display the histogram with KDE line
+        st.plotly_chart(fig)
+
+    with col[2]:
+        st.markdown('#### Real-Estate offer type distribution')
+
+        category = df_merged.real_estate_type.unique()
+        value = df_merged['real_estate_type'].value_counts()
+
+
+        source = pd.DataFrame({"category": category, "value": value})
+
+        chart = alt.Chart(source).mark_arc(innerRadius=50).encode(
+            theta=alt.Theta(field="value", type="quantitative"),
+            color=alt.Color(field="category", type="nominal"),
+        )
+
+        st.altair_chart(chart, theme=None, use_container_width=True)
+                

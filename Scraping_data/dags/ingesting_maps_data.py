@@ -8,7 +8,7 @@ def copy_csv_to_table_maps():
         cur = conn.cursor()
         with open('/opt/airflow/dags/long_lalt.csv', "r") as file:
             cur.copy_expert(
-                "COPY maps_table(neighbourhood_city, longitude, laltitude) FROM STDIN WITH CSV HEADER DELIMITER AS ';' QUOTE '\"' NULL '' " ,
+                "COPY maps_table(neighbourhood_city, laltitude, longitude) FROM STDIN WITH CSV HEADER DELIMITER AS ';' QUOTE '\"' NULL '' " ,
                 file,
             )
             conn.commit()

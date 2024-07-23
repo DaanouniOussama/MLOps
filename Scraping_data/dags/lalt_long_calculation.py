@@ -6,7 +6,7 @@ from geopy.geocoders import Nominatim
 def lati_long()->int:
     try:
         logging.info('Loading scraped data ...')
-        df = pd.read_csv('/opt/airflow/dags/processed_scraped.csv',index_col=0)
+        df = pd.read_csv('/opt/airflow/dags/scraped_data.csv',index_col=0)
         logging.info('Data was loaded successfully')
 
     except Exception as e:

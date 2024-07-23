@@ -1,0 +1,11 @@
+digest: 7f75d4dd
+name: dataset
+profile: '{"num_rows": 832, "num_elements": 5824}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "superficie", "required": true},
+  {"type": "long", "name": "rooms", "required": true}, {"type": "long", "name": "bath_room",
+  "required": true}, {"type": "long", "name": "floor", "required": true}, {"type":
+  "long", "name": "age", "required": true}, {"type": "integer", "name": "neighbourhood_",
+  "required": true}, {"type": "long", "name": "city", "required": true}]}'
+source: '{"tags": {"mlflow.user": "DELL XPS", "mlflow.source.name": "run_pipeline.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "1d86b6117ee26bf1d28b33920f938c64a99d225e"}}'
+source_type: code

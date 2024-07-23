@@ -6,7 +6,7 @@ def copy_csv_to_table():
         postgres_hook = PostgresHook(postgres_conn_id="real_estate_connexion")
         conn = postgres_hook.get_conn()
         cur = conn.cursor()
-        with open('/opt/airflow/dags/processed_scraped.csv', "r") as file:
+        with open('/opt/airflow/dags/scraped_data.csv', "r") as file:
             cur.copy_expert(
                 "COPY Real_Estate_table(Title, Real_estate_type, Price, Superficie, Rooms, Bath_room, Floor, Age, neighbourhood, City) FROM STDIN WITH CSV HEADER DELIMITER AS ',' QUOTE '\"' NULL '' " ,
                 file,

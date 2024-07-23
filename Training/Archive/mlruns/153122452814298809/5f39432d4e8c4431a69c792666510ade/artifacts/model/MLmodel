@@ -1,0 +1,28 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.1
+mlflow_version: 2.14.2
+model_size_bytes: 654441
+model_uuid: 313a9e3679bf435db74b91cd209c77cb
+run_id: 5f39432d4e8c4431a69c792666510ade
+signature:
+  inputs: '[{"type": "long", "name": "superficie", "required": true}, {"type": "long",
+    "name": "rooms", "required": true}, {"type": "long", "name": "bath_room", "required":
+    true}, {"type": "long", "name": "floor", "required": true}, {"type": "long", "name":
+    "age", "required": true}, {"type": "integer", "name": "neighbourhood_", "required":
+    true}, {"type": "long", "name": "city", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-07-08 17:39:42.557834'

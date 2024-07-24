@@ -18,11 +18,11 @@ class IngestData:
         logging.info(f"Connecting to postgres db")
         try:
             conn = psycopg2.connect(host=self.host, dbname= self.dbname,user = self.user, password = self.password , port = self.port)
-            query = """ SELECT * FROM real_estate_table;"""
+            query = """ SELECT * FROM feature_store;"""
             # Load data into a pandas DataFrame
             df = pd.read_sql_query(query, conn)
             logging.info("Data loaded successfully into DataFrame")
-            return df
+            return df.iloc[:,1:]
         except Exception as e:
             logging.error(f"Error connecting to database: {e}")
         finally:

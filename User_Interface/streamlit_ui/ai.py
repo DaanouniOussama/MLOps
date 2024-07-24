@@ -16,7 +16,7 @@ def ai(df_merged):
 
     mlflow.set_tracking_uri(remote_server_uri)
 
-    logged_model = 'runs:/97f2e0a964ea475e8d71977fec719138/RF_model'
+    logged_model = 'runs:/f58c0fe5b7244d51ba284975e439b136/XGBoost_model'
 
     # Load model as a PyFuncModel.
     loaded_model = mlflow.pyfunc.load_model(logged_model)
@@ -80,9 +80,10 @@ def ai(df_merged):
                          'bath_room' : [bath_rooms],
                          'floor' : [floor],
                          'age' : [age_],
-                         'neighbourhood_' : neighbourhood_encoded,
+                         'neighbourhood_city' : neighbourhood_encoded,
                          'city' : [city_]                       
                          })
+        
         # Predict on a Pandas DataFrame.
         predicted_price = loaded_model.predict(data)
         st.write('The price of your real-estate : ', int(predicted_price[0]), 'Dhs')

@@ -63,12 +63,14 @@ with DAG(dag_id = 'dag_data_engineering_', default_args=default_args, schedule_i
         sql ="""
             CREATE TABLE IF NOT EXISTS feature_store (
                 id SERIAL PRIMARY KEY,
+                real_estate_type INT,
                 superficie INT,
                 rooms INT,
                 bath_room INT,
                 floor INT,
                 age INT,
-                neighbourhood_city INT,
+                neighbourhood_city VARCHAR(100),
+                neighbourhood_city_coded INT,
                 city INT,
                 price FLOAT CHECK (price > 0)
             );

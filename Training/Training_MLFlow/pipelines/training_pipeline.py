@@ -13,7 +13,7 @@ remote_server_uri = "https://dagshub.com/DaanouniOussama/MLOps.mlflow"
 
 
 def train_pipeline(algo):
-    df = import_df('172.19.0.5', 'Real_estate', 'airflow', 'airflow', '5432')
+    df = import_df('172.19.0.3', 'Real_estate', 'airflow', 'airflow', '5432')
     X_train, X_test, Y_train, Y_test = clean_df(df)
     print(X_train)
     print(X_test)

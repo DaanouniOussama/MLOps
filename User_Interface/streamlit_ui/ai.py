@@ -16,7 +16,7 @@ def ai(df_merged):
 
     mlflow.set_tracking_uri(remote_server_uri)
 
-    logged_model = 'runs:/f58c0fe5b7244d51ba284975e439b136/XGBoost_model'
+    logged_model = 'runs:/edea889add6f4a5b9aafe137a4fb31a6/RF_model'
 
     # Load model as a PyFuncModel.
     loaded_model = mlflow.pyfunc.load_model(logged_model)
@@ -31,15 +31,15 @@ def ai(df_merged):
     logging.info('Coding cities')
     # Create a mapping dictionary (mask)
     if(city=='Casablanca'):
-        city_ = 5
-    elif( city =='Tanger'):
         city_ = 4
-    elif( city == 'Marrakech' ):
+    elif( city =='Tanger'):
         city_ = 3
-    elif( city == 'Agadir' ):
+    elif( city == 'Marrakech' ):
         city_ = 2
-    else:
+    elif( city == 'Agadir' ):
         city_ = 1
+    else:
+        city_ = 0
     # here encode neighbourhood
     city = city.lower()
     label_encoder = LabelEncoder()

@@ -2,6 +2,7 @@ import logging
 import psycopg2
 import pandas as pd
 from geopy.geocoders import Nominatim
+from geopy.extra.rate_limiter import RateLimiter
 
 def lati_long()->int:
     try:
@@ -18,9 +19,10 @@ def lati_long()->int:
         df['adress'] = df['neighbourhood'] + ', ' + df['city']
         logging.info('Creating variable Adresse as neighbourhood + city')
         geolocator = Nominatim(user_agent="Real-estate Monitor")
+        geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1)
         maps_data = pd.DataFrame()
         maps_data['adresses'] = df['adress'].unique()
-        maps_data['location'] = maps_data['adresses'].apply(lambda x: geolocator.geocode(x,language = 'fr'))
+        maps_data['location'] = maps_data['adresses'].apply(lambda x: geocode(x,language = 'fr'))
         maps_data['latitude'] = maps_data['location'].apply(lambda x: x.latitude if x else None)
         maps_data['longitude'] = maps_data['location'].apply(lambda x: x.longitude if x else None)
 

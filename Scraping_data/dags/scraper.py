@@ -12,10 +12,10 @@ import time
 def scrapper()->pd.DataFrame:
     min_price = 250000
     min_size = 30
-    real_estate = [ 'appartements' , 'maisons' , 'villas_riad' ]
+    real_estate = [ 'villas_riad' ] # 'appartements' , 
     floor = [0 , 1 , 2 , 3] # 0 , 1 , 2 , 3
-    room = [1 , 2 , 3] # 1 , 2 , 3
-    bathroom = [1 , 2] # 1 , 2
+    room = [1 , 2 , 3, 4 , 5] # 1 , 2 , 3
+    bathroom = [1 , 2, 3] # 1 , 2
     cities = ['casablanca', 'tanger', 'rabat', 'marrakech', 'agadir']
 
     # My DataFrame

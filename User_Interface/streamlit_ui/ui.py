@@ -20,8 +20,10 @@ st.set_page_config(
 try:
     logging.info('Connecting to postgres DB ...')
     connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
-    query = """ SELECT * FROM real_estate_table;"""
-    df = pd.read_sql_query(query, connection)
+    query1 = """ SELECT * FROM real_estate_table;"""
+    query2 = """ SELECT neighbourhood_city, neighbourhood_city_coded, city FROM feature_store;"""
+    df = pd.read_sql_query(query1, connection)
+    feature_store = pd.read_sql_query(query2, connection)
     logging.info('Connection to postgres db was successful')
 
 except Exception as e:
@@ -92,8 +94,8 @@ if window == "Dashboard":
 
 if window == "Advanced analysis":
 
-    advanced_analytics(df_merged)
+    advanced_analytics(df)
 
 if window == "AI":
 
-    ai(df_merged)
+    ai(feature_store)

@@ -36,7 +36,7 @@ class RandomForestModel(Model):
 
     def train_model(self, X_train : pd.DataFrame, Y_train : pd.Series) -> RegressorMixin:
         try :
-            RF = RandomForestRegressor(random_state = 125, max_depth=10, n_estimators = 10, max_features = 3)
+            RF = RandomForestRegressor(random_state = 125, max_depth=25, n_estimators = 10, max_features = 6)
             RF.fit(X_train, Y_train)
             logging.info('Training RandomForest Model finished')
             return RF

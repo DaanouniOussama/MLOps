@@ -44,8 +44,8 @@ df['adress'] = df['neighbourhood'] + ', ' + df['city']
 
 # Connecting and Fetching all rows from database Maps_data
 try:
-    logging.info('Connecting to postgres DB ...')
-    connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
+    #logging.info('Connecting to postgres DB ...')
+    #connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
     query = """ SELECT * FROM maps_table;"""
     df_maps = pd.read_sql_query(query, connection)
     logging.info('Connection to postgres db was successful')

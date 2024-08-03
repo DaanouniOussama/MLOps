@@ -9,18 +9,18 @@ def dashboard(df_merged,df):
     with st.sidebar:
         
         # Add "All Cities" to the city list
-        city_list = ['All Cities'] + list(df_merged.city.unique())[::-1]
+        city_list = ['All Cities'] + list(df.city.unique())[::-1]
         
         selected_city = st.selectbox('Select a city', city_list)
 
-        real_estate_levels = df_merged['real_estate_type'].unique()
+        real_estate_levels = df['real_estate_type'].unique()
         selected_real_estate = st.selectbox('Select the type of real-estate', real_estate_levels)
         
         # Modify filtering logic to handle "All Cities" option
         if selected_city == 'All Cities':
-            df_selected_city = df_merged[df_merged.real_estate_type==selected_real_estate]
+            df_selected_city = df[df.real_estate_type==selected_real_estate]
         else:
-            df_selected_city = df_merged[(df_merged.city == selected_city) & (df_merged.real_estate_type==selected_real_estate)]
+            df_selected_city = df[(df.city == selected_city) & (df.real_estate_type==selected_real_estate)]
 
 
 
@@ -76,10 +76,10 @@ def dashboard(df_merged,df):
     with col[2]:
         st.markdown('#### Real-Estate offer type distribution')
 
-        category = df_merged.real_estate_type.unique()
-        st.write(category)
-        value = df_merged.loc[df_merged['city']==selected_city,'real_estate_type'].value_counts()
-        st.write(value)
+        category = df.real_estate_type.unique()
+        #st.write(category)
+        value = df.loc[df['city']==selected_city,'real_estate_type'].value_counts()
+        #st.write(value)
 
 
         source = pd.DataFrame({"category": category, "value": value})

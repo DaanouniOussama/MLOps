@@ -18,7 +18,7 @@ class IngestData:
         logging.info(f"Connecting to postgres db")
         try:
             conn = psycopg2.connect(host=self.host, dbname= self.dbname,user = self.user, password = self.password , port = self.port)
-            query = """ SELECT * FROM feature_store;"""
+            query = """ SELECT * FROM feature_store_appartement;"""
             # Load data into a pandas DataFrame
             df = pd.read_sql_query(query, conn)
             logging.info("Data loaded successfully into DataFrame")

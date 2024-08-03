@@ -69,8 +69,8 @@ class Spliting_Data():
     def handle_data(self,data : pd.DataFrame) ->  Union[pd.DataFrame , pd.Series]:
         try:
             logging.info('Spliting data into train and test')
-            x_train, x_test, y_train, y_test = train_test_split(data.iloc[:,:-1],
-                                                    data.iloc[:,-1],
+            x_train, x_test, y_train, y_test = train_test_split(data[['superficie','rooms','bath_room','floor','age','neighbourhood_city_coded','city']],
+                                                    data['price'],
                                                     test_size = 0.2,
                                                     shuffle = True,   
                                                     random_state = 123)

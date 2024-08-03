@@ -61,7 +61,7 @@ def dashboard(df_merged,df):
 
     with col[1]:
         st.markdown('#### Geographic Distribution of Property Prices in Morocco')
-        st.write(df)
+        #st.write(df)
         # Render the map in Streamlit
         st.pydeck_chart(r)
 
@@ -78,14 +78,16 @@ def dashboard(df_merged,df):
 
         category = df.real_estate_type.unique()
         #st.write(category)
-        value = df.loc[df['city']==selected_city,'real_estate_type'].value_counts()
+        if selected_city == 'All Cities':
+            value = df['real_estate_type'].value_counts(normalize=True)
+        else:
+            value = df.loc[df['city']==selected_city,'real_estate_type'].value_counts(normalize=True)
         #st.write(value)
-
-
-        source = pd.DataFrame({"category": category, "value": value})
+        value = (value*100).round(1)  # Round to one decimal place
+        source = pd.DataFrame({"category": category, "Pourcentage": value.values})
 
         chart = alt.Chart(source).mark_arc(innerRadius=50).encode(
-            theta=alt.Theta(field="value", type="quantitative"),
+            theta=alt.Theta(field="Pourcentage", type="quantitative"),
             color=alt.Color(field="category", type="nominal"),
         )
 

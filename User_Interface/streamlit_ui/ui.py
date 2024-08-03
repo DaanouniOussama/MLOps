@@ -21,7 +21,7 @@ try:
     logging.info('Connecting to postgres DB ...')
     connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
     query1 = """ SELECT * FROM real_estate_table;"""
-    query2 = """ SELECT neighbourhood_city, neighbourhood_city_coded, city FROM feature_store;"""
+    query2 = """ SELECT neighbourhood_city, neighbourhood_city_coded, city FROM feature_store_appartement;"""
     df = pd.read_sql_query(query1, connection)
     feature_store = pd.read_sql_query(query2, connection)
     logging.info('Connection to postgres db was successful')

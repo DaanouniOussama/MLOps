@@ -3,7 +3,6 @@ import os
 import pandas as pd
 import streamlit as st
 import logging
-from sklearn.preprocessing import LabelEncoder
 
 
 
@@ -16,7 +15,7 @@ def ai(df,feature_store):
 
     mlflow.set_tracking_uri(remote_server_uri)
 
-    logged_model = 'runs:/5e68c5dc5ba14ea9a9795c95c87275a7/RF_model'
+    logged_model = 'runs:/f35bde28f59c48a39d0cc864e52e3a1c/RF_model'
 
     # Load model as a PyFuncModel.
     loaded_model = mlflow.pyfunc.load_model(logged_model)
@@ -83,7 +82,7 @@ def ai(df,feature_store):
 
     if st.button("Predict"):
         # data
-        data = pd.DataFrame({'real_estate_type' : [real_estate_type_], 
+        data = pd.DataFrame({ 
                          'superficie' : [area] , 
                          'rooms' : [rooms],
                          'bath_room' : [bath_rooms],

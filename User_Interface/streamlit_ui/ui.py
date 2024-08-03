@@ -88,7 +88,7 @@ window = st.sidebar.selectbox("Choose a window", ["Dashboard", "Advanced analysi
 ##### ^^^^^^^^^^^ @@@@@@@@@@@@ Dashboard     @@@@@@@@@@@@ ^^^^^^^^^^^ #####
 
 if window == "Dashboard":
-    dashboard(df_merged)
+    dashboard(df_merged,df)
 
 ##### ^^^^^^^^^^^ @@@@@@@@@@@@   Advanced analysis   @@@@@@@@@@@@ ^^^^^^^^^^^ #####
 
@@ -98,4 +98,4 @@ if window == "Advanced analysis":
 
 if window == "AI":
 
-    ai(feature_store)
+    ai(df, feature_store)

@@ -4,7 +4,7 @@ import pandas as pd
 import pydeck as pdk
 import altair as alt
 
-def dashboard(df_merged):
+def dashboard(df_merged,df):
 
     with st.sidebar:
         
@@ -61,7 +61,7 @@ def dashboard(df_merged):
 
     with col[1]:
         st.markdown('#### Geographic Distribution of Property Prices in Morocco')
-        st.write(df_merged)
+        st.write(df)
         # Render the map in Streamlit
         st.pydeck_chart(r)
 

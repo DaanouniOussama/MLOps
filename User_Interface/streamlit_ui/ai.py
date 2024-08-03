@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 
 
 
-def ai(df_merged):
+def ai(df,feature_store):
 
     os.environ['MLFLOW_TRACKING_USERNAME'] = 'DaanouniOussama'
     os.environ['MLFLOW_TRACKING_PASSWORD'] = '70f0d514b2b8dc0829ed8030f38eb9421734bbcc'
@@ -16,7 +16,7 @@ def ai(df_merged):
 
     mlflow.set_tracking_uri(remote_server_uri)
 
-    logged_model = 'runs:/edea889add6f4a5b9aafe137a4fb31a6/RF_model'
+    logged_model = 'runs:/5e68c5dc5ba14ea9a9795c95c87275a7/RF_model'
 
     # Load model as a PyFuncModel.
     loaded_model = mlflow.pyfunc.load_model(logged_model)
@@ -24,7 +24,14 @@ def ai(df_merged):
     st.markdown('#### Predict the price of your real-estate')
 
 
-    real_estate_type = st.selectbox('Please select type of your real-estate', ['Appartement'])
+    real_estate_type = st.selectbox('Please select type of your real-estate', ['Appartement','Villa'])
+    logging.info('Coding real_estate type')
+    if(real_estate_type=='Appartement'):
+        real_estate_type_ = 0
+    else:
+        real_estate_type_ = 1
+
+
     area = st.number_input('Please enter the area of your real estate', min_value=20, format="%d")
     city = st.selectbox('Please select the city of your real-estate', ['Casablanca', 'Rabat', 'Tanger', 'Marrakech', 'Agadir'])
         
@@ -40,13 +47,19 @@ def ai(df_merged):
         city_ = 1
     else:
         city_ = 0
-    # here encode neighbourhood
-    city = city.lower()
-    label_encoder = LabelEncoder()
-    # Fit and transform the neighborhood column
-    label_encoder.fit(df_merged['neighbourhood_city'])
-    neighbourhood = st.selectbox('Please select the neighbourhood of your real-estate', df_merged.loc[df_merged['city']==city,'neighbourhood'].unique())
-    neighbourhood_encoded = label_encoder.transform([neighbourhood + ', ' + city])
+
+    
+    logging.info('Coding the neighboorhoods')
+    
+    selected_neighbourhood = st.selectbox(f'Please select the neighboorhood in {city}', [address.split(',')[0].strip() for address in df.loc[df['city'] == city.lower(), 'adress'].unique()])
+    selected_neighbourhood = selected_neighbourhood + ', ' + city.lower()
+
+    coded_neighbourhood = feature_store.drop_duplicates(subset=['neighbourhood_city', 'neighbourhood_city_coded'])
+    coded_neighbourhood= coded_neighbourhood[['neighbourhood_city', 'neighbourhood_city_coded']]
+
+
+    coded_neighbourhood = coded_neighbourhood.loc[coded_neighbourhood.neighbourhood_city==selected_neighbourhood,'neighbourhood_city_coded']
+    
     age = st.number_input('Please enter the age of your real estate', min_value=0, format="%d")
     floor = st.number_input('Please enter the floor of your real estate', min_value=0, format="%d")
     rooms = st.number_input('Please enter the number of rooms of your real estate', min_value=0, format="%d")
@@ -67,23 +80,19 @@ def ai(df_merged):
     else:
         age_ = 4
 
-    logging.info('Label coding the neighboorhoods')
-
-
-
-
 
     if st.button("Predict"):
         # data
-        data = pd.DataFrame({'superficie' : [area] , 
+        data = pd.DataFrame({'real_estate_type' : [real_estate_type_], 
+                         'superficie' : [area] , 
                          'rooms' : [rooms],
                          'bath_room' : [bath_rooms],
                          'floor' : [floor],
                          'age' : [age_],
-                         'neighbourhood_city' : neighbourhood_encoded,
+                         'neighbourhood_city_coded' : coded_neighbourhood.values,
                          'city' : [city_]                       
                          })
-        
+        st.write(data)
         # Predict on a Pandas DataFrame.
         predicted_price = loaded_model.predict(data)
         st.write('The price of your real-estate : ', int(predicted_price[0]), 'Dhs')

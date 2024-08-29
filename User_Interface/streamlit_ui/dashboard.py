@@ -54,9 +54,9 @@ def dashboard(df_merged,df):
         st.markdown('#### Mean price of square meter by city')
         #st.write(df_merged)
         #st.write(df_selected_city)
-        st.metric(str(df_selected_city.city.unique()[0]),int(df_selected_city.price.mean()/df_selected_city.superficie.mean()),delta='10K',delta_color='normal')
+        st.metric(str(df_selected_city.city.unique()[0]),int(df_selected_city.price.mean()/df_selected_city.superficie.mean()),delta='1K',delta_color='normal')
         neighbourhood = st.selectbox('Select neighbourhood',df_selected_city.neighbourhood.unique())
-        st.metric('Mean price of square meter', int(df_selected_city[df_selected_city['neighbourhood']==neighbourhood].price.mean()/df_selected_city[df_selected_city['neighbourhood']==neighbourhood].superficie.mean()),delta='10K',delta_color='normal')
+        st.metric('Mean price of square meter', int(df_selected_city[df_selected_city['neighbourhood']==neighbourhood].price.mean()/df_selected_city[df_selected_city['neighbourhood']==neighbourhood].superficie.mean()),delta='1K',delta_color='normal')
 
 
     with col[1]:

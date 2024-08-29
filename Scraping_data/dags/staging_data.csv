@@ -1,0 +1,808 @@
+real_estate_type,superficie (m²),Rooms,bath_room,floor,age,neighbourhood_city,city,price (DHS)
+2,542,2,1,0,1,"Autre secteur, casablanca",4,3000000
+2,1100,2,2,0,2,"Toute la ville, casablanca",4,1000000
+2,1350,2,2,0,4,"Toute la ville, casablanca",4,3300000
+2,600,3,2,0,0,"Route de Fès, casablanca",4,3400000
+2,240,3,2,0,1,"Autre secteur, casablanca",4,1600000
+2,297,4,2,0,0,"Toute la ville, casablanca",4,2200000
+2,128,4,2,0,3,"Toute la ville, casablanca",4,950000
+2,431,4,2,0,3,"Toute la ville, casablanca",4,2600000
+2,746,4,2,0,4,"Anfa, casablanca",4,11500000
+2,1317,4,2,0,4,"Anfa, casablanca",4,18550000
+2,300,4,3,0,0,"Al Boustane, casablanca",4,1300000
+2,293,5,3,0,2,"Toute la ville, casablanca",4,1200000
+2,120,1,1,1,0,"Route d'Ourika, casablanca",4,1630000
+2,250,1,1,1,0,"Toute la ville, casablanca",4,1700000
+2,300,1,1,1,1,"Toute la ville, casablanca",4,850000
+2,300,2,1,1,0,"Toute la ville, casablanca",4,690000
+2,300,2,1,1,1,"Route de Fès, casablanca",4,1100000
+2,200,2,1,1,2,"Autre secteur, casablanca",4,1700000
+2,200,2,2,1,0,"Autre secteur, casablanca",4,1300000
+2,4000,2,2,1,1,"Toute la ville, casablanca",4,850000
+2,300,3,1,1,0,"Autre secteur, casablanca",4,1740000
+2,251,3,1,1,0,"Autre secteur, casablanca",4,1300000
+2,200,3,1,1,0,"Autre secteur, casablanca",4,1300000
+2,121,3,1,1,0,"Al Boustane, casablanca",4,1350000
+2,8855,3,1,1,1,"Autre secteur, casablanca",4,3000000
+2,450,3,1,1,2,"Sidi Abdellah Ghiat, casablanca",4,850000
+2,200,3,2,1,0,"Autre secteur, casablanca",4,1350000
+2,149,3,2,1,0,"Al Boustane, casablanca",4,1300000
+2,153,3,2,1,0,"Al Boustane, casablanca",4,1320000
+2,165,3,2,1,0,"Autre secteur, casablanca",4,1450000
+2,200,3,2,1,0,"Autre secteur, casablanca",4,1250000
+2,300,3,2,1,0,"Al Boustane, casablanca",4,1300000
+2,200,3,2,1,0,"Autre secteur, casablanca",4,1350000
+2,220,3,2,1,0,"Al Boustane, casablanca",4,1300000
+2,200,3,2,1,0,"Autre secteur, casablanca",4,1350000
+2,1000,3,2,1,1,"Route de Fès, casablanca",4,2000000
+2,2100,3,2,1,1,"Route d'Ourika, casablanca",4,2000000
+2,120,3,2,1,1,"Toute la ville, casablanca",4,2000000
+2,560,3,2,1,1,"Toute la ville, casablanca",4,1400000
+2,300,3,2,1,1,"Toute la ville, casablanca",4,900000
+2,10000,3,2,1,2,"Autre secteur, casablanca",4,2500000
+2,800,3,2,1,3,"Toute la ville, casablanca",4,6365000
+2,180,3,3,1,1,"Toute la ville, casablanca",4,1500000
+2,2500,3,3,1,1,"Autre secteur, casablanca",4,3200000
+2,300,3,3,1,1,"Toute la ville, casablanca",4,880000
+2,201,3,3,1,1,"Toute la ville, casablanca",4,1850000
+2,2500,3,3,1,1,"Toute la ville, casablanca",4,1200000
+2,395,3,3,1,2,"Autre secteur, casablanca",4,2850000
+2,387,3,3,1,2,"Autre secteur, casablanca",4,2400000
+2,250,3,3,1,3,"Autre secteur, casablanca",4,2700000
+2,250,3,3,1,4,"Hay Hassani, casablanca",4,2900000
+2,330,4,1,1,1,"Autre secteur, casablanca",4,1690000
+2,250,4,1,1,2,"Hay Hassani, casablanca",4,3000000
+2,3088,4,1,1,3,"Autre secteur, casablanca",4,1500000
+2,2500,4,1,1,4,"Souissi, casablanca",4,11500000
+2,350,4,2,1,0,"Al Boustane, casablanca",4,1300000
+2,200,4,2,1,1,"Toute la ville, casablanca",4,2700000
+2,430,4,2,1,2,"Route de Ouarzazate, casablanca",4,1200000
+2,260,4,2,1,2,"Toute la ville, casablanca",4,1300000
+2,724,4,2,1,3,"Toute la ville, casablanca",4,2000000
+2,1360,4,2,1,4,"Polo, casablanca",4,11500000
+2,194,4,3,1,0,"Toute la ville, casablanca",4,4400000
+2,506,4,3,1,1,"Toute la ville, casablanca",4,3500000
+2,450,4,3,1,1,"Harhoura, casablanca",4,5800000
+2,1200,4,3,1,1,"Toute la ville, casablanca",4,2400000
+2,949,4,3,1,2,"Toute la ville, casablanca",4,8600000
+2,600,5,3,1,0,"Toute la ville, casablanca",4,2200000
+2,240,5,3,1,0,"Toute la ville, casablanca",4,2300000
+2,50000,5,3,1,2,"Toute la ville, casablanca",4,4200000
+2,750,5,3,1,2,"Toute la ville, casablanca",4,4000000
+2,401,5,3,1,2,"Targa, casablanca",4,4000000
+2,326,5,3,1,2,"Autre secteur, casablanca",4,1900000
+2,220,5,3,1,2,"Toute la ville, casablanca",4,1600000
+2,2100,5,3,1,3,"Souissi, casablanca",4,9500000
+2,775,1,1,2,4,"Polo, casablanca",4,7000000
+2,250,2,2,2,2,"Autre secteur, casablanca",4,1700000
+2,300,3,1,2,1,"Autre secteur, casablanca",4,1200000
+2,2000,3,2,2,0,"Toute la ville, casablanca",4,1700000
+2,260,3,2,2,1,"Toute la ville, casablanca",4,1900000
+2,378,3,3,2,0,"Autre secteur, casablanca",4,2000000
+2,200,3,3,2,0,"Autre secteur, casablanca",4,1440000
+2,200,3,3,2,0,"Autre secteur, casablanca",4,1400000
+2,374,3,3,2,1,"Autre secteur, casablanca",4,4250000
+2,240,3,3,2,2,"Toute la ville, casablanca",4,1690000
+2,200,3,3,2,2,"Autre secteur, casablanca",4,1200000
+2,261,3,3,2,2,"Toute la ville, casablanca",4,4390000
+2,150,3,3,2,3,"Toute la ville, casablanca",4,2500000
+2,250,3,3,2,3,"Autre secteur, casablanca",4,1560000
+2,376,3,3,2,4,"Aïn Chock, casablanca",4,5800000
+2,956,3,3,2,4,"Autre secteur, casablanca",4,4100000
+2,132,4,1,2,0,"Autre secteur, casablanca",4,1300000
+2,230,4,2,2,1,"Autre secteur, casablanca",4,1950000
+2,230,4,2,2,1,"Autre secteur, casablanca",4,1980000
+2,8516,4,2,2,3,"Autre secteur, casablanca",4,4500000
+2,201,4,3,2,0,"Autre secteur, casablanca",4,1660000
+2,1000,4,3,2,0,"Souissi, casablanca",4,17000000
+2,2000,4,3,2,0,"Souissi, casablanca",4,17000000
+2,300,4,3,2,0,"Autre secteur, casablanca",4,1800000
+2,333,4,3,2,0,"Autre secteur, casablanca",4,1299999
+2,480,4,3,2,0,"Al Boustane, casablanca",4,1550000
+2,290,4,3,2,0,"Al Boustane, casablanca",4,1530000
+2,200,4,3,2,0,"Autre secteur, casablanca",4,1620000
+2,480,4,3,2,0,"Al Boustane, casablanca",4,1600000
+2,260,4,3,2,0,"Toute la ville, casablanca",4,3300000
+2,310,4,3,2,0,"Autre secteur, casablanca",4,1480000
+2,480,4,3,2,0,"Al Boustane, casablanca",4,1630000
+2,200,4,3,2,0,"Autre secteur, casablanca",4,1500000
+2,230,4,3,2,0,"Autre secteur, casablanca",4,1550000
+2,360,4,3,2,0,"Autre secteur, casablanca",4,1660000
+2,230,4,3,2,0,"Autre secteur, casablanca",4,1630000
+2,200,4,3,2,0,"Autre secteur, casablanca",4,1440000
+2,200,4,3,2,0,"Autre secteur, casablanca",4,1620000
+2,300,4,3,2,0,"Al Boustane, casablanca",4,1300000
+2,300,4,3,2,0,"Autre secteur, casablanca",4,1800000
+2,643,4,3,2,1,"Anfa, casablanca",4,13500000
+2,200,4,3,2,2,"Polo, casablanca",4,3700000
+2,343,4,3,2,2,"Autre secteur, casablanca",4,5800000
+2,380,4,3,2,3,"Anfa, casablanca",4,8400000
+2,1146,4,3,2,3,"Anfa, casablanca",4,18800000
+2,1103,4,3,2,4,"Aïn Diab, casablanca",4,18000000
+2,1146,4,3,2,4,"Polo, casablanca",4,10900000
+2,950,4,3,2,4,"Polo, casablanca",4,10000000
+2,320,5,2,2,0,"Toute la ville, casablanca",4,2700000
+2,234,5,2,2,2,"Toute la ville, casablanca",4,700000
+2,234,5,2,2,2,"Autre secteur, casablanca",4,2800000
+2,200,5,2,2,2,"Toute la ville, casablanca",4,2000000
+2,294,5,2,2,4,"Autre secteur, casablanca",4,3990000
+2,350,5,3,2,0,"Centre, casablanca",4,2100000
+2,720,5,3,2,2,"Aïn Diab, casablanca",4,12000000
+2,1351,5,3,2,4,"Polo, casablanca",4,12834500
+2,165,3,2,3,0,"Autre secteur, casablanca",4,1800000
+2,346,3,2,3,3,"Anfa, casablanca",4,13900000
+2,73,3,3,3,0,"Autre secteur, casablanca",4,1060000
+2,1200,3,3,3,0,"Sidi Abdellah Ghiat, casablanca",4,2900000
+2,400,3,3,3,1,"Harhoura, casablanca",4,4600000
+2,257,3,3,3,2,"Toute la ville, casablanca",4,3700000
+2,210,3,3,3,3,"Harhoura, casablanca",4,2800000
+2,274,3,3,3,3,"Toute la ville, casablanca",4,2900000
+2,275,4,2,3,0,"Autre secteur, casablanca",4,2600000
+2,300,4,2,3,0,"Autre secteur, casablanca",4,4600000
+2,260,4,2,3,1,"Targa, casablanca",4,4800000
+2,310,4,2,3,2,"Oulfa, casablanca",4,3400000
+2,491,4,3,3,2,"Anfa, casablanca",4,11000000
+2,600,4,3,3,3,"Californie, casablanca",4,8500000
+2,385,4,3,3,3,"Sidi Maarouf, casablanca",4,5600000
+2,280,4,3,3,4,"Longchamps, casablanca",4,7300000
+2,1103,4,3,3,4,"Anfa, casablanca",4,18000000
+2,132,5,2,3,1,"Toute la ville, casablanca",4,1780000
+2,225,5,2,3,3,"Toute la ville, casablanca",4,2400000
+2,400,5,2,3,4,"Toute la ville, casablanca",4,1600000
+2,220,5,3,3,0,"Al Boustane, casablanca",4,1550000
+2,203,5,3,3,4,"Harhoura, casablanca",4,5800000
+2,1000,1,1,0,2,"Autre secteur, tanger",3,1000000
+2,1100,2,2,0,2,"Toute la ville, tanger",3,1000000
+2,1350,2,2,0,4,"Toute la ville, tanger",3,3300000
+2,600,3,2,0,0,"Route de Fès, tanger",3,3400000
+2,240,3,2,0,1,"Autre secteur, tanger",3,1600000
+2,300,3,2,0,3,"Tilila, tanger",3,2820000
+2,325,3,2,0,4,"Hay Salam, tanger",3,3000000
+2,297,4,2,0,0,"Toute la ville, tanger",3,2200000
+2,128,4,2,0,3,"Toute la ville, tanger",3,950000
+2,431,4,2,0,3,"Toute la ville, tanger",3,2600000
+2,746,4,2,0,4,"Anfa, tanger",3,11500000
+2,1317,4,2,0,4,"Anfa, tanger",3,18550000
+2,300,4,3,0,0,"Al Boustane, tanger",3,1300000
+2,293,5,3,0,2,"Toute la ville, tanger",3,1200000
+2,300,1,1,1,1,"Toute la ville, tanger",3,850000
+2,300,2,1,1,0,"Toute la ville, tanger",3,690000
+2,300,2,1,1,1,"Route de Fès, tanger",3,1100000
+2,200,2,1,1,2,"Autre secteur, tanger",3,1700000
+2,1000,2,1,1,2,"Toute la ville, tanger",3,1400000
+2,250,2,1,1,2,"Autre secteur, tanger",3,1700000
+2,184,2,2,1,0,"Toute la ville, tanger",3,900000
+2,200,2,2,1,0,"Autre secteur, tanger",3,1300000
+2,4000,2,2,1,1,"Toute la ville, tanger",3,850000
+2,280,2,2,1,2,"Toute la ville, tanger",3,1250000
+2,144,2,2,1,2,"Toute la ville, tanger",3,800000
+2,300,3,1,1,0,"Autre secteur, tanger",3,1740000
+2,251,3,1,1,0,"Autre secteur, tanger",3,1300000
+2,200,3,1,1,0,"Autre secteur, tanger",3,1300000
+2,121,3,1,1,0,"Al Boustane, tanger",3,1350000
+2,3402,3,1,1,1,"Autre secteur, tanger",3,1000000
+2,8855,3,1,1,1,"Autre secteur, tanger",3,3000000
+2,450,3,1,1,2,"Sidi Abdellah Ghiat, tanger",3,850000
+2,208,3,2,1,0,"Toute la ville, tanger",3,1530000
+2,200,3,2,1,0,"Autre secteur, tanger",3,1350000
+2,1000,3,2,1,0,"Route de Sidi A. Ghiat, tanger",3,1800000
+2,149,3,2,1,0,"Al Boustane, tanger",3,1300000
+2,380,3,2,1,0,"Route de Fès, tanger",3,3100000
+2,311,3,2,1,0,"Toute la ville, tanger",3,1530000
+2,153,3,2,1,0,"Al Boustane, tanger",3,1320000
+2,165,3,2,1,0,"Autre secteur, tanger",3,1450000
+2,1000,3,2,1,0,"Route d'Ourika, tanger",3,2800000
+2,200,3,2,1,0,"Autre secteur, tanger",3,1250000
+2,300,3,2,1,0,"Al Boustane, tanger",3,1300000
+2,200,3,2,1,0,"Autre secteur, tanger",3,1350000
+2,220,3,2,1,0,"Al Boustane, tanger",3,1300000
+2,200,3,2,1,0,"Autre secteur, tanger",3,1350000
+2,1000,3,2,1,1,"Route de Fès, tanger",3,2000000
+2,2100,3,2,1,1,"Route d'Ourika, tanger",3,2000000
+2,120,3,2,1,1,"Toute la ville, tanger",3,2000000
+2,560,3,2,1,1,"Toute la ville, tanger",3,1400000
+2,300,3,2,1,1,"Toute la ville, tanger",3,900000
+2,250,3,2,1,2,"Autre secteur, tanger",3,2500000
+2,175,3,2,1,2,"Autre secteur, tanger",3,1720000
+2,197,3,2,1,2,"Autre secteur, tanger",3,3600000
+2,180,3,2,1,2,"Toute la ville, tanger",3,1350000
+2,675,3,2,1,2,"Toute la ville, tanger",3,2400000
+2,150,3,2,1,2,"Toute la ville, tanger",3,1530000
+2,180,3,2,1,2,"Autre secteur, tanger",3,2100000
+2,10000,3,2,1,2,"Autre secteur, tanger",3,2500000
+2,175,3,2,1,3,"Harhoura, tanger",3,3550000
+2,326,3,2,1,3,"Toute la ville, tanger",3,1400000
+2,800,3,2,1,3,"Toute la ville, tanger",3,6365000
+2,160,3,3,1,0,"Route de Ouarzazate, tanger",3,980000
+2,400,3,3,1,0,"Harhoura, tanger",3,5600000
+2,160,3,3,1,0,"Route de Ouarzazate, tanger",3,880000
+2,180,3,3,1,1,"Toute la ville, tanger",3,1500000
+2,2500,3,3,1,1,"Autre secteur, tanger",3,3200000
+2,588,3,3,1,1,"Annakhil, tanger",3,3400000
+2,300,3,3,1,1,"Toute la ville, tanger",3,880000
+2,201,3,3,1,1,"Toute la ville, tanger",3,1850000
+2,2500,3,3,1,1,"Toute la ville, tanger",3,1200000
+2,395,3,3,1,2,"Autre secteur, tanger",3,2850000
+2,387,3,3,1,2,"Autre secteur, tanger",3,2400000
+2,168,3,3,1,2,"Toute la ville, tanger",3,1750000
+2,606,3,3,1,2,"Targa, tanger",3,4500000
+2,250,3,3,1,3,"Autre secteur, tanger",3,2700000
+2,837,3,3,1,3,"Toute la ville, tanger",3,3500000
+2,480,3,3,1,3,"Toute la ville, tanger",3,5200000
+2,234,3,3,1,3,"Autre secteur, tanger",3,2500000
+2,330,4,1,1,1,"Autre secteur, tanger",3,1690000
+2,3088,4,1,1,3,"Autre secteur, tanger",3,1500000
+2,2500,4,1,1,4,"Souissi, tanger",3,11500000
+2,350,4,2,1,0,"Al Boustane, tanger",3,1300000
+2,200,4,2,1,1,"Toute la ville, tanger",3,2700000
+2,370,4,2,1,2,"Targa, tanger",3,2900000
+2,430,4,2,1,2,"Route de Ouarzazate, tanger",3,1200000
+2,260,4,2,1,2,"Toute la ville, tanger",3,1300000
+2,200,4,2,1,3,"Toute la ville, tanger",3,800000
+2,128,4,2,1,3,"Toute la ville, tanger",3,950000
+2,246,4,2,1,3,"Toute la ville, tanger",3,1750000
+2,724,4,2,1,3,"Toute la ville, tanger",3,2000000
+2,148,4,2,1,4,"Toute la ville, tanger",3,1900000
+2,1360,4,2,1,4,"Polo, tanger",3,11500000
+2,250,4,2,1,4,"Toute la ville, tanger",3,3200000
+2,300,4,3,1,0,"Toute la ville, tanger",3,2890000
+2,300,4,3,1,0,"Hay Targa, tanger",3,3000000
+2,194,4,3,1,0,"Toute la ville, tanger",3,4400000
+2,539,4,3,1,0,"Targa, tanger",3,5900000
+2,3000,4,3,1,0,"Toute la ville, tanger",3,2000000
+2,506,4,3,1,1,"Toute la ville, tanger",3,3500000
+2,450,4,3,1,1,"Harhoura, tanger",3,5800000
+2,1200,4,3,1,1,"Toute la ville, tanger",3,2400000
+2,306,4,3,1,1,"Route d'Ourika, tanger",3,3000000
+2,200,4,3,1,2,"Toute la ville, tanger",3,1750000
+2,3477,4,3,1,2,"Toute la ville, tanger",3,2900000
+2,334,4,3,1,2,"Autre secteur, tanger",3,2300000
+2,431,4,3,1,3,"Hay Riad, tanger",3,6800000
+2,220,4,3,1,3,"Hay Riad, tanger",3,5800000
+2,490,4,3,1,3,"Toute la ville, tanger",3,5700000
+2,240,4,3,1,3,"Harhoura, tanger",3,3700000
+2,400,4,3,1,3,"Autre secteur, tanger",3,4200000
+2,700,4,3,1,3,"Autre secteur, tanger",3,4000000
+2,460,4,3,1,3,"Autre secteur, tanger",3,6500000
+2,1900,4,3,1,4,"Souissi, tanger",3,10000000
+2,1050,4,3,1,4,"Souissi, tanger",3,8300000
+2,999,5,2,1,2,"Toute la ville, tanger",3,1400000
+2,300,5,2,1,2,"Targa, tanger",3,3500000
+2,342,5,2,1,3,"Toute la ville, tanger",3,2900000
+2,1143,5,2,1,3,"Agdal, tanger",3,7436900
+2,233,5,2,1,3,"Mabella, tanger",3,2250000
+2,340,5,2,1,4,"Agdal, tanger",3,1700000
+2,600,5,3,1,0,"Toute la ville, tanger",3,2200000
+2,240,5,3,1,0,"Toute la ville, tanger",3,2300000
+2,750,5,3,1,2,"Toute la ville, tanger",3,4000000
+2,10000,5,3,1,4,"Toute la ville, tanger",3,1800000
+2,590,5,3,1,4,"Toute la ville, tanger",3,1600000
+2,775,1,1,2,4,"Polo, tanger",3,7000000
+2,126,2,1,2,3,"Harhoura, tanger",3,2200000
+2,250,2,2,2,2,"Autre secteur, tanger",3,1700000
+2,360,2,2,2,4,"Toute la ville, tanger",3,1300000
+2,300,3,1,2,1,"Autre secteur, tanger",3,1200000
+2,250,3,2,2,0,"Autre secteur, tanger",3,1200000
+2,260,3,2,2,1,"Toute la ville, tanger",3,1900000
+2,520,3,2,2,2,"Hay Targa, tanger",3,3800000
+2,249,3,2,2,2,"Autre secteur, tanger",3,2100000
+2,130,3,2,2,2,"Toute la ville, tanger",3,1800000
+2,208,3,2,2,2,"Al Wifaq, tanger",3,2250000
+2,190,3,2,2,2,"Toute la ville, tanger",3,730000
+2,398,3,2,2,2,"Toute la ville, tanger",3,4500000
+2,445,3,2,2,3,"Hay Riad, tanger",3,6000000
+2,1200,3,2,2,3,"Toute la ville, tanger",3,3500000
+2,242,3,2,2,3,"Toute la ville, tanger",3,3300000
+2,436,3,2,2,3,"Toute la ville, tanger",3,3750000
+2,387,3,2,2,4,"Toute la ville, tanger",3,1900000
+2,378,3,3,2,0,"Autre secteur, tanger",3,2000000
+2,1200,3,3,2,0,"Route d'Ourika, tanger",3,1200000
+2,200,3,3,2,0,"Toute la ville, tanger",3,3570000
+2,200,3,3,2,0,"Autre secteur, tanger",3,1440000
+2,650,3,3,2,0,"Toute la ville, tanger",3,3000000
+2,200,3,3,2,0,"Autre secteur, tanger",3,1400000
+2,1000,3,3,2,0,"Route d'Ourika, tanger",3,1600000
+2,219,3,3,2,1,"Autre secteur, tanger",3,3000000
+2,2000,3,3,2,2,"Autre secteur, tanger",3,1800000
+2,230,3,3,2,2,"Toute la ville, tanger",3,2400000
+2,312,3,3,2,2,"Toute la ville, tanger",3,1400000
+2,299,3,3,2,2,"Toute la ville, tanger",3,3400000
+2,257,3,3,2,2,"Toute la ville, tanger",3,2150000
+2,300,3,3,2,2,"Targa, tanger",3,4000000
+2,240,3,3,2,2,"Toute la ville, tanger",3,1690000
+2,294,3,3,2,2,"Toute la ville, tanger",3,2200000
+2,180,3,3,2,2,"Toute la ville, tanger",3,1350000
+2,334,3,3,2,2,"Route de Tamansourt, tanger",3,860000
+2,200,3,3,2,2,"Autre secteur, tanger",3,1200000
+2,180,3,3,2,2,"Toute la ville, tanger",3,1800000
+2,300,3,3,2,2,"Toute la ville, tanger",3,1800000
+2,261,3,3,2,2,"Toute la ville, tanger",3,4390000
+2,257,3,3,2,2,"Toute la ville, tanger",3,1750000
+2,250,3,3,2,3,"Autre secteur, tanger",3,1560000
+2,376,3,3,2,4,"Aïn Chock, tanger",3,5800000
+2,415,3,3,2,4,"Aviation, tanger",3,4000000
+2,450,3,3,2,4,"Harhoura, tanger",3,4500000
+2,956,3,3,2,4,"Autre secteur, tanger",3,4100000
+2,132,4,1,2,0,"Autre secteur, tanger",3,1300000
+2,386,4,1,2,3,"Route de Tamansourt, tanger",3,1550000
+2,230,4,2,2,1,"Autre secteur, tanger",3,1950000
+2,230,4,2,2,1,"Autre secteur, tanger",3,1980000
+2,250,4,2,2,2,"Toute la ville, tanger",3,1600000
+2,229,4,2,2,2,"Toute la ville, tanger",3,2000000
+2,200,4,2,2,2,"Autre secteur, tanger",3,1700000
+2,119,4,2,2,2,"Toute la ville, tanger",3,1300000
+2,4500,4,2,2,2,"Toute la ville, tanger",3,2700000
+2,231,4,2,2,2,"Toute la ville, tanger",3,1250000
+2,189,4,2,2,3,"Toute la ville, tanger",3,2600000
+2,220,4,2,2,3,"Toute la ville, tanger",3,3100000
+2,8516,4,2,2,3,"Autre secteur, tanger",3,4500000
+2,240,4,2,2,3,"Toute la ville, tanger",3,2800000
+2,1127,4,2,2,3,"Autre secteur, tanger",3,7500000
+2,250,4,2,2,4,"Toute la ville, tanger",3,1800000
+2,218,4,2,2,4,"Saada, tanger",3,1600000
+2,180,4,3,2,0,"Achakar, tanger",3,1950000
+2,176,4,3,2,1,"Achakar, tanger",3,2000000
+2,1146,4,3,2,4,"Polo, tanger",3,10900000
+2,200,4,3,2,4,"Toute la ville, tanger",3,840000
+2,320,4,3,2,4,"Hay Riad, tanger",3,6000000
+2,157,4,3,2,4,"Toute la ville, tanger",3,2100000
+2,950,4,3,2,4,"Polo, tanger",3,10000000
+2,320,5,2,2,0,"Toute la ville, tanger",3,2700000
+2,234,5,2,2,2,"Toute la ville, tanger",3,700000
+2,234,5,2,2,2,"Autre secteur, tanger",3,2800000
+2,200,5,2,2,2,"Toute la ville, tanger",3,2000000
+2,300,5,2,2,3,"Route de Casablanca, tanger",3,3000000
+2,200,5,2,2,3,"Toute la ville, tanger",3,980000
+2,341,5,2,2,4,"Toute la ville, tanger",3,1500000
+2,374,5,2,2,4,"Toute la ville, tanger",3,2500000
+2,294,5,2,2,4,"Autre secteur, tanger",3,3990000
+2,302,5,3,2,0,"Ville Nouvelle, tanger",3,2650000
+2,170,5,3,2,0,"Toute la ville, tanger",3,680000
+2,350,5,3,2,0,"Centre, tanger",3,2100000
+2,300,5,3,2,1,"Toute la ville, tanger",3,2200000
+2,700,5,3,2,1,"Targa, tanger",3,5600000
+2,14174,5,3,2,1,"Autre secteur, tanger",3,6400000
+2,378,5,3,2,1,"Autre secteur, tanger",3,5000000
+2,324,5,3,2,2,"Toute la ville, tanger",3,3500000
+2,420,5,3,2,2,"Toute la ville, tanger",3,2800000
+2,300,5,3,2,3,"Hay Dakhla, tanger",3,2600000
+2,250,5,3,2,3,"Toute la ville, tanger",3,1800000
+2,345,5,3,2,3,"Toute la ville, tanger",3,2100000
+2,300,5,3,2,3,"Toute la ville, tanger",3,750000
+2,1351,5,3,2,4,"Polo, tanger",3,12834500
+2,225,5,3,2,4,"Toute la ville, tanger",3,1600000
+2,165,3,2,3,0,"Autre secteur, tanger",3,1800000
+2,73,3,3,3,0,"Autre secteur, tanger",3,1060000
+2,1200,3,3,3,0,"Sidi Abdellah Ghiat, tanger",3,2900000
+2,400,3,3,3,1,"Harhoura, tanger",3,4600000
+2,248,3,3,3,2,"Harhoura, tanger",3,3900000
+2,200,3,3,3,2,"Route de Fès, tanger",3,1800000
+2,257,3,3,3,2,"Toute la ville, tanger",3,3700000
+2,215,3,3,3,2,"Harhoura, tanger",3,3200000
+2,198,3,3,3,2,"Harhoura, tanger",3,4200000
+2,210,3,3,3,3,"Harhoura, tanger",3,2800000
+2,274,3,3,3,3,"Toute la ville, tanger",3,2900000
+2,83,4,1,3,3,"Ancienne Médina, tanger",3,1500000
+2,275,4,2,3,0,"Autre secteur, tanger",3,2600000
+2,260,4,2,3,1,"Targa, tanger",3,4800000
+2,491,4,3,3,2,"Anfa, tanger",3,11000000
+2,319,4,3,3,2,"Route d'Immouzere, tanger",3,4500000
+2,190,4,3,3,2,"Toute la ville, tanger",3,3200000
+2,1103,4,3,3,4,"Anfa, tanger",3,18000000
+2,132,5,2,3,1,"Toute la ville, tanger",3,1780000
+2,225,5,2,3,3,"Toute la ville, tanger",3,2400000
+2,400,5,2,3,4,"Toute la ville, tanger",3,1600000
+2,220,5,3,3,0,"Al Boustane, tanger",3,1550000
+2,400,5,3,3,2,"Centre, tanger",3,2200000
+2,394,5,3,3,2,"Toute la ville, tanger",3,3660000
+2,300,5,3,3,2,"Route d'Ourika, tanger",3,1700000
+2,485,5,3,3,4,"Agdal, tanger",3,2750000
+2,203,5,3,3,4,"Harhoura, tanger",3,5800000
+2,542,2,1,0,1,"Autre secteur, rabat",0,3000000
+2,1100,2,2,0,2,"Toute la ville, rabat",0,1000000
+2,1350,2,2,0,4,"Toute la ville, rabat",0,3300000
+2,600,3,2,0,0,"Route de Fès, rabat",0,3400000
+2,240,3,2,0,1,"Autre secteur, rabat",0,1600000
+2,297,4,2,0,0,"Toute la ville, rabat",0,2200000
+2,128,4,2,0,3,"Toute la ville, rabat",0,950000
+2,431,4,2,0,3,"Toute la ville, rabat",0,2600000
+2,746,4,2,0,4,"Anfa, rabat",0,11500000
+2,1317,4,2,0,4,"Anfa, rabat",0,18550000
+2,300,4,3,0,0,"Al Boustane, rabat",0,1300000
+2,293,5,3,0,2,"Toute la ville, rabat",0,1200000
+2,120,1,1,1,0,"Route d'Ourika, rabat",0,1630000
+2,250,1,1,1,0,"Toute la ville, rabat",0,1700000
+2,300,1,1,1,1,"Toute la ville, rabat",0,850000
+2,300,2,1,1,0,"Toute la ville, rabat",0,690000
+2,300,2,1,1,1,"Route de Fès, rabat",0,1100000
+2,200,2,1,1,2,"Autre secteur, rabat",0,1700000
+2,200,2,2,1,0,"Autre secteur, rabat",0,1300000
+2,4000,2,2,1,1,"Toute la ville, rabat",0,850000
+2,300,3,1,1,0,"Autre secteur, rabat",0,1740000
+2,251,3,1,1,0,"Autre secteur, rabat",0,1300000
+2,200,3,1,1,0,"Autre secteur, rabat",0,1300000
+2,121,3,1,1,0,"Al Boustane, rabat",0,1350000
+2,8855,3,1,1,1,"Autre secteur, rabat",0,3000000
+2,450,3,1,1,2,"Sidi Abdellah Ghiat, rabat",0,850000
+2,200,3,2,1,0,"Autre secteur, rabat",0,1350000
+2,149,3,2,1,0,"Al Boustane, rabat",0,1300000
+2,153,3,2,1,0,"Al Boustane, rabat",0,1320000
+2,165,3,2,1,0,"Autre secteur, rabat",0,1450000
+2,200,3,2,1,0,"Autre secteur, rabat",0,1250000
+2,300,3,2,1,0,"Al Boustane, rabat",0,1300000
+2,200,3,2,1,0,"Autre secteur, rabat",0,1350000
+2,220,3,2,1,0,"Al Boustane, rabat",0,1300000
+2,200,3,2,1,0,"Autre secteur, rabat",0,1350000
+2,1000,3,2,1,1,"Route de Fès, rabat",0,2000000
+2,2100,3,2,1,1,"Route d'Ourika, rabat",0,2000000
+2,120,3,2,1,1,"Toute la ville, rabat",0,2000000
+2,560,3,2,1,1,"Toute la ville, rabat",0,1400000
+2,300,3,2,1,1,"Toute la ville, rabat",0,900000
+2,250,3,2,1,2,"Autre secteur, rabat",0,2500000
+2,175,3,2,1,2,"Autre secteur, rabat",0,1720000
+2,197,3,2,1,2,"Autre secteur, rabat",0,3600000
+2,180,3,2,1,2,"Autre secteur, rabat",0,2100000
+2,10000,3,2,1,2,"Autre secteur, rabat",0,2500000
+2,228,3,2,1,4,"Mabella, rabat",0,2650000
+2,400,3,3,1,0,"Harhoura, rabat",0,5600000
+2,180,3,3,1,1,"Toute la ville, rabat",0,1500000
+2,2500,3,3,1,1,"Autre secteur, rabat",0,3200000
+2,300,3,3,1,1,"Toute la ville, rabat",0,880000
+2,201,3,3,1,1,"Toute la ville, rabat",0,1850000
+2,2500,3,3,1,1,"Toute la ville, rabat",0,1200000
+2,395,3,3,1,2,"Autre secteur, rabat",0,2850000
+2,387,3,3,1,2,"Autre secteur, rabat",0,2400000
+2,250,3,3,1,3,"Autre secteur, rabat",0,2700000
+2,615,3,3,1,4,"Hay Riad, rabat",0,7000000
+2,330,4,1,1,1,"Autre secteur, rabat",0,1690000
+2,3088,4,1,1,3,"Autre secteur, rabat",0,1500000
+2,2500,4,1,1,4,"Souissi, rabat",0,11500000
+2,350,4,2,1,0,"Al Boustane, rabat",0,1300000
+2,230,4,2,1,2,"Toute la ville, rabat",0,600000
+2,260,4,2,1,2,"Toute la ville, rabat",0,1300000
+2,300,4,3,1,0,"Toute la ville, rabat",0,2890000
+2,194,4,3,1,0,"Toute la ville, rabat",0,4400000
+2,3000,4,3,1,0,"Toute la ville, rabat",0,2000000
+2,820,4,3,1,0,"Toute la ville, rabat",0,7800000
+2,450,4,3,1,1,"Harhoura, rabat",0,5800000
+2,431,4,3,1,3,"Hay Riad, rabat",0,6800000
+2,220,4,3,1,3,"Hay Riad, rabat",0,5800000
+2,400,4,3,1,3,"Autre secteur, rabat",0,4200000
+2,1900,4,3,1,4,"Souissi, rabat",0,10000000
+2,1050,4,3,1,4,"Souissi, rabat",0,8300000
+2,230,5,2,1,0,"Toute la ville, rabat",0,600000
+2,233,5,2,1,3,"Mabella, rabat",0,2250000
+2,600,5,3,1,0,"Toute la ville, rabat",0,2200000
+2,240,5,3,1,0,"Toute la ville, rabat",0,2300000
+2,326,5,3,1,2,"Autre secteur, rabat",0,1900000
+2,2100,5,3,1,3,"Souissi, rabat",0,9500000
+2,475,5,3,1,4,"Harhoura, rabat",0,7500000
+2,775,1,1,2,4,"Polo, rabat",0,7000000
+2,126,2,1,2,3,"Harhoura, rabat",0,2200000
+2,250,2,2,2,2,"Autre secteur, rabat",0,1700000
+2,300,3,1,2,1,"Autre secteur, rabat",0,1200000
+2,269,3,2,2,0,"Autre secteur, rabat",0,3200000
+2,2000,3,2,2,0,"Toute la ville, rabat",0,1700000
+2,250,3,2,2,0,"Autre secteur, rabat",0,1200000
+2,260,3,2,2,1,"Toute la ville, rabat",0,1900000
+2,249,3,2,2,2,"Autre secteur, rabat",0,2100000
+2,445,3,2,2,3,"Hay Riad, rabat",0,6000000
+2,378,3,3,2,0,"Autre secteur, rabat",0,2000000
+2,200,3,3,2,0,"Autre secteur, rabat",0,1440000
+2,200,3,3,2,0,"Autre secteur, rabat",0,1400000
+2,374,3,3,2,1,"Autre secteur, rabat",0,4250000
+2,2000,3,3,2,2,"Autre secteur, rabat",0,1800000
+2,200,3,3,2,2,"Autre secteur, rabat",0,1200000
+2,150,3,3,2,3,"Toute la ville, rabat",0,2500000
+2,250,3,3,2,3,"Autre secteur, rabat",0,1560000
+2,132,4,1,2,0,"Autre secteur, rabat",0,1300000
+2,350,4,2,2,0,"Al Boustane, rabat",0,1750000
+2,230,4,2,2,1,"Autre secteur, rabat",0,1950000
+2,230,4,2,2,1,"Autre secteur, rabat",0,1980000
+2,200,4,2,2,2,"Autre secteur, rabat",0,1700000
+2,8516,4,2,2,3,"Autre secteur, rabat",0,4500000
+2,1000,4,3,2,0,"Souissi, rabat",0,17000000
+2,2000,4,3,2,0,"Souissi, rabat",0,17000000
+2,380,4,3,2,1,"Autre secteur, rabat",0,2600000
+2,240,4,3,2,1,"Al Boustane, rabat",0,1350000
+2,643,4,3,2,1,"Anfa, rabat",0,13500000
+2,360,4,3,2,2,"Hay Riad, rabat",0,6500000
+2,350,4,3,2,2,"Hay Riad, rabat",0,7500000
+2,681,4,3,2,3,"Autre secteur, rabat",0,3950000
+2,684,4,3,2,3,"Autre secteur, rabat",0,3940000
+2,320,4,3,2,4,"Hay Riad, rabat",0,6000000
+2,320,5,2,2,0,"Toute la ville, rabat",0,2700000
+2,234,5,2,2,2,"Autre secteur, rabat",0,2800000
+2,294,5,2,2,4,"Autre secteur, rabat",0,3990000
+2,350,5,3,2,0,"Centre, rabat",0,2100000
+2,1702,5,3,2,1,"Souissi, rabat",0,21000000
+2,165,3,2,3,0,"Autre secteur, rabat",0,1800000
+2,346,3,2,3,3,"Anfa, rabat",0,13900000
+2,73,3,3,3,0,"Autre secteur, rabat",0,1060000
+2,1200,3,3,3,0,"Sidi Abdellah Ghiat, rabat",0,2900000
+2,400,3,3,3,1,"Harhoura, rabat",0,4600000
+2,248,3,3,3,2,"Harhoura, rabat",0,3900000
+2,215,3,3,3,2,"Harhoura, rabat",0,3200000
+2,198,3,3,3,2,"Harhoura, rabat",0,4200000
+2,210,3,3,3,3,"Harhoura, rabat",0,2800000
+2,275,4,2,3,0,"Autre secteur, rabat",0,2600000
+2,300,4,2,3,0,"Autre secteur, rabat",0,4600000
+2,260,4,2,3,1,"Targa, rabat",0,4800000
+2,215,4,3,3,0,"Autre secteur, rabat",0,1600000
+2,208,4,3,3,0,"Harhoura, rabat",0,3500000
+2,300,4,3,3,1,"Autre secteur, rabat",0,2200001
+2,270,4,3,3,1,"Harhoura, rabat",0,4600000
+2,491,4,3,3,2,"Anfa, rabat",0,11000000
+2,280,4,3,3,4,"Longchamps, rabat",0,7300000
+2,1103,4,3,3,4,"Anfa, rabat",0,18000000
+2,132,5,2,3,1,"Toute la ville, rabat",0,1780000
+2,225,5,2,3,3,"Toute la ville, rabat",0,2400000
+2,400,5,2,3,4,"Toute la ville, rabat",0,1600000
+2,220,5,3,3,0,"Al Boustane, rabat",0,1550000
+2,298,5,3,3,1,"Harhoura, rabat",0,7500000
+2,203,5,3,3,4,"Harhoura, rabat",0,5800000
+2,1000,1,1,0,2,"Autre secteur, marrakech",2,1000000
+2,1100,2,2,0,2,"Toute la ville, marrakech",2,1000000
+2,1350,2,2,0,4,"Toute la ville, marrakech",2,3300000
+2,600,3,2,0,0,"Route de Fès, marrakech",2,3400000
+2,297,4,2,0,0,"Toute la ville, marrakech",2,2200000
+2,431,4,2,0,3,"Toute la ville, marrakech",2,2600000
+2,746,4,2,0,4,"Anfa, marrakech",2,11500000
+2,1317,4,2,0,4,"Anfa, marrakech",2,18550000
+2,293,5,3,0,2,"Toute la ville, marrakech",2,1200000
+2,120,1,1,1,0,"Route d'Ourika, marrakech",2,1630000
+2,300,1,1,1,1,"Toute la ville, marrakech",2,850000
+2,300,2,1,1,1,"Route de Fès, marrakech",2,1100000
+2,250,2,1,1,2,"Autre secteur, marrakech",2,1700000
+2,120,2,2,1,2,"Autre secteur, marrakech",2,900000
+2,280,2,2,1,2,"Toute la ville, marrakech",2,1250000
+2,144,2,2,1,2,"Toute la ville, marrakech",2,800000
+2,81,2,2,1,2,"Toute la ville, marrakech",2,650000
+2,300,3,1,1,0,"Autre secteur, marrakech",2,1740000
+2,251,3,1,1,0,"Autre secteur, marrakech",2,1300000
+2,200,3,1,1,0,"Autre secteur, marrakech",2,1300000
+2,121,3,1,1,0,"Al Boustane, marrakech",2,1350000
+2,3402,3,1,1,1,"Autre secteur, marrakech",2,1000000
+2,580,3,1,1,1,"Autre secteur, marrakech",2,850000
+2,450,3,1,1,2,"Sidi Abdellah Ghiat, marrakech",2,850000
+2,1000,3,2,1,0,"Route de Sidi A. Ghiat, marrakech",2,1800000
+2,380,3,2,1,0,"Route de Fès, marrakech",2,3100000
+2,1000,3,2,1,0,"Route d'Ourika, marrakech",2,2800000
+2,1000,3,2,1,1,"Route de Fès, marrakech",2,2000000
+2,2100,3,2,1,1,"Route d'Ourika, marrakech",2,2000000
+2,250,3,2,1,2,"Autre secteur, marrakech",2,2500000
+2,175,3,2,1,2,"Autre secteur, marrakech",2,1720000
+2,197,3,2,1,2,"Autre secteur, marrakech",2,3600000
+2,180,3,2,1,2,"Toute la ville, marrakech",2,1350000
+2,675,3,2,1,2,"Toute la ville, marrakech",2,2400000
+2,150,3,2,1,2,"Toute la ville, marrakech",2,1530000
+2,180,3,2,1,2,"Autre secteur, marrakech",2,2100000
+2,10000,3,2,1,2,"Autre secteur, marrakech",2,2500000
+2,160,3,3,1,0,"Route de Ouarzazate, marrakech",2,980000
+2,160,3,3,1,0,"Route de Ouarzazate, marrakech",2,880000
+2,588,3,3,1,1,"Annakhil, marrakech",2,3400000
+2,606,3,3,1,2,"Targa, marrakech",2,4500000
+2,250,3,3,1,3,"Autre secteur, marrakech",2,2700000
+2,837,3,3,1,3,"Toute la ville, marrakech",2,3500000
+2,234,3,3,1,3,"Autre secteur, marrakech",2,2500000
+2,330,4,1,1,1,"Autre secteur, marrakech",2,1690000
+2,250,4,1,1,2,"Hay Hassani, marrakech",2,3000000
+2,3088,4,1,1,3,"Autre secteur, marrakech",2,1500000
+2,370,4,2,1,2,"Targa, marrakech",2,2900000
+2,430,4,2,1,2,"Route de Ouarzazate, marrakech",2,1200000
+2,160,4,2,1,3,"Afaq, marrakech",2,1600000
+2,148,4,2,1,4,"Toute la ville, marrakech",2,1900000
+2,250,4,2,1,4,"Toute la ville, marrakech",2,3200000
+2,300,4,3,1,0,"Hay Targa, marrakech",2,3000000
+2,539,4,3,1,0,"Targa, marrakech",2,5900000
+2,306,4,3,1,1,"Route d'Ourika, marrakech",2,3000000
+2,240,4,3,1,3,"Targa, marrakech",2,2850000
+2,300,5,2,1,2,"Targa, marrakech",2,3500000
+2,340,5,2,1,4,"Agdal, marrakech",2,1700000
+2,600,5,3,1,0,"Toute la ville, marrakech",2,2200000
+2,401,5,3,1,2,"Targa, marrakech",2,4000000
+2,126,2,1,2,3,"Harhoura, marrakech",2,2200000
+2,250,2,2,2,2,"Autre secteur, marrakech",2,1700000
+2,360,2,2,2,4,"Toute la ville, marrakech",2,1300000
+2,300,3,1,2,1,"Autre secteur, marrakech",2,1200000
+2,2000,3,2,2,0,"Toute la ville, marrakech",2,1700000
+2,520,3,2,2,2,"Hay Targa, marrakech",2,3800000
+2,387,3,2,2,4,"Toute la ville, marrakech",2,1900000
+2,1200,3,3,2,0,"Route d'Ourika, marrakech",2,1200000
+2,1000,3,3,2,0,"Route d'Ourika, marrakech",2,1600000
+2,300,3,3,2,2,"Targa, marrakech",2,4000000
+2,334,3,3,2,2,"Route de Tamansourt, marrakech",2,860000
+2,406,3,3,2,3,"Annakhil, marrakech",2,4850000
+2,450,3,3,2,4,"Harhoura, marrakech",2,4500000
+2,956,3,3,2,4,"Autre secteur, marrakech",2,4100000
+2,132,4,1,2,0,"Autre secteur, marrakech",2,1300000
+2,386,4,1,2,3,"Route de Tamansourt, marrakech",2,1550000
+2,133,4,2,2,0,"Toute la ville, marrakech",2,1350000
+2,1000,4,2,2,0,"Toute la ville, marrakech",2,2300000
+2,230,4,2,2,1,"Autre secteur, marrakech",2,1950000
+2,230,4,2,2,1,"Autre secteur, marrakech",2,1980000
+2,250,4,2,2,4,"Toute la ville, marrakech",2,1800000
+2,320,4,3,2,0,"Route de Tahanaoute, marrakech",2,5500000
+2,545,4,3,2,0,"Annakhil, marrakech",2,5000000
+2,120,4,3,2,0,"Route d'Ourika, marrakech",2,1250000
+2,302,4,3,2,0,"Targa, marrakech",2,3000000
+2,400,4,3,2,0,"Targa, marrakech",2,5000000
+2,500,4,3,2,1,"Route de Tahanaoute, marrakech",2,5600000
+2,221,4,3,2,1,"M'Hamid, marrakech",2,1800000
+2,280,4,3,2,2,"Targa, marrakech",2,2800000
+2,206,4,3,2,2,"Route de Safi, marrakech",2,1450000
+2,421,4,3,2,3,"Targa, marrakech",2,4800000
+2,240,4,3,2,3,"Targa, marrakech",2,3000000
+2,1146,4,3,2,4,"Polo, marrakech",2,10900000
+2,200,4,3,2,4,"Toute la ville, marrakech",2,840000
+2,320,4,3,2,4,"Hay Riad, marrakech",2,6000000
+2,157,4,3,2,4,"Toute la ville, marrakech",2,2100000
+2,950,4,3,2,4,"Polo, marrakech",2,10000000
+2,234,5,2,2,2,"Toute la ville, marrakech",2,700000
+2,234,5,2,2,2,"Autre secteur, marrakech",2,2800000
+2,200,5,2,2,2,"Toute la ville, marrakech",2,2000000
+2,300,5,2,2,3,"Route de Casablanca, marrakech",2,3000000
+2,341,5,2,2,4,"Toute la ville, marrakech",2,1500000
+2,374,5,2,2,4,"Toute la ville, marrakech",2,2500000
+2,294,5,2,2,4,"Autre secteur, marrakech",2,3990000
+2,170,5,3,2,0,"Toute la ville, marrakech",2,680000
+2,700,5,3,2,1,"Targa, marrakech",2,5600000
+2,165,3,2,3,0,"Autre secteur, marrakech",2,1800000
+2,300,3,2,3,3,"Harhoura, marrakech",2,1985000
+2,225,3,2,3,3,"Toute la ville, marrakech",2,1800000
+2,346,3,2,3,3,"Anfa, marrakech",2,13900000
+2,200,3,2,3,4,"Toute la ville, marrakech",2,650000
+2,73,3,3,3,0,"Autre secteur, marrakech",2,1060000
+2,1200,3,3,3,0,"Sidi Abdellah Ghiat, marrakech",2,2900000
+2,400,3,3,3,1,"Harhoura, marrakech",2,4600000
+2,200,3,3,3,2,"Route de Fès, marrakech",2,1800000
+2,210,3,3,3,3,"Harhoura, marrakech",2,2800000
+2,274,3,3,3,3,"Toute la ville, marrakech",2,2900000
+2,83,4,1,3,3,"Ancienne Médina, marrakech",2,1500000
+2,275,4,2,3,0,"Autre secteur, marrakech",2,2600000
+2,260,4,2,3,1,"Targa, marrakech",2,4800000
+2,215,4,3,3,0,"Autre secteur, marrakech",2,1600000
+2,208,4,3,3,0,"Harhoura, marrakech",2,3500000
+2,260,4,3,3,1,"Toute la ville, marrakech",2,2200000
+2,321,4,3,3,1,"Toute la ville, marrakech",2,4900000
+2,300,4,3,3,1,"Autre secteur, marrakech",2,2200001
+2,270,4,3,3,1,"Harhoura, marrakech",2,4600000
+2,225,4,3,3,1,"Toute la ville, marrakech",2,3780000
+2,976,4,3,3,3,"Targa, marrakech",2,3500000
+2,280,4,3,3,4,"Longchamps, marrakech",2,7300000
+2,1103,4,3,3,4,"Anfa, marrakech",2,18000000
+2,132,5,2,3,1,"Toute la ville, marrakech",2,1780000
+2,225,5,2,3,3,"Toute la ville, marrakech",2,2400000
+2,400,5,2,3,4,"Toute la ville, marrakech",2,1600000
+2,220,5,3,3,0,"Al Boustane, marrakech",2,1550000
+2,298,5,3,3,1,"Harhoura, marrakech",2,7500000
+2,300,5,3,3,2,"Route d'Ourika, marrakech",2,1700000
+2,1000,1,1,0,2,"Autre secteur, agadir",1,1000000
+2,542,2,1,0,1,"Autre secteur, agadir",1,3000000
+2,1100,2,2,0,2,"Toute la ville, agadir",1,1000000
+2,1350,2,2,0,4,"Toute la ville, agadir",1,3300000
+2,600,3,2,0,0,"Route de Fès, agadir",1,3400000
+2,300,3,2,0,3,"Tilila, agadir",1,2820000
+2,297,4,2,0,0,"Toute la ville, agadir",1,2200000
+2,431,4,2,0,3,"Toute la ville, agadir",1,2600000
+2,746,4,2,0,4,"Anfa, agadir",1,11500000
+2,1317,4,2,0,4,"Anfa, agadir",1,18550000
+2,293,5,3,0,2,"Toute la ville, agadir",1,1200000
+2,120,1,1,1,0,"Route d'Ourika, agadir",1,1630000
+2,300,1,1,1,1,"Toute la ville, agadir",1,850000
+2,300,2,1,1,0,"Toute la ville, agadir",1,690000
+2,300,2,1,1,1,"Route de Fès, agadir",1,1100000
+2,250,2,1,1,2,"Autre secteur, agadir",1,1700000
+2,120,2,2,1,2,"Autre secteur, agadir",1,900000
+2,280,2,2,1,2,"Toute la ville, agadir",1,1250000
+2,144,2,2,1,2,"Toute la ville, agadir",1,800000
+2,81,2,2,1,2,"Toute la ville, agadir",1,650000
+2,300,3,1,1,0,"Autre secteur, agadir",1,1740000
+2,251,3,1,1,0,"Autre secteur, agadir",1,1300000
+2,200,3,1,1,0,"Autre secteur, agadir",1,1300000
+2,121,3,1,1,0,"Al Boustane, agadir",1,1350000
+2,3402,3,1,1,1,"Autre secteur, agadir",1,1000000
+2,450,3,1,1,2,"Sidi Abdellah Ghiat, agadir",1,850000
+2,1000,3,2,1,1,"Route de Fès, agadir",1,2000000
+2,2100,3,2,1,1,"Route d'Ourika, agadir",1,2000000
+2,250,3,2,1,2,"Autre secteur, agadir",1,2500000
+2,175,3,2,1,2,"Autre secteur, agadir",1,1720000
+2,197,3,2,1,2,"Autre secteur, agadir",1,3600000
+2,180,3,2,1,2,"Toute la ville, agadir",1,1350000
+2,675,3,2,1,2,"Toute la ville, agadir",1,2400000
+2,150,3,2,1,2,"Toute la ville, agadir",1,1530000
+2,180,3,2,1,2,"Autre secteur, agadir",1,2100000
+2,10000,3,2,1,2,"Autre secteur, agadir",1,2500000
+2,160,3,3,1,0,"Route de Ouarzazate, agadir",1,980000
+2,160,3,3,1,0,"Route de Ouarzazate, agadir",1,880000
+2,588,3,3,1,1,"Annakhil, agadir",1,3400000
+2,606,3,3,1,2,"Targa, agadir",1,4500000
+2,250,3,3,1,3,"Autre secteur, agadir",1,2700000
+2,837,3,3,1,3,"Toute la ville, agadir",1,3500000
+2,234,3,3,1,3,"Autre secteur, agadir",1,2500000
+2,330,4,1,1,1,"Autre secteur, agadir",1,1690000
+2,250,4,1,1,2,"Hay Hassani, agadir",1,3000000
+2,3088,4,1,1,3,"Autre secteur, agadir",1,1500000
+2,370,4,2,1,2,"Targa, agadir",1,2900000
+2,430,4,2,1,2,"Route de Ouarzazate, agadir",1,1200000
+2,148,4,2,1,4,"Toute la ville, agadir",1,1900000
+2,250,4,2,1,4,"Toute la ville, agadir",1,3200000
+2,539,4,3,1,0,"Targa, agadir",1,5900000
+2,306,4,3,1,1,"Route d'Ourika, agadir",1,3000000
+2,340,5,2,1,4,"Agdal, agadir",1,1700000
+2,600,5,3,1,0,"Toute la ville, agadir",1,2200000
+2,240,5,3,1,0,"Toute la ville, agadir",1,2300000
+2,200,5,3,1,2,"Tilila, agadir",1,3450000
+2,200,5,3,1,3,"Sonaba, agadir",1,4600000
+2,160,2,2,2,0,"Autre secteur, agadir",1,900000
+2,250,2,2,2,2,"Autre secteur, agadir",1,1700000
+2,360,2,2,2,4,"Toute la ville, agadir",1,1300000
+2,300,3,1,2,1,"Autre secteur, agadir",1,1200000
+2,269,3,2,2,0,"Autre secteur, agadir",1,3200000
+2,2000,3,2,2,0,"Toute la ville, agadir",1,1700000
+2,250,3,2,2,0,"Autre secteur, agadir",1,1200000
+2,208,3,2,2,2,"Al Wifaq, agadir",1,2250000
+2,387,3,2,2,4,"Toute la ville, agadir",1,1900000
+2,1200,3,3,2,0,"Route d'Ourika, agadir",1,1200000
+2,1000,3,3,2,0,"Route d'Ourika, agadir",1,1600000
+2,270,3,3,2,1,"Toute la ville, agadir",1,2600000
+2,406,3,3,2,3,"Annakhil, agadir",1,4850000
+2,450,3,3,2,4,"Harhoura, agadir",1,4500000
+2,956,3,3,2,4,"Autre secteur, agadir",1,4100000
+2,132,4,1,2,0,"Autre secteur, agadir",1,1300000
+2,386,4,1,2,3,"Route de Tamansourt, agadir",1,1550000
+2,133,4,2,2,0,"Toute la ville, agadir",1,1350000
+2,1000,4,2,2,0,"Toute la ville, agadir",1,2300000
+2,230,4,2,2,1,"Autre secteur, agadir",1,1950000
+2,230,4,2,2,1,"Autre secteur, agadir",1,1980000
+2,250,4,2,2,4,"Toute la ville, agadir",1,1800000
+2,208,4,3,2,0,"Al Wifaq, agadir",1,2200000
+2,250,4,3,2,1,"Sonaba, agadir",1,4800000
+2,1146,4,3,2,4,"Polo, agadir",1,10900000
+2,200,4,3,2,4,"Toute la ville, agadir",1,840000
+2,320,4,3,2,4,"Hay Riad, agadir",1,6000000
+2,157,4,3,2,4,"Toute la ville, agadir",1,2100000
+2,950,4,3,2,4,"Polo, agadir",1,10000000
+2,234,5,2,2,2,"Toute la ville, agadir",1,700000
+2,234,5,2,2,2,"Autre secteur, agadir",1,2800000
+2,200,5,2,2,2,"Toute la ville, agadir",1,2000000
+2,341,5,2,2,4,"Toute la ville, agadir",1,1500000
+2,374,5,2,2,4,"Toute la ville, agadir",1,2500000
+2,294,5,2,2,4,"Autre secteur, agadir",1,3990000
+2,302,5,3,2,0,"Ville Nouvelle, agadir",1,2650000
+2,170,5,3,2,0,"Toute la ville, agadir",1,680000
+2,700,5,3,2,1,"Targa, agadir",1,5600000
+2,300,5,3,2,3,"Hay Dakhla, agadir",1,2600000
+2,165,3,2,3,0,"Autre secteur, agadir",1,1800000
+2,300,3,2,3,3,"Harhoura, agadir",1,1985000
+2,225,3,2,3,3,"Toute la ville, agadir",1,1800000
+2,346,3,2,3,3,"Anfa, agadir",1,13900000
+2,200,3,2,3,4,"Toute la ville, agadir",1,650000
+2,73,3,3,3,0,"Autre secteur, agadir",1,1060000
+2,1200,3,3,3,0,"Sidi Abdellah Ghiat, agadir",1,2900000
+2,400,3,3,3,1,"Harhoura, agadir",1,4600000
+2,200,3,3,3,2,"Route de Fès, agadir",1,1800000
+2,210,3,3,3,3,"Harhoura, agadir",1,2800000
+2,274,3,3,3,3,"Toute la ville, agadir",1,2900000
+2,83,4,1,3,3,"Ancienne Médina, agadir",1,1500000
+2,275,4,2,3,0,"Autre secteur, agadir",1,2600000
+2,300,4,2,3,0,"Autre secteur, agadir",1,4600000
+2,260,4,2,3,1,"Targa, agadir",1,4800000
+2,215,4,3,3,0,"Autre secteur, agadir",1,1600000
+2,208,4,3,3,0,"Harhoura, agadir",1,3500000
+2,260,4,3,3,1,"Toute la ville, agadir",1,2200000
+2,321,4,3,3,1,"Toute la ville, agadir",1,4900000
+2,300,4,3,3,1,"Autre secteur, agadir",1,2200001
+2,270,4,3,3,1,"Harhoura, agadir",1,4600000
+2,225,4,3,3,1,"Toute la ville, agadir",1,3780000
+2,491,4,3,3,2,"Anfa, agadir",1,11000000
+2,190,4,3,3,2,"Toute la ville, agadir",1,3200000
+2,976,4,3,3,3,"Targa, agadir",1,3500000
+2,280,4,3,3,4,"Longchamps, agadir",1,7300000
+2,1103,4,3,3,4,"Anfa, agadir",1,18000000
+2,132,5,2,3,1,"Toute la ville, agadir",1,1780000
+2,225,5,2,3,3,"Toute la ville, agadir",1,2400000
+2,400,5,2,3,4,"Toute la ville, agadir",1,1600000
+2,220,5,3,3,0,"Al Boustane, agadir",1,1550000
+2,298,5,3,3,1,"Harhoura, agadir",1,7500000
+2,300,5,3,3,2,"Route d'Ourika, agadir",1,1700000

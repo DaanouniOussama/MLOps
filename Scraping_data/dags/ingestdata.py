@@ -8,7 +8,7 @@ def copy_csv_to_table():
         cur = conn.cursor()
         with open('/opt/airflow/dags/scraped_data.csv', "r") as file:
             cur.copy_expert(
-                "COPY Real_Estate_table(Title, Real_estate_type, Price, Superficie, Rooms, Bath_room, Floor, Age, neighbourhood, City) FROM STDIN WITH CSV HEADER DELIMITER AS ',' QUOTE '\"' NULL '' " ,
+                "COPY Real_Estate_table_avito_vente(Title , Real_estate_type , Transaction, Ville , Secteur , Surface_totale , Surface_habitable , Chambres , Salle_bains , Salons , Pieces , Age_bien , Terrasse , Balcon, Parking , Ascenseur , Securite , Climatisation , Cuisine_equipee , Concierge , Duplex , Chauffage , Meuble , Price) FROM STDIN WITH CSV HEADER DELIMITER AS ',' QUOTE '\"' NULL '' " ,
                 file,
             )
             conn.commit()

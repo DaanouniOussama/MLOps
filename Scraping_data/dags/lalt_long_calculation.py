@@ -16,7 +16,7 @@ def lati_long()->int:
 
     try:
         
-        df['adress'] = df['neighbourhood'] + ', ' + df['city']
+        df['adress'] = df['secteur'] + ', ' + df['ville']
         logging.info('Creating variable Adresse as neighbourhood + city')
         geolocator = Nominatim(user_agent="Real-estate Monitor")
         geocode = RateLimiter(geolocator.geocode, min_delay_seconds=1)

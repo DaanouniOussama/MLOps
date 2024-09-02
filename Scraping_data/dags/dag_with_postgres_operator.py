@@ -75,18 +75,32 @@ with DAG(dag_id = 'dag_data_engineering_', default_args=default_args, schedule_i
         task_id = 'create_feature_store',
         postgres_conn_id = 'real_estate_connexion',
         sql ="""
-            CREATE TABLE IF NOT EXISTS feature_store (
+            CREATE TABLE IF NOT EXISTS feature_store_vente_avito_appartements (
                 id SERIAL PRIMARY KEY,
-                real_estate_type INT,
-                superficie INT,
-                rooms INT,
-                bath_room INT,
-                floor INT,
-                age INT,
-                neighbourhood_city VARCHAR(100),
-                neighbourhood_city_coded INT,
-                city INT,
-                price FLOAT CHECK (price > 0)
+                Real_estate_type INT,
+                Transaction VARCHAR(30),
+                Ville INT,
+                ville_secteur VARCHAR(50),
+                Surface_totale INT,
+                Surface_habitable INT,
+                Chambres INT,
+                Salle_bains INT,
+                Salons INT,
+                Pieces INT,
+                Age_bien INT,
+                Terrasse INT,
+                Balcon INT,
+                Parking INT,
+                Ascenseur INT,
+                Securite INT,
+                Climatisation INT,
+                Cuisine_equipee INT,
+                Concierge INT,
+                Duplex INT,
+                Chauffage INT,
+                Meuble INT,
+                Prix INT,
+                Ville_secteur_coded INT
             );
         """
     )

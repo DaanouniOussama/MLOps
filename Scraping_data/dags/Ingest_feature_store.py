@@ -8,7 +8,7 @@ def copy_process_to_feature_store():
         cur = conn.cursor()
         with open('/opt/airflow/dags/processed_scraped.csv', "r") as file:
             cur.copy_expert(
-                "COPY feature_store(real_estate_type, superficie, rooms, bath_room, floor, age, neighbourhood_city_coded, neighbourhood_city, city, price) FROM STDIN WITH CSV HEADER DELIMITER AS ',' QUOTE '\"' NULL '' " ,
+                "COPY feature_store_vente_avito_appartements(Real_estate_type,Transaction,Ville,ville_secteur,Surface_totale,Surface_habitable,Chambres,Salle_bains,Salons,Pieces,Age_bien,Terrasse,Balcon,Parking,Ascenseur,Securite,Climatisation,Cuisine_equipee,Concierge,Duplex,Chauffage,Meuble,Prix, Ville_secteur_coded) FROM STDIN WITH CSV HEADER DELIMITER AS ',' QUOTE '\"' NULL '' " ,
                 file,
             )
             conn.commit()

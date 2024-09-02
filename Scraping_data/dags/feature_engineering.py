@@ -15,18 +15,22 @@ def assign_quantile_code(price, quantiles):
 def preprocess() -> pd.DataFrame:
     try:
         data = pd.read_csv('/opt/airflow/dags/scraped_data.csv',index_col=0)
-        logging.info('Feature engineering column neighbourhood')
-        data['neighbourhood_city'] = data['neighbourhood'] + ', ' + data['city']
-        data = data[['real_estate_type','superficie (m²)','Rooms','bath_room','floor','age','neighbourhood_city','city','price (DHS)']]
-        logging.info('Deleting outliers')
-        lower_quantile = data.groupby('neighbourhood_city')['price (DHS)'].quantile(0.05).reset_index()
-        upper_quantile = data.groupby('neighbourhood_city')['price (DHS)'].quantile(0.95).reset_index()
-        lower_quantile.rename(columns={'price (DHS)': '0.05_price'}, inplace=True)
-        upper_quantile.rename(columns={'price (DHS)': '0.95_price'}, inplace=True)
-        adding_2 = pd.merge(data , lower_quantile, on='neighbourhood_city', how='left')
-        final_df = pd.merge(adding_2 , upper_quantile, on='neighbourhood_city', how='left')
-        final_df = final_df[(final_df['price (DHS)']>final_df['0.05_price']) & (final_df['price (DHS)']<final_df['0.95_price'])]
-        final_df = final_df.iloc[:,:-2]
+        logging.info('Feature engineering column secteur')
+        data['ville_secteur'] = data['secteur'] + ', ' + data['ville']
+        # titre,Type,transaction,ville,secteur,surface_totale,surface_habitable,chambres,salle_bains,salons,pieces,age_bien,
+        # terrasse,balcon,parking,ascenseur,securite,climatisation,cuisine_equipee,concierge,duplex,chauffage,meuble,prix
+        final_df = data[['Type','transaction','ville','ville_secteur','surface_totale','surface_habitable','chambres','salle_bains'
+                     ,'salons','pieces','age_bien','terrasse','balcon','parking','ascenseur','securite','climatisation','cuisine_equipee'
+                     ,'concierge','duplex','chauffage','meuble','prix']]
+        # logging.info('Deleting outliers')
+        # lower_quantile = data.groupby('ville_secteur')['prix'].quantile(0.00005).reset_index()
+        # upper_quantile = data.groupby('ville_secteur')['prix'].quantile(0.99995).reset_index()
+        # lower_quantile.rename(columns={'prix': '0.005_price'}, inplace=True)
+        # upper_quantile.rename(columns={'prix': '0.995_price'}, inplace=True)
+        # adding_2 = pd.merge(data , lower_quantile, on='ville_secteur', how='left')
+        # final_df = pd.merge(adding_2 , upper_quantile, on='ville_secteur', how='left')
+        # final_df = final_df[(final_df['prix']>final_df['0.005_price']) & (final_df['prix']<final_df['0.995_price'])]
+        # final_df = final_df.iloc[:,:-2]
     
     except Exception as e:
         logging.error(f'Error while cleaning data : {e}')
@@ -34,41 +38,70 @@ def preprocess() -> pd.DataFrame:
 
     try:
         logging.info('Coding cities')
-        final_df.loc[final_df['city']=='casablanca','city'] = 4
-        final_df.loc[final_df['city']=='tanger','city'] = 3
-        final_df.loc[final_df['city']=='marrakech','city'] = 2
-        final_df.loc[final_df['city']=='agadir','city'] = 1
-        final_df.loc[final_df['city']=='rabat','city'] = 0
+        final_df.loc[final_df['ville']=='Casablanca','ville'] = 4
+        final_df.loc[final_df['ville']=='Tanger','ville'] = 3
+        final_df.loc[final_df['ville']=='Marrakech','ville'] = 2
+        final_df.loc[final_df['ville']=='Agadir','ville'] = 1
+        final_df.loc[final_df['ville']=='Rabat','ville'] = 0
         logging.info('Coding ages')
-        final_df.loc[final_df['age']=='New','age'] = 0
-        final_df.loc[final_df['age']=='1-5 years','age'] = 1
-        final_df.loc[final_df['age']=='6-10 years','age'] = 2
-        final_df.loc[final_df['age']=='11-21 years','age'] = 3
-        final_df.loc[final_df['age']=='21+ years','age'] = 4
+        final_df.loc[final_df['age_bien']=='Neuf','age_bien'] = 0
+        final_df.loc[final_df['age_bien']=='1-5 ans','age_bien'] = 1
+        final_df.loc[final_df['age_bien']=='6-10 ans','age_bien'] = 2
+        final_df.loc[final_df['age_bien']=='11-20 ans','age_bien'] = 3
+        final_df.loc[final_df['age_bien']=='21+ ans','age_bien'] = 4
         logging.info('Coding type of real-estate')
-        final_df.loc[final_df['real_estate_type']=='appartements','real_estate_type'] = 0
-        final_df.loc[final_df['real_estate_type']=='maisons','real_estate_type'] = 1
-        final_df.loc[final_df['real_estate_type']=='villas_riad','real_estate_type'] = 2
-        logging.info('Label coding the neighboorhoods')
+        final_df.loc[final_df['Type']=='Appartements','Type'] = 0
+        final_df.loc[final_df['Type']=='Maisons','Type'] = 1
+        final_df.loc[final_df['Type']=='Villas_riad','Type'] = 2
+        logging.info('Coding extras')
+        # terrasse
+        final_df.loc[final_df['terrasse']=='Yes','terrasse'] = 1
+        final_df.loc[final_df['terrasse']=='No','terrasse'] = 0
+        # balcon
+        final_df.loc[final_df['balcon']=='Yes','balcon'] = 1
+        final_df.loc[final_df['balcon']=='No','balcon'] = 0    
+        # parking
+        final_df.loc[final_df['parking']=='Yes','parking'] = 1
+        final_df.loc[final_df['parking']=='No','parking'] = 0 
+        # ascenseur        
+        final_df.loc[final_df['ascenseur']=='Yes','ascenseur'] = 1
+        final_df.loc[final_df['ascenseur']=='No','ascenseur'] = 0    
+        # securite    
+        final_df.loc[final_df['securite']=='Yes','securite'] = 1
+        final_df.loc[final_df['securite']=='No','securite'] = 0 
+        # climatisation
+        final_df.loc[final_df['climatisation']=='Yes','climatisation'] = 1
+        final_df.loc[final_df['climatisation']=='No','climatisation'] = 0 
+        # cuisine_equipee
+        final_df.loc[final_df['cuisine_equipee']=='Yes','cuisine_equipee'] = 1
+        final_df.loc[final_df['cuisine_equipee']=='No','cuisine_equipee'] = 0
+        # concierge
+        final_df.loc[final_df['concierge']=='Yes','concierge'] = 1
+        final_df.loc[final_df['concierge']=='No','concierge'] = 0 
+        # duplex      
+        final_df.loc[final_df['duplex']=='Yes','duplex'] = 1
+        final_df.loc[final_df['duplex']=='No','duplex'] = 0 
+        # chauffage
+        final_df.loc[final_df['chauffage']=='Yes','chauffage'] = 1
+        final_df.loc[final_df['chauffage']=='No','chauffage'] = 0 
+        # meuble
+        final_df.loc[final_df['meuble']=='Yes','meuble'] = 1
+        final_df.loc[final_df['meuble']=='No','meuble'] = 0 
 
-        
         # calculate quartile 10 
-        quantiles = final_df.loc[:,'price (DHS)'].quantile([0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9])
+        quantiles = final_df.loc[:,'prix'].quantile([0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9])
 
-        median_price_df = final_df.groupby('neighbourhood_city')['price (DHS)'].median()
+        median_price_df = final_df.groupby('ville_secteur')['prix'].median()
 
         # Apply the function to assign quantile code to each neighborhood
         median_price_df['quantile_code'] = median_price_df.apply(assign_quantile_code, quantiles=quantiles)
 
-        final_df = final_df.merge(median_price_df['quantile_code'],left_on='neighbourhood_city', right_on='neighbourhood_city')
+        final_df = final_df.merge(median_price_df['quantile_code'],left_on='ville_secteur', right_on='ville_secteur')
 
-        final_df.to_csv('/opt/airflow/dags/staging_data2.csv',index=False)
-
-        final_df = final_df[['real_estate_type','superficie (m²)','Rooms','bath_room','floor','age','price (DHS)_y','neighbourhood_city','city','price (DHS)_x']]
-
-        final_df = final_df.rename(columns={'superficie (m²)' : 'superficie', 'Rooms' : 'rooms',"price (DHS)_y":"neighbourhood_city_coded","price (DHS)_x":"price"})
+        final_df = final_df.rename(columns={"prix_y":"ville_secteur_coded","prix_x":"price"})
 
         final_df.to_csv('/opt/airflow/dags/processed_scraped.csv',index=False)
+
     except Exception as e:
         logging.error(f'Error while coding variables : {e}')
         raise e

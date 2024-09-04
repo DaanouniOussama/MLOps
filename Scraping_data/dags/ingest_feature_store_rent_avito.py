@@ -1,14 +1,14 @@
 import logging
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 
-def copy_process_to_feature_store():
+def copy_process_to_feature_store_rent():
     try:
         postgres_hook = PostgresHook(postgres_conn_id="real_estate_connexion")
         conn = postgres_hook.get_conn()
         cur = conn.cursor()
-        with open('/opt/airflow/dags/processed_scraped.csv', "r") as file:
+        with open('/opt/airflow/dags/processed_scraped_avito_rent.csv', "r") as file:
             cur.copy_expert(
-                "COPY feature_store_vente_avito_appartements(Real_estate_type,Transaction,Ville,ville_secteur,Surface_totale,Surface_habitable,Chambres,Salle_bains,Salons,Pieces,Age_bien,Terrasse,Balcon,Parking,Ascenseur,Securite,Climatisation,Cuisine_equipee,Concierge,Duplex,Chauffage,Meuble,Prix, Ville_secteur_coded) FROM STDIN WITH CSV HEADER DELIMITER AS ',' QUOTE '\"' NULL '' " ,
+                "COPY feature_store_rent_avito(Real_estate_type,Transaction,Ville,ville_secteur,Surface_totale,Surface_habitable,Chambres,Salle_bains,Salons,Pieces,Terrasse,Balcon,Parking,Ascenseur,Securite,Climatisation,Cuisine_equipee,Concierge,Duplex,Chauffage,Meuble, Garage , Jardin  , Piscine , Prix, Ville_secteur_coded) FROM STDIN WITH CSV HEADER DELIMITER AS ',' QUOTE '\"' NULL '' " ,
                 file,
             )
             conn.commit()

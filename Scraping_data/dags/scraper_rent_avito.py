@@ -5,10 +5,12 @@ import httpx
 import time 
 
 
-def scrapper()->pd.DataFrame:
-    min_price = 250000
+def scrapper_rent()->pd.DataFrame:
+    min_price = 2500
+    max_price = 70000
     min_size = 30
-    real_estate = [ 'appartements' ] # 'appartements' , studio
+    max_size = 1500
+    real_estate = [ 'villas_riad' , 'appartements'] # 'appartements' , villas_riad 
     # extra=balcony,elevator,terrace,heater,airconditioner,furnished,furnished_kitchen,janitor,duplex,parking,security,phone_cable
     cities = ['casablanca']  # 'tanger', 'rabat', 'marrakech', 'agadir'
 
@@ -16,22 +18,18 @@ def scrapper()->pd.DataFrame:
         # My DataFrame
     my_df = pd.DataFrame(columns=['titre', 'Type', 'transaction', 'ville', 'secteur', 'surface_totale', 
                                   'surface_habitable', 'chambres', 'salle_bains', 'salons',
-                                  'pieces', 'age_bien', 'terrasse', 'balcon', 'parking', 
+                                  'pieces', 'terrasse', 'balcon', 'parking', 
                                   'ascenseur', 'securite', 'climatisation', 'cuisine_equipee',
-                                 'concierge', 'duplex', 'chauffage', 'meuble', 'prix'])
+                                 'concierge', 'duplex', 'chauffage', 'meuble','garage', 'jardin', 'piscine', 'prix'])
 
     for city in cities:
         for immobilier in real_estate:               
             try:
-                if immobilier != 'appartements':
-                    # URL
-                    my_url = f"https://www.avito.ma/fr/{city}/{immobilier}-%C3%A0_vendre?price={min_price}-&size={min_size}"
-                else :
-                    # URL           
-                    my_url = f"https://www.avito.ma/fr/{city}/{immobilier}-%C3%A0_vendre?price={min_price}-&size={min_size}"
-                    
+                # URL
+                my_url = f"https://www.avito.ma/fr/{city}/{immobilier}-à_louer?price={min_price}-{max_price}-&size={min_size}-{max_size}"
+    
                 # visit the website with the url : my_url
-                response = httpx.get(my_url, timeout=10.0)
+                response = httpx.get(my_url, timeout=50.0, follow_redirects=True)
                 time.sleep(2)
                 logging.info('Defining links and accessing websites have been successful')
 
@@ -48,7 +46,6 @@ def scrapper()->pd.DataFrame:
                 logging.error(f'Error while parsing html : {e}')
                 raise e
             
-
 
             try : 
                 # Initialize list to store URLs
@@ -101,7 +98,7 @@ def scrapper()->pd.DataFrame:
                     Chambres = int(Chambres)
                     Surface_totale = extracted_data[i]['Surface totale']
                     Surface_totale = int(Surface_totale.replace('m²',''))
-                    response = httpx.get(link)
+                    response = httpx.get(link, timeout=50.0)
                     time.sleep(2)
 
                     # Parse html
@@ -132,9 +129,8 @@ def scrapper()->pd.DataFrame:
                     price_element = int(price_element)
                     print('price : ', price_element)
                     
-                    globals()['Âge_du_bien'] = 'Missing'
                     globals()['Surface_habitable'] = 'Missing'
-                    globals()['Salon'] = 'Missing'
+                    globals()['Salons'] = 'Missing'                       
                     
                     # Find all list items and extract the data
                     items = market_soup.find_all('li', class_='sc-qmn92k-1 jJjeGO')
@@ -143,7 +139,10 @@ def scrapper()->pd.DataFrame:
                         label = label.replace(" ", "_")
                         value = item.find('span', class_='sc-1x0vz2r-0 gSLYtF').text.strip()
                         globals()[label] = value
-                        
+
+                    if (Salons == 'Missing') or (Surface_habitable == 'Missing'):
+                        continue
+
                     salons = int(Salons)
                     surface_habitable = int(Surface_habitable)
                     
@@ -165,8 +164,6 @@ def scrapper()->pd.DataFrame:
                     
                     print('Surface_habitable : ', Surface_habitable)
 
-
-                    print('Âge_du_bien : ', Âge_du_bien)
 
         
                     # working on extras
@@ -224,35 +221,78 @@ def scrapper()->pd.DataFrame:
                         cuisine_equipee = 'Yes'
                     else:
                         cuisine_equipee = 'No'
+
+                    if 'Garage' in extras:
+                        garage = 'Yes'
+                    else:
+                        garage = 'No'
+
+                    if 'Jardin' in extras:
+                        jardin = 'Yes'
+                    else:
+                        jardin = 'No'
+
+                    if 'Piscine' in extras:
+                        piscine = 'Yes'
+                    else:
+                        piscine = 'No'
+                    
                         
-                    print(ascenseur, securite, concierge, parking, terrasse, balcon, climatisation, duplex, chauffage, meuble, cuisine_equipee)
+                    print(ascenseur, securite, concierge, parking, terrasse, balcon, climatisation, 
+                            duplex, chauffage, meuble, cuisine_equipee, garage, jardin, piscine)
                     
                     
                     print()
                     
                     new_row = {'titre' : title_element, 'Type' : Type_, 'transaction' : transaction, 'ville' : city, 'secteur' : Secteur, 'surface_totale' : Surface_totale, 
                                 'surface_habitable' : Surface_habitable, 'chambres' : Chambres, 'salle_bains' : Salle_bain, 'salons' : salons,
-                                'pieces' : salons+Chambres, 'age_bien' : Âge_du_bien, 'terrasse' : terrasse, 'balcon' : balcon, 'parking' : parking, 
+                                'pieces' : salons+Chambres, 'terrasse' : terrasse, 'balcon' : balcon, 'parking' : parking, 
                                 'ascenseur' : ascenseur, 'securite' : securite, 'climatisation' : climatisation, 'cuisine_equipee' : cuisine_equipee,
-                                'concierge' : concierge, 'duplex' : duplex, 'chauffage' : chauffage, 'meuble' : meuble, 'prix' : price_element
+                                'concierge' : concierge, 'duplex' : duplex, 'chauffage' : chauffage, 'meuble' : meuble, 
+                                'garage' : garage, 'jardin' : jardin, 'piscine' : piscine,'prix' : price_element
                             }
                     
                     if 'Missing' not in new_row.values():
                         new_row_df = pd.DataFrame([new_row])
                         my_df = pd.concat([my_df, new_row_df], ignore_index=True)
+                        
                         # Append to your main DataFrame here
                     else:
                         print("Row not appended due to 'Missing' values.")
                     
                     print(my_df)
                     
-                logging.info('Extracting data and putting it in DataFrame format was successful')
+                logging.info('Extracting data for appartements and putting it in DataFrame format was successful')
             except Exception as e:
-                logging.error(f'Error while Extracting Data and putting it in DataFrame format : {e}')
+                logging.error(f'Error while Extracting Data for appartements and putting it in DataFrame format : {e}')
                 raise e
+            
 
     try:
-        my_df.to_csv('/opt/airflow/dags/scraped_data.csv',index=False)
+        
+        logging.info('Selecting right data with right city')
+        my_df = my_df[my_df['ville'] == 'Casablanca']
+        
+        # Deleting Outliers will be done after. 
+
+        # lower_quantile = my_df.groupby(['secteur','Type'])['prix'].quantile(0.05).reset_index()
+        # upper_quantile = my_df.groupby(['secteur','Type'])['prix'].quantile(0.95).reset_index()
+        # lower_quantile.rename(columns={'prix': '0.05_price'}, inplace=True)
+        # upper_quantile.rename(columns={'prix': '0.95_price'}, inplace=True)
+        # adding_2 = pd.merge(my_df , lower_quantile, on=['ville_secteur', 'Type'], how='left')
+        # final_df = pd.merge(adding_2 , upper_quantile, on=['ville_secteur', 'Type'], how='left')
+        # final_df = final_df[(final_df['prix']>final_df['0.05_price']) & (final_df['prix']<final_df['0.95_price'])]
+        # final_df = final_df.iloc[:,:-2]
+
+        # lower_quantile = final_df.groupby(['ville_secteur','Type'])['surface_totale'].quantile(0.05).reset_index()
+        # upper_quantile = final_df.groupby(['ville_secteur','Type'])['surface_totale'].quantile(0.95).reset_index()
+        # lower_quantile.rename(columns={'surface_totale': '0.05_surface_totale'}, inplace=True)
+        # upper_quantile.rename(columns={'surface_totale': '0.95_surface_totale'}, inplace=True)
+        # adding_2 = pd.merge(my_df , lower_quantile, on=['ville_secteur', 'Type'], how='left')
+        # final_df_2 = pd.merge(adding_2 , upper_quantile, on=['ville_secteur', 'Type'], how='left')
+        # final_df_2 = final_df_2[(final_df_2['surface_totale']>final_df_2['0.05_surface_totale']) & (final_df_2['surface_totale']<final_df_2['0.95_surface_totale'])]
+        # final_df_2 = final_df_2.iloc[:,:-2]
+        my_df.to_csv('/opt/airflow/dags/scraped_data_rent_avito.csv',index=False)
         logging.info('Saving data in csv format was successful')
 
     except Exception as e:

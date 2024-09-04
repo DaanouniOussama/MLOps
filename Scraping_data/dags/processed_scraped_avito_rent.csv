@@ -1,0 +1,54 @@
+Type,transaction,ville,ville_secteur,surface_totale,surface_habitable,chambres,salle_bains,salons,pieces,terrasse,balcon,parking,ascenseur,securite,climatisation,cuisine_equipee,concierge,duplex,chauffage,meuble,garage,jardin,piscine,prix,quantile_code
+1,louer,4,"Hay Hana, Casablanca",510,510,3,2,4,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35000,3
+1,louer,4,"C.I.L, Casablanca",450,400,4,4,3,7,1,1,1,0,1,1,1,0,0,1,0,1,1,0,30000,3
+1,louer,4,"Californie, Casablanca",890,500,4,4,3,7,1,1,1,0,0,1,1,0,0,1,1,1,1,1,35000,6
+1,louer,4,"Hay Hana, Casablanca",240,240,5,4,1,6,1,0,0,0,0,0,0,0,0,0,0,1,0,0,11000,3
+1,louer,4,"Oasis, Casablanca",400,400,4,3,2,6,1,1,1,0,1,1,1,0,0,1,1,1,1,1,40000,3
+1,louer,4,"Aïn Diab, Casablanca",550,400,4,3,3,7,1,1,1,0,1,1,0,0,0,0,0,1,1,1,30000,4
+1,louer,4,"Autre secteur, Casablanca",233,171,3,3,2,5,0,1,0,0,1,1,1,0,0,0,0,1,1,0,11500,2
+1,louer,4,"Bourgogne, Casablanca",356,356,4,3,3,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45000,8
+1,louer,4,"Triangle d'Or, Casablanca",356,356,3,3,2,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45000,10
+1,louer,4,"Ain Sebaa, Casablanca",68,68,2,1,1,3,1,0,0,0,1,0,0,0,0,0,0,0,0,0,3700,0
+1,louer,4,"C.I.L, Casablanca",400,450,5,5,4,9,1,1,1,0,1,1,1,0,0,1,0,1,1,0,36000,3
+1,louer,4,"Longchamps, Casablanca",1500,600,4,4,5,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60000,10
+1,louer,4,"Sidi Bernoussi, Casablanca",120,120,2,1,2,4,1,0,1,0,1,0,0,0,0,0,0,0,1,0,7500,1
+1,louer,4,"Aïn Diab, Casablanca",450,350,4,3,3,7,1,1,1,0,1,1,1,0,0,1,0,1,1,0,25000,4
+1,louer,4,"Aïn Diab, Casablanca",700,700,7,5,2,9,1,1,1,0,1,1,0,0,0,0,0,1,1,1,40000,4
+1,louer,4,"Polo, Casablanca",500,150,8,5,2,10,0,1,0,0,1,0,1,0,0,0,1,0,0,0,50000,8
+1,louer,4,"Californie, Casablanca",400,500,4,4,3,7,1,1,1,0,1,1,0,0,0,0,0,1,1,1,30000,6
+1,louer,4,"Sidi Maarouf, Casablanca",450,40,4,4,4,8,1,1,1,0,1,1,1,0,0,1,1,1,1,1,30000,2
+1,louer,4,"Polo, Casablanca",495,480,5,4,2,7,1,1,0,0,1,1,0,0,0,0,0,1,1,0,30000,8
+1,louer,4,"Californie, Casablanca",850,600,5,4,3,8,1,1,1,0,1,1,1,0,0,1,1,1,1,1,35000,6
+1,louer,4,"C.I.L, Casablanca",240,140,3,2,1,4,1,0,1,0,1,0,0,0,0,0,0,1,0,0,20000,3
+1,louer,4,"Californie, Casablanca",800,600,4,4,3,7,1,1,1,0,1,1,1,0,0,1,1,1,1,1,35000,6
+1,louer,4,"Aïn Chock, Casablanca",120,120,3,1,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3500,0
+1,louer,4,"Californie, Casablanca",500,450,4,4,3,7,1,1,1,0,1,1,1,0,0,1,0,1,1,1,30000,6
+1,louer,4,"C.I.L, Casablanca",274,150,5,2,1,6,1,1,0,0,0,0,0,0,0,0,0,1,1,0,14000,3
+1,louer,4,"Bourgogne, Casablanca",380,440,4,3,2,6,1,0,0,0,1,1,1,0,0,0,0,1,1,1,30000,8
+1,louer,4,"Aïn Chock, Casablanca",120,120,3,1,1,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3500,0
+1,louer,4,"Aïn Chock, Casablanca",110,110,2,1,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3500,0
+1,louer,4,"Oasis, Casablanca",300,180,3,3,0,3,0,1,1,0,0,0,1,0,0,1,1,0,1,0,24000,3
+1,louer,4,"Hermitage, Casablanca",350,160,4,3,4,8,1,1,0,0,0,0,0,0,0,0,0,0,1,0,25000,3
+1,louer,4,"Laimoune, Casablanca",600,600,2,1,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22000,3
+1,louer,4,"Sidi Maarouf, Casablanca",140,140,3,2,2,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6000,2
+1,louer,4,"Route d'Azemmour, Casablanca",500,500,3,3,3,6,1,1,0,0,0,1,0,0,0,0,1,0,0,0,30000,4
+1,louer,4,"Oasis, Casablanca",450,350,3,3,3,6,1,1,1,0,1,1,1,0,0,1,0,1,1,0,20000,3
+1,louer,4,"Habous, Casablanca",363,365,5,4,5,10,0,0,0,0,0,0,0,0,0,0,0,1,0,0,37000,8
+0,louer,4,"Mers Sultan, Casablanca",130,130,3,1,1,4,0,0,1,1,1,0,1,1,0,0,1,0,0,0,7000,5
+0,louer,4,"Aïn Chock, Casablanca",100,100,3,1,1,4,1,0,0,0,0,0,0,0,0,0,0,0,0,0,3300,0
+0,louer,4,"Ain Sebaa, Casablanca",88,87,2,1,1,3,1,1,1,1,1,1,1,1,0,1,1,0,0,0,5500,1
+0,louer,4,"Belvédère, Casablanca",85,85,2,1,1,3,0,0,1,1,1,0,0,0,0,0,0,0,0,0,4300,0
+0,louer,4,"Oasis, Casablanca",124,120,3,2,2,5,0,1,1,1,1,1,1,0,0,0,1,0,0,0,8500,6
+0,louer,4,"Aïn Borja, Casablanca",92,92,2,1,1,3,0,0,1,1,1,0,1,1,0,0,1,0,0,0,5500,1
+0,louer,4,"Aïn Diab, Casablanca",68,68,2,2,2,4,1,1,1,1,1,1,1,1,0,1,1,0,0,0,12500,10
+0,louer,4,"Palmier, Casablanca",40,40,1,1,1,2,0,1,1,1,1,1,1,1,0,1,1,0,0,0,6700,5
+0,louer,4,"La Gironde, Casablanca",74,70,2,1,1,3,0,1,0,1,0,0,1,1,0,0,0,0,0,0,5800,3
+0,louer,4,"Les Princesses, Casablanca",109,101,2,2,1,3,0,1,1,1,1,1,1,1,0,1,1,0,0,0,10500,8
+0,louer,4,"Almaz, Casablanca",108,95,2,2,1,3,0,1,1,1,1,0,1,0,0,0,0,0,0,0,6000,4
+0,louer,4,"Gauthier, Casablanca",40,40,1,1,1,2,0,0,0,0,0,0,1,0,0,0,1,0,0,0,4500,5
+0,louer,4,"Gauthier, Casablanca",74,74,2,2,1,3,1,1,1,1,1,1,1,1,0,1,0,0,0,0,8500,5
+0,louer,4,"Gauthier, Casablanca",64,64,1,1,1,2,0,0,0,0,0,0,1,1,0,0,1,0,0,0,5500,5
+0,louer,4,"Casablanca Finance City, Casablanca",74,74,1,1,1,2,1,1,1,1,1,1,1,1,0,1,1,0,0,0,10500,8
+0,louer,4,"Californie, Casablanca",125,125,3,2,1,4,1,1,1,0,1,0,1,1,0,0,1,0,0,0,10000,7
+0,louer,4,"Gauthier, Casablanca",120,120,2,2,1,3,1,1,1,1,1,0,1,1,0,0,0,0,0,0,11000,5
+0,louer,4,"Riviera, Casablanca",44,44,1,1,1,2,0,1,0,1,1,1,1,1,0,0,1,0,0,0,6300,4

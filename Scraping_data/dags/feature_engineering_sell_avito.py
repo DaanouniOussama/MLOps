@@ -14,14 +14,14 @@ def assign_quantile_code(price, quantiles):
 
 def preprocess() -> pd.DataFrame:
     try:
-        data = pd.read_csv('/opt/airflow/dags/scraped_data.csv',index_col=0)
+        data = pd.read_csv('/opt/airflow/dags/scraped_data_sell_avito.csv',index_col=0)
         logging.info('Feature engineering column secteur')
         data['ville_secteur'] = data['secteur'] + ', ' + data['ville']
         # titre,Type,transaction,ville,secteur,surface_totale,surface_habitable,chambres,salle_bains,salons,pieces,age_bien,
         # terrasse,balcon,parking,ascenseur,securite,climatisation,cuisine_equipee,concierge,duplex,chauffage,meuble,prix
         final_df = data[['Type','transaction','ville','ville_secteur','surface_totale','surface_habitable','chambres','salle_bains'
-                     ,'salons','pieces','age_bien','terrasse','balcon','parking','ascenseur','securite','climatisation','cuisine_equipee'
-                     ,'concierge','duplex','chauffage','meuble','prix']]
+                     ,'salons', 'pieces', 'age_bien', 'terrasse', 'balcon', 'parking', 'ascenseur', 'securite', 'climatisation','cuisine_equipee'
+                     , 'concierge', 'duplex', 'chauffage', 'meuble', 'garage', 'jardin', 'piscine', 'prix']]
         # logging.info('Deleting outliers')
         # lower_quantile = data.groupby('ville_secteur')['prix'].quantile(0.00005).reset_index()
         # upper_quantile = data.groupby('ville_secteur')['prix'].quantile(0.99995).reset_index()
@@ -51,8 +51,7 @@ def preprocess() -> pd.DataFrame:
         final_df.loc[final_df['age_bien']=='21+ ans','age_bien'] = 4
         logging.info('Coding type of real-estate')
         final_df.loc[final_df['Type']=='Appartements','Type'] = 0
-        final_df.loc[final_df['Type']=='Maisons','Type'] = 1
-        final_df.loc[final_df['Type']=='Villas_riad','Type'] = 2
+        final_df.loc[final_df['Type']=='Villas et Riads','Type'] = 1
         logging.info('Coding extras')
         # terrasse
         final_df.loc[final_df['terrasse']=='Yes','terrasse'] = 1
@@ -87,20 +86,37 @@ def preprocess() -> pd.DataFrame:
         # meuble
         final_df.loc[final_df['meuble']=='Yes','meuble'] = 1
         final_df.loc[final_df['meuble']=='No','meuble'] = 0 
+        # garage
+        final_df.loc[final_df['garage']=='Yes','garage'] = 1
+        final_df.loc[final_df['garage']=='No','garage'] = 0
+        # jardin
+        final_df.loc[final_df['jardin']=='Yes','jardin'] = 1
+        final_df.loc[final_df['jardin']=='No','jardin'] = 0
+        # piscine
+        final_df.loc[final_df['piscine']=='Yes','piscine'] = 1
+        final_df.loc[final_df['piscine']=='No','piscine'] = 0
 
-        # calculate quartile 10 
-        quantiles = final_df.loc[:,'prix'].quantile([0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9])
+        # Calculate the median price grouped by 'ville_secteur' and 'type'
+        median_price_df = final_df.groupby(['ville_secteur', 'Type'])['prix'].median().reset_index()
 
-        median_price_df = final_df.groupby('ville_secteur')['prix'].median()
+        # Initialize a new column for quantile codes
+        median_price_df['quantile_code'] = 0
 
-        # Apply the function to assign quantile code to each neighborhood
-        median_price_df['quantile_code'] = median_price_df.apply(assign_quantile_code, quantiles=quantiles)
+        # Calculate quantiles and assign quantile codes for each 'type'
+        for t in final_df['Type'].unique():
+            # Calculate quantiles for the current type
+            quantiles = final_df[final_df['Type'] == t]['prix'].quantile([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
+            
+            # Apply the quantile assignment function to the median prices for the current type
+            median_price_df.loc[median_price_df['Type'] == t, 'quantile_code'] = median_price_df[median_price_df['Type'] == t]['prix'].apply(assign_quantile_code, quantiles=quantiles)
 
-        final_df = final_df.merge(median_price_df['quantile_code'],left_on='ville_secteur', right_on='ville_secteur')
+        # Merge the quantile code back to the original DataFrame
+        final_df = final_df.merge(median_price_df[['ville_secteur', 'Type', 'quantile_code']], on=['ville_secteur', 'Type'])
 
-        final_df = final_df.rename(columns={"prix_y":"ville_secteur_coded","prix_x":"price"})
+        # Rename columns
+        final_df = final_df.rename(columns={"prix_x": "price", "prix_y": "ville_secteur_coded"})
 
-        final_df.to_csv('/opt/airflow/dags/processed_scraped.csv',index=False)
+        final_df.to_csv('/opt/airflow/dags/processed_scraped_avito_sell.csv',index=False)
 
     except Exception as e:
         logging.error(f'Error while coding variables : {e}')

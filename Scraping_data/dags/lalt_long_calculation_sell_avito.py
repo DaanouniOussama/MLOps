@@ -7,7 +7,7 @@ from geopy.extra.rate_limiter import RateLimiter
 def lati_long()->int:
     try:
         logging.info('Loading scraped data ...')
-        df = pd.read_csv('/opt/airflow/dags/scraped_data.csv',index_col=0)
+        df = pd.read_csv('/opt/airflow/dags/scraped_data_sell_avito.csv',index_col=0)
         logging.info('Data was loaded successfully')
 
     except Exception as e:
@@ -29,7 +29,7 @@ def lati_long()->int:
         maps_data = maps_data[['adresses','latitude','longitude']]
         logging.info('Calculating longitude and laltitude')
 
-        maps_data.to_csv('/opt/airflow/dags/long_lalt.csv',index=False, sep=';')
+        maps_data.to_csv('/opt/airflow/dags/long_lalt_sell_avito.csv',index=False, sep=';')
         logging.info('Saving dataframe into csv')
         return 0
 

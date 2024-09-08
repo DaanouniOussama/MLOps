@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as soup
 import pandas as pd
 import httpx
 import time 
+import re
 
 
 def scrapper_rent()->pd.DataFrame:
@@ -18,7 +19,7 @@ def scrapper_rent()->pd.DataFrame:
         # My DataFrame
     my_df = pd.DataFrame(columns=['titre', 'Type', 'transaction', 'ville', 'secteur', 'surface_totale', 
                                   'surface_habitable', 'chambres', 'salle_bains', 'salons',
-                                  'pieces', 'terrasse', 'balcon', 'parking', 
+                                  'pieces', 'etage', 'terrasse', 'balcon', 'parking', 
                                   'ascenseur', 'securite', 'climatisation', 'cuisine_equipee',
                                  'concierge', 'duplex', 'chauffage', 'meuble','garage', 'jardin', 'piscine', 'prix'])
 
@@ -129,8 +130,11 @@ def scrapper_rent()->pd.DataFrame:
                     price_element = int(price_element)
                     print('price : ', price_element)
                     
+                    globals()['Âge_du_bien'] = 'Missing'
                     globals()['Surface_habitable'] = 'Missing'
-                    globals()['Salons'] = 'Missing'                       
+                    globals()['Salons'] = 'Missing'    
+                    globals()['Étage'] = 'Missing'  
+                    globals()["Nombre_d'étage"] = 'Missing'                      
                     
                     # Find all list items and extract the data
                     items = market_soup.find_all('li', class_='sc-qmn92k-1 jJjeGO')
@@ -140,9 +144,20 @@ def scrapper_rent()->pd.DataFrame:
                         value = item.find('span', class_='sc-1x0vz2r-0 gSLYtF').text.strip()
                         globals()[label] = value
 
-                    if (Salons == 'Missing') or (Surface_habitable == 'Missing'):
+                    # Check if either Étage or Nombre_etage is available
+                    if globals().get("Nombre_d'étage") != 'Missing':
+                        globals()['Étage'] = globals()["Nombre_d'étage"]
+
+                    print(Salons)
+                    print(Surface_habitable)
+
+
+                    if (Salons == 'Missing') or (Surface_habitable == 'Missing') or (Étage == 'Missing'):
                         continue
 
+                    etage = re.sub(r'[^\d]', '', Étage)
+                    etage = int(etage)
+                    print('etage : ', etage)
                     salons = int(Salons)
                     surface_habitable = int(Surface_habitable)
                     
@@ -246,7 +261,7 @@ def scrapper_rent()->pd.DataFrame:
                     
                     new_row = {'titre' : title_element, 'Type' : Type_, 'transaction' : transaction, 'ville' : city, 'secteur' : Secteur, 'surface_totale' : Surface_totale, 
                                 'surface_habitable' : Surface_habitable, 'chambres' : Chambres, 'salle_bains' : Salle_bain, 'salons' : salons,
-                                'pieces' : salons+Chambres, 'terrasse' : terrasse, 'balcon' : balcon, 'parking' : parking, 
+                                'pieces' : salons+Chambres, 'etage' : etage, 'terrasse' : terrasse, 'balcon' : balcon, 'parking' : parking, 
                                 'ascenseur' : ascenseur, 'securite' : securite, 'climatisation' : climatisation, 'cuisine_equipee' : cuisine_equipee,
                                 'concierge' : concierge, 'duplex' : duplex, 'chauffage' : chauffage, 'meuble' : meuble, 
                                 'garage' : garage, 'jardin' : jardin, 'piscine' : piscine,'prix' : price_element

@@ -18,7 +18,7 @@ def scrapper()->pd.DataFrame:
         # My DataFrame
     my_df = pd.DataFrame(columns=['titre', 'Type', 'transaction', 'ville', 'secteur', 'surface_totale', 
                                   'surface_habitable', 'chambres', 'salle_bains', 'salons',
-                                  'pieces', 'age_bien', 'terrasse', 'balcon', 'parking', 
+                                  'pieces', 'etage' ,'age_bien', 'terrasse', 'balcon', 'parking', 
                                   'ascenseur', 'securite', 'climatisation', 'cuisine_equipee',
                                  'concierge', 'duplex', 'chauffage', 'meuble','garage', 'jardin', 'piscine', 'prix'])
 
@@ -26,7 +26,7 @@ def scrapper()->pd.DataFrame:
         for immobilier in real_estate:               
             try:
                 # URL
-                my_url = f"https://www.avito.ma/fr/{city}/{immobilier}-à_louer?price={min_price}-{max_price}-&size={min_size}-{max_size}"
+                my_url = f"https://www.avito.ma/fr/{city}/{immobilier}-à_vendre?price={min_price}-{max_price}-&size={min_size}-{max_size}"
     
                 # visit the website with the url : my_url
                 response = httpx.get(my_url, timeout=10.0, follow_redirects=True)
@@ -131,7 +131,9 @@ def scrapper()->pd.DataFrame:
                     
                     globals()['Âge_du_bien'] = 'Missing'
                     globals()['Surface_habitable'] = 'Missing'
-                    globals()['Salons'] = 'Missing'                       
+                    globals()['Salons'] = 'Missing'    
+                    globals()['Étage'] = 'Missing'  
+                    globals()['Nombre_etage'] = 'Missing'                    
                     
                     # Find all list items and extract the data
                     items = market_soup.find_all('li', class_='sc-qmn92k-1 jJjeGO')
@@ -141,9 +143,15 @@ def scrapper()->pd.DataFrame:
                         value = item.find('span', class_='sc-1x0vz2r-0 gSLYtF').text.strip()
                         globals()[label] = value
 
-                    if (Salons == 'Missing') or (Surface_habitable == 'Missing') or (Âge_du_bien == 'Missing'):
+                    # Check if either Étage or Nombre_etage is available
+                    if globals().get("Nombre_d'étage") != 'Missing':
+                        globals()['Étage'] = globals()["Nombre_d'étage"]
+
+                    if (Salons == 'Missing') or (Surface_habitable == 'Missing') or (Âge_du_bien == 'Missing') or (Étage == 'Missing'):
                         continue
 
+                    etage = int(Étage)
+                    print('etage : ', etage)
                     salons = int(Salons)
                     surface_habitable = int(Surface_habitable)
                     
@@ -249,7 +257,7 @@ def scrapper()->pd.DataFrame:
                     
                     new_row = {'titre' : title_element, 'Type' : Type_, 'transaction' : transaction, 'ville' : city, 'secteur' : Secteur, 'surface_totale' : Surface_totale, 
                                 'surface_habitable' : Surface_habitable, 'chambres' : Chambres, 'salle_bains' : Salle_bain, 'salons' : salons,
-                                'pieces' : salons+Chambres, 'age_bien' : Âge_du_bien, 'terrasse' : terrasse, 'balcon' : balcon, 'parking' : parking, 
+                                'pieces' : salons+Chambres, 'etage' : etage ,'age_bien' : Âge_du_bien, 'terrasse' : terrasse, 'balcon' : balcon, 'parking' : parking, 
                                 'ascenseur' : ascenseur, 'securite' : securite, 'climatisation' : climatisation, 'cuisine_equipee' : cuisine_equipee,
                                 'concierge' : concierge, 'duplex' : duplex, 'chauffage' : chauffage, 'meuble' : meuble, 
                                 'garage' : garage, 'jardin' : jardin, 'piscine' : piscine,'prix' : price_element

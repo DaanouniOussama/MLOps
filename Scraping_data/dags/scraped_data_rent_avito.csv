@@ -1,54 +1,50 @@
-titre,Type,transaction,ville,secteur,surface_totale,surface_habitable,chambres,salle_bains,salons,pieces,terrasse,balcon,parking,ascenseur,securite,climatisation,cuisine_equipee,concierge,duplex,chauffage,meuble,garage,jardin,piscine,prix
-Villa 500 m² utiles usage bureau ou professionnel,Villas et Riads,louer,Casablanca,Hay Hana,510,510,3,2,4,7,No,No,No,No,No,No,No,No,No,No,No,No,No,No,35000
-Villa vide CIL,Villas et Riads,louer,Casablanca,C.I.L,450,400,4,4,3,7,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,30000
-Villa 890m Meublé O Vide A Californie,Villas et Riads,louer,Casablanca,Californie,890,500,4,4,3,7,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,35000
-Villa à louer à Hay Hana,Villas et Riads,louer,Casablanca,Hay Hana,240,240,5,4,1,6,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,11000
-Villa vide en location avec picine a oisis,Villas et Riads,louer,Casablanca,Oasis,400,400,4,3,2,6,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,40000
-Villa 550m vide Ain Diab,Villas et Riads,louer,Casablanca,Aïn Diab,550,400,4,3,3,7,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,30000
-villa a louer a darbouazza,Villas et Riads,louer,Casablanca,Autre secteur,233,171,3,3,2,5,No,Yes,No,No,Yes,Yes,Yes,No,No,No,No,Yes,Yes,No,11500
-Villa 350m Commercial Triangle d'or,Villas et Riads,louer,Casablanca,Bourgogne,356,356,4,3,3,7,No,No,No,No,No,No,No,No,No,No,No,No,No,No,45000
-Villa 350m Commercial A Triangle D'or,Villas et Riads,louer,Casablanca,Triangle d'Or,356,356,3,3,2,5,No,No,No,No,No,No,No,No,No,No,No,No,No,No,45000
-Étage villa louer,Villas et Riads,louer,Casablanca,Ain Sebaa,68,68,2,1,1,3,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,3700
-Villa ensoleillée CIL,Villas et Riads,louer,Casablanca,C.I.L,400,450,5,5,4,9,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,36000
-Villa 1500 m² 4 chambres piscine,Villas et Riads,louer,Casablanca,Longchamps,1500,600,4,4,5,9,No,No,No,No,No,No,No,No,No,No,No,No,No,No,60000
-Villa louer n 2,Villas et Riads,louer,Casablanca,Sidi Bernoussi,120,120,2,1,2,4,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,7500
-Villa ain diab,Villas et Riads,louer,Casablanca,Aïn Diab,450,350,4,3,3,7,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,25000
-Villa à louer,Villas et Riads,louer,Casablanca,Aïn Diab,700,700,7,5,2,9,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,40000
-villa meublé à louer,Villas et Riads,louer,Casablanca,Polo,500,150,8,5,2,10,No,Yes,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,50000
-Jolie villa à louer vide à Californie,Villas et Riads,louer,Casablanca,Californie,400,500,4,4,3,7,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,30000
-Villa meublée Sidi Maarouf,Villas et Riads,louer,Casablanca,Sidi Maarouf,450,40,4,4,4,8,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,30000
-JOLIE VILLA A LOUER,Villas et Riads,louer,Casablanca,Polo,495,480,5,4,2,7,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,No,30000
-Villa à louer meublée à californie ac piscine,Villas et Riads,louer,Casablanca,Californie,850,600,5,4,3,8,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,35000
-petite villa - bel emplacement CIL,Villas et Riads,louer,Casablanca,C.I.L,240,140,3,2,1,4,Yes,No,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,20000
-Villa à louer luxueuse meublée à Californie,Villas et Riads,louer,Casablanca,Californie,800,600,4,4,3,7,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,35000
-شقة شوكة للكراء 115م توجد بحي الأسرة بقرب الشارع,Villas et Riads,louer,Casablanca,Aïn Chock,120,120,3,1,1,4,No,No,No,No,No,No,No,No,No,No,No,No,No,No,3500
-Villa vide Californie,Villas et Riads,louer,Casablanca,Californie,500,450,4,4,3,7,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,30000
-Villa étage à C.I.L,Villas et Riads,louer,Casablanca,C.I.L,274,150,5,2,1,6,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,14000
-Villa viee en location à al manar habitattion,Villas et Riads,louer,Casablanca,Bourgogne,380,440,4,3,2,6,Yes,No,No,No,Yes,Yes,Yes,No,No,No,No,Yes,Yes,Yes,30000
-شقة للكراء فيها 120م بشارع السمارة بحي سليمة,Villas et Riads,louer,Casablanca,Aïn Chock,120,120,3,1,1,4,No,No,No,No,No,No,No,No,No,No,No,No,No,No,3500
-Partma en location 110m2 sur bd smara hay salima,Villas et Riads,louer,Casablanca,Aïn Chock,110,110,2,1,1,3,No,No,No,No,No,No,No,No,No,No,No,No,No,No,3500
-villa à louer à l'oasis,Villas et Riads,louer,Casablanca,Oasis,300,180,3,3,0,3,No,Yes,Yes,No,No,No,Yes,No,No,Yes,Yes,No,Yes,No,24000
-Villa à louer,Villas et Riads,louer,Casablanca,Hermitage,350,160,4,3,4,8,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,25000
-Villa à louer dans le quartier d'Al-Laymoun,Villas et Riads,louer,Casablanca,Laimoune,600,600,2,1,1,3,No,No,No,No,No,No,No,No,No,No,No,No,No,No,22000
-semi villa vide alloué,Villas et Riads,louer,Casablanca,Sidi Maarouf,140,140,3,2,2,5,No,No,No,No,No,No,No,No,No,No,No,No,No,No,6000
-Villa à louer,Villas et Riads,louer,Casablanca,Route d'Azemmour,500,500,3,3,3,6,Yes,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,30000
-Villa Art Deco Oasis,Villas et Riads,louer,Casablanca,Oasis,450,350,3,3,3,6,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,20000
-Villa Traditionnelle (près du Palais Royal Habous),Villas et Riads,louer,Casablanca,Habous,363,365,5,4,5,10,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,37000
-Appartement meublé 130m Mers Sultan,Appartements,louer,Casablanca,Mers Sultan,130,130,3,1,1,4,No,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,7000
-شقة للكراء حي مولاي عبد الله عين الشق,Appartements,louer,Casablanca,Aïn Chock,100,100,3,1,1,4,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,3300
-Appartement équipé,Appartements,louer,Casablanca,Ain Sebaa,88,87,2,1,1,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,5500
-Appartement vide à belvédère,Appartements,louer,Casablanca,Belvédère,85,85,2,1,1,3,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,4300
-Appartement à louer 120 m² à Casablanca,Appartements,louer,Casablanca,Oasis,124,120,3,2,2,5,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,8500
-appartement meublé,Appartements,louer,Casablanca,Aïn Borja,92,92,2,1,1,3,No,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,5500
-Appartement meublé 2chambres Ain Diab 12500dh,Appartements,louer,Casablanca,Aïn Diab,68,68,2,2,2,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,12500
-A louer Studio lumineux à Palmier proche du Tram,Appartements,louer,Casablanca,Palmier,40,40,1,1,1,2,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,6700
-appartement meublé lagironde,Appartements,louer,Casablanca,La Gironde,74,70,2,1,1,3,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,5800
-Appartement à louer 101 m² à Casablanca,Appartements,louer,Casablanca,Les Princesses,109,101,2,2,1,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,10500
-Apparemment à louer dans quartier Almaz,Appartements,louer,Casablanca,Almaz,108,95,2,2,1,3,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,6000
-Studio meublé Gauthier 4500 Dh,Appartements,louer,Casablanca,Gauthier,40,40,1,1,1,2,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,4500
-Appartement neuf vide 74m Gauthier,Appartements,louer,Casablanca,Gauthier,74,74,2,2,1,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,8500
-Appartement meublé 64m Gauthier,Appartements,louer,Casablanca,Gauthier,64,64,1,1,1,2,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,5500
-Studio meublé casa finance City 12eme étages,Appartements,louer,Casablanca,Casablanca Finance City,74,74,1,1,1,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,10500
-Appartement meublé 125 m² Californie,Appartements,louer,Casablanca,Californie,125,125,3,2,1,4,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,10000
-Appartement terrasse 120m Gauthier,Appartements,louer,Casablanca,Gauthier,120,120,2,2,1,3,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,11000
-Studio meublé 44m Riviera,Appartements,louer,Casablanca,Riviera,44,44,1,1,1,2,No,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,6300
+titre,Type,transaction,ville,secteur,surface_totale,surface_habitable,chambres,salle_bains,salons,pieces,etage,terrasse,balcon,parking,ascenseur,securite,climatisation,cuisine_equipee,concierge,duplex,chauffage,meuble,garage,jardin,piscine,prix
+villa a louer a darbouazza,Villas et Riads,louer,Casablanca,Autre secteur,233,171,3,3,2,5,2,No,Yes,No,No,Yes,Yes,Yes,No,No,No,No,Yes,Yes,No,11500
+Villa 550m vide Ain Diab,Villas et Riads,louer,Casablanca,Aïn Diab,550,400,4,3,3,7,3,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,30000
+VILLA PREMIUM ANFA SUPÉRIEURE 4CH,Villas et Riads,louer,Casablanca,Val d'Anfa,800,500,5,4,2,7,1,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,50000
+alouer vila belle finition,Villas et Riads,louer,Casablanca,Aïn Chock,161,161,4,3,2,6,1,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,20000
+Villa 890m Meublé O Vide A Californie,Villas et Riads,louer,Casablanca,Californie,890,500,4,4,3,7,3,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,35000
+Villa 500 m² utiles usage bureau ou professionnel,Villas et Riads,louer,Casablanca,Hay Hana,510,510,3,2,4,7,3,No,No,No,No,No,No,No,No,No,No,No,No,No,No,35000
+Villa vide CIL,Villas et Riads,louer,Casablanca,C.I.L,450,400,4,4,3,7,2,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,30000
+Villa à louer à Hay Hana,Villas et Riads,louer,Casablanca,Hay Hana,240,240,5,4,1,6,2,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,11000
+Villa vide en location avec picine a oisis,Villas et Riads,louer,Casablanca,Oasis,400,400,4,3,2,6,3,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,40000
+Villa 350m Commercial Triangle d'or,Villas et Riads,louer,Casablanca,Bourgogne,356,356,4,3,3,7,2,No,No,No,No,No,No,No,No,No,No,No,No,No,No,45000
+Villa 350m Commercial A Triangle D'or,Villas et Riads,louer,Casablanca,Triangle d'Or,356,356,3,3,2,5,2,No,No,No,No,No,No,No,No,No,No,No,No,No,No,45000
+Villa ensoleillée CIL,Villas et Riads,louer,Casablanca,C.I.L,400,450,5,5,4,9,2,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,36000
+Villa 1500 m² 4 chambres piscine,Villas et Riads,louer,Casablanca,Longchamps,1500,600,4,4,5,9,1,No,No,No,No,No,No,No,No,No,No,No,No,No,No,60000
+Villa louer n 2,Villas et Riads,louer,Casablanca,Sidi Bernoussi,120,120,2,1,2,4,1,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,7500
+Villa ain diab,Villas et Riads,louer,Casablanca,Aïn Diab,450,350,4,3,3,7,1,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,25000
+Villa à louer,Villas et Riads,louer,Casablanca,Aïn Diab,700,700,7,5,2,9,2,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,40000
+Jolie villa à louer vide à Californie,Villas et Riads,louer,Casablanca,Californie,400,500,4,4,3,7,3,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,30000
+Villa meublée Sidi Maarouf,Villas et Riads,louer,Casablanca,Sidi Maarouf,450,40,4,4,4,8,2,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,30000
+JOLIE VILLA A LOUER,Villas et Riads,louer,Casablanca,Polo,495,480,5,4,2,7,1,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,No,30000
+Villa à louer meublée à californie ac piscine,Villas et Riads,louer,Casablanca,Californie,850,600,5,4,3,8,3,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,35000
+petite villa - bel emplacement CIL,Villas et Riads,louer,Casablanca,C.I.L,240,140,3,2,1,4,1,Yes,No,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,20000
+Villa à louer luxueuse meublée à Californie,Villas et Riads,louer,Casablanca,Californie,800,600,4,4,3,7,3,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,35000
+Villa vide Californie,Villas et Riads,louer,Casablanca,Californie,500,450,4,4,3,7,2,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,30000
+Villa étage à C.I.L,Villas et Riads,louer,Casablanca,C.I.L,274,150,5,2,1,6,2,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,14000
+Villa viee en location à al manar habitattion,Villas et Riads,louer,Casablanca,Bourgogne,380,440,4,3,2,6,2,Yes,No,No,No,Yes,Yes,Yes,No,No,No,No,Yes,Yes,Yes,30000
+Villa à louer,Villas et Riads,louer,Casablanca,Hermitage,350,160,4,3,4,8,2,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,25000
+Villa à louer dans le quartier d'Al-Laymoun,Villas et Riads,louer,Casablanca,Laimoune,600,600,2,1,1,3,2,No,No,No,No,No,No,No,No,No,No,No,No,No,No,22000
+Appartement à louer 83 m² à Casablanca,Appartements,louer,Casablanca,Roches Noires,90,83,2,1,2,4,2,No,No,No,No,No,No,No,No,No,No,No,No,No,No,6000
+bel appartement 3 chambre a bélvèdere,Appartements,louer,Casablanca,Belvédère,139,130,3,2,1,4,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,6000
+Appartement à louer à Casablanca,Appartements,louer,Casablanca,Maarif,90,90,3,2,1,4,1,No,No,No,No,No,No,No,No,No,No,No,No,No,No,5500
+appartement vide sur FERME BRETONE,Appartements,louer,Casablanca,Ferme Bretone,86,86,2,1,1,3,1,No,No,No,No,No,No,No,No,No,No,No,No,No,No,7500
+Appartement à louer 52 m² à Casablanca,Appartements,louer,Casablanca,La Gironde,52,52,1,1,1,2,5,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,Yes,No,No,No,5500
+Appartement à louer 70 m² à Casablanca,Appartements,louer,Casablanca,Hay Sadri,70,70,2,1,1,3,3,No,No,No,No,No,No,No,No,No,No,No,No,No,No,2500
+JOLI APPART 3 CH SALON 104M 1 ETG TRMWAY,Appartements,louer,Casablanca,Ain Sebaa,104,104,3,2,1,4,1,Yes,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,3500
+bel appartement a Gauthier 3 chambre,Appartements,louer,Casablanca,Gauthier,167,167,3,3,1,4,5,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,12000
+bel appartement en location ain borja,Appartements,louer,Casablanca,Aïn Borja,73,73,2,1,1,3,2,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,5000
+appartement a louer a Belvédère,Appartements,louer,Casablanca,Belvédère,84,87,2,2,1,3,3,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,5000
+appartement vide a ain sbae,Appartements,louer,Casablanca,Ain Sebaa,120,120,3,2,1,4,3,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,5500
+Appartement à louer 52m2 a oasis,Appartements,louer,Casablanca,Les Princesses,55,52,1,2,1,2,1,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,8000
+Appartement meublé Maarif Gandhi,Appartements,louer,Casablanca,Maarif,100,100,2,2,1,3,5,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,7000
+Appartement à louer 101 m² à Casablanca,Appartements,louer,Casablanca,Les Princesses,109,101,2,2,1,3,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,10500
+Studio meublé Val Fleuri,Appartements,louer,Casablanca,Val Fleuri,43,43,1,1,1,2,1,No,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,6300
+Appartement neuf 63 m Palmier,Appartements,louer,Casablanca,Palmier,63,63,2,2,1,3,3,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,7000
+Studio meublé Bourgogne pour Fille,Appartements,louer,Casablanca,Bourgogne,33,33,1,1,1,2,1,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,4600
+Appartement à louer 70 m² à Casablanca,Appartements,louer,Casablanca,Casablanca Finance City,85,70,1,1,1,2,7,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,9000
+Studio meublé 50m² Les Princesses,Appartements,louer,Casablanca,Les Princesses,50,50,1,1,1,2,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,5500
+Appartement terrasse meublé 85m Bourgogne,Appartements,louer,Casablanca,Bourgogne,85,85,2,1,1,3,7,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,7500
+Appartement meublé 60m² CIL,Appartements,louer,Casablanca,C.I.L,60,60,1,1,1,2,3,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,7500
+Á louer luxueux appartement meublé avec piscine .,Appartements,louer,Casablanca,Palmier,125,125,2,2,1,3,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,20000

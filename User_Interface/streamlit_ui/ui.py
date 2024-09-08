@@ -17,13 +17,24 @@ st.set_page_config(
         layout="wide",
         initial_sidebar_state="expanded")
 
+option = st.radio('Select :',
+                  ['Avito',
+                   'Mubawab'],
+                  horizontal=True)
+option = option.lower()
+
+# Map the selected option to the corresponding table name
+table_name = f"real_estate_table_{option}_vente"
+
 try:
     logging.info('Connecting to postgres DB ...')
     connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
-    query1 = """ SELECT * FROM real_estate_table;"""
-    query2 = """ SELECT neighbourhood_city, neighbourhood_city_coded, city FROM feature_store_appartement;"""
+    # Dynamically format the query based on the selected option
+    query1 = f"SELECT * FROM {table_name};"
+
+    #query2 = """ SELECT neighbourhood_city, neighbourhood_city_coded, city FROM feature_store_appartement;"""
     df = pd.read_sql_query(query1, connection)
-    feature_store = pd.read_sql_query(query2, connection)
+    #feature_store = pd.read_sql_query(query2, connection)
     logging.info('Connection to postgres db was successful')
 
 except Exception as e:
@@ -32,21 +43,21 @@ except Exception as e:
 
 # Outliers deletion
 # price outliers
-try:
-    df = df[df['price'] <= df['price'].quantile(0.97)]
-    df = df[df['superficie'] <= df['superficie'].quantile(0.97)]
-    logging.info('Deleting outliers')
-except Exception as e:
-    logging.error('Error while deleting outliers')
-    raise e
+# try:
+#     df = df[df['price'] <= df['price'].quantile(0.97)]
+#     df = df[df['surface_totale'] <= df['surface_totale'].quantile(0.97)]
+#     logging.info('Deleting outliers')
+# except Exception as e:
+#     logging.error('Error while deleting outliers')
+#     raise e
 
-df['adress'] = df['neighbourhood'] + ', ' + df['city']
+df['adress'] = df['secteur'] + ', ' + df['ville']
 
 # Connecting and Fetching all rows from database Maps_data
 try:
     #logging.info('Connecting to postgres DB ...')
     #connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
-    query = """ SELECT * FROM maps_table;"""
+    query = """ SELECT * FROM maps_table_avito_sell;"""
     df_maps = pd.read_sql_query(query, connection)
     logging.info('Connection to postgres db was successful')
 
@@ -57,10 +68,11 @@ except Exception as e:
 
 df_maps = df_maps.dropna()
 
-df_maps = df_maps.rename(columns={"laltitude": "longitude" , "longitude" :"latitude"})
 #df_maps = df_maps[['latitude','longitude']]
-df_maps = df_maps.loc[(df_maps['latitude']>21.0) & (df_maps['latitude']<36.0) & (df_maps['longitude']>-17.0) & (df_maps['longitude']<-1.0)]
-#st.write(df_maps[['latitude','longitude']])
+df_maps = df_maps.loc[(df_maps['laltitude']>21.0) & (df_maps['laltitude']<36.0) & (df_maps['longitude']>-17.0) & (df_maps['longitude']<-1.0)]
+
+df_maps = df_maps.rename(columns={"laltitude": "latitude"})
+
 #st.map(df_maps, zoom=6)
 
 # merge df with df_maps
@@ -85,6 +97,8 @@ df_merged['color'] = df_merged['price'].apply(price_to_color)
 st.sidebar.title('Moroccan Real-estate Monitor')
 window = st.sidebar.selectbox("Choose a window", ["Dashboard", "Advanced analysis", "AI"])
 
+
+                  
 ##### ^^^^^^^^^^^ @@@@@@@@@@@@ Dashboard     @@@@@@@@@@@@ ^^^^^^^^^^^ #####
 
 if window == "Dashboard":
@@ -92,10 +106,10 @@ if window == "Dashboard":
 
 ##### ^^^^^^^^^^^ @@@@@@@@@@@@   Advanced analysis   @@@@@@@@@@@@ ^^^^^^^^^^^ #####
 
-if window == "Advanced analysis":
+#if window == "Advanced analysis":
 
-    advanced_analytics(df)
+    #advanced_analytics(df)
 
-if window == "AI":
+#if window == "AI":
 
-    ai(df, feature_store)
+    #ai(df, feature_store)

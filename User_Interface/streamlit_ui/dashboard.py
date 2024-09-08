@@ -9,7 +9,7 @@ def dashboard(df_merged,df):
     with st.sidebar:
         
         # Add "All Cities" to the city list
-        city_list = ['All Cities'] + list(df.city.unique())[::-1]
+        city_list = ['All Cities'] + list(df.ville.unique())[::-1]
         
         selected_city = st.selectbox('Select a city', city_list)
 
@@ -20,7 +20,7 @@ def dashboard(df_merged,df):
         if selected_city == 'All Cities':
             df_selected_city = df[df.real_estate_type==selected_real_estate]
         else:
-            df_selected_city = df[(df.city == selected_city) & (df.real_estate_type==selected_real_estate)]
+            df_selected_city = df[(df.ville == selected_city) & (df.real_estate_type==selected_real_estate)]
 
 
 
@@ -52,11 +52,11 @@ def dashboard(df_merged,df):
     col = st.columns((1.5, 4.5, 2), gap='medium')
     with col[0]:
         st.markdown('#### Mean price of square meter by city')
-        #st.write(df_merged)
         #st.write(df_selected_city)
-        st.metric(str(df_selected_city.city.unique()[0]),int(df_selected_city.price.mean()/df_selected_city.superficie.mean()),delta='1K',delta_color='normal')
-        neighbourhood = st.selectbox('Select neighbourhood',df_selected_city.neighbourhood.unique())
-        st.metric('Mean price of square meter', int(df_selected_city[df_selected_city['neighbourhood']==neighbourhood].price.mean()/df_selected_city[df_selected_city['neighbourhood']==neighbourhood].superficie.mean()),delta='1K',delta_color='normal')
+        #st.write(df_selected_city)
+        st.metric(str(df_selected_city.ville.unique()[0]),int(df_selected_city.price.mean()/df_selected_city.surface_totale.mean()),delta='1K',delta_color='normal')
+        neighbourhood = st.selectbox('Select neighbourhood',df_selected_city.secteur.unique())
+        st.metric('Mean price of square meter', int(df_selected_city[df_selected_city['secteur']==neighbourhood].price.mean()/df_selected_city[df_selected_city['secteur']==neighbourhood].surface_totale.mean()),delta='1K',delta_color='normal')
 
 
     with col[1]:
@@ -67,29 +67,31 @@ def dashboard(df_merged,df):
 
         #st.write(df_merged)
 
+
+
+    with col[2]:
+        st.markdown('#### Real-Estate offer type distribution')
+
         # Create a histogram with KDE line using Plotly
         fig = px.histogram(df_selected_city, x='price', nbins=50, marginal='box', title=f'Price Distribution in {selected_city}')
 
         # Display the histogram with KDE line
         st.plotly_chart(fig)
 
-    with col[2]:
-        st.markdown('#### Real-Estate offer type distribution')
+        # category = df.real_estate_type.unique()
+        # #st.write(category)
+        # if selected_city == 'All Cities':
+        #     value = df['real_estate_type'].value_counts(normalize=True)
+        # else:
+        #     value = df.loc[df['ville']==selected_city,'real_estate_type'].value_counts(normalize=True)
+        # #st.write(value)
+        # value = (value*100).round(1)  # Round to one decimal place
+        # source = pd.DataFrame({"category": category, "Pourcentage": value.values})
 
-        category = df.real_estate_type.unique()
-        #st.write(category)
-        if selected_city == 'All Cities':
-            value = df['real_estate_type'].value_counts(normalize=True)
-        else:
-            value = df.loc[df['city']==selected_city,'real_estate_type'].value_counts(normalize=True)
-        #st.write(value)
-        value = (value*100).round(1)  # Round to one decimal place
-        source = pd.DataFrame({"category": category, "Pourcentage": value.values})
+        # chart = alt.Chart(source).mark_arc(innerRadius=50).encode(
+        #     theta=alt.Theta(field="Pourcentage", type="quantitative"),
+        #     color=alt.Color(field="category", type="nominal"),
+        # )
 
-        chart = alt.Chart(source).mark_arc(innerRadius=50).encode(
-            theta=alt.Theta(field="Pourcentage", type="quantitative"),
-            color=alt.Color(field="category", type="nominal"),
-        )
-
-        st.altair_chart(chart, theme=None, use_container_width=True)
+        # st.altair_chart(chart, theme=None, use_container_width=True)
                 

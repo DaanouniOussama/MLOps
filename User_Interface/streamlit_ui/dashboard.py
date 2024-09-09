@@ -29,16 +29,17 @@ def dashboard(df_merged,df):
         'HeatmapLayer',
         data=df_merged,
         get_position='[longitude, latitude]',
-        get_radius=2000,  # Fixed radius, can be adjusted as needed
+        get_radius=10,  # Fixed radius, can be adjusted as needed
         get_fill_color='color',
-        pickable=True
+        pickable=True,
+        opacity=0.5
     )
 
     # Set the view state
     view_state = pdk.ViewState(
         latitude=31.7917,
         longitude=-7.0926,
-        zoom=3,
+        zoom=5,
         pitch=0
     )
 
@@ -47,6 +48,7 @@ def dashboard(df_merged,df):
         layers=[layer],
         initial_view_state=view_state,
         tooltip={"text": "Price: {price}"}
+        
     )
     # Dashboard Main Panel
     col = st.columns((1.5, 4.5, 2), gap='medium')
@@ -55,7 +57,7 @@ def dashboard(df_merged,df):
         #st.write(df_selected_city)
         #st.write(df_selected_city)
         st.metric(str(df_selected_city.ville.unique()[0]),int(df_selected_city.price.mean()/df_selected_city.surface_totale.mean()),delta='1K',delta_color='normal')
-        neighbourhood = st.selectbox('Select neighbourhood',df_selected_city.secteur.unique())
+        neighbourhood = st.selectbox('Select neighbourhood',sorted(df_selected_city.secteur.unique()))
         st.metric('Mean price of square meter', int(df_selected_city[df_selected_city['secteur']==neighbourhood].price.mean()/df_selected_city[df_selected_city['secteur']==neighbourhood].surface_totale.mean()),delta='1K',delta_color='normal')
 
 
@@ -65,7 +67,7 @@ def dashboard(df_merged,df):
         # Render the map in Streamlit
         st.pydeck_chart(r)
 
-        #st.write(df_merged)
+        st.write(df_merged)
 
 
 

@@ -17,20 +17,34 @@ st.set_page_config(
         layout="wide",
         initial_sidebar_state="expanded")
 
-option = st.radio('Select :',
-                  ['Avito',
-                   'Mubawab'],
-                  horizontal=True)
-option = option.lower()
+
+# Top horizontal selection
+col1, col2, col3 = st.columns([1, 1, 1])
+with col1:
+    option_site = st.radio('Select data source :',
+                    ['Avito',
+                    'Mubawab'],
+                    horizontal=True)
+    option_site = option_site.lower()
+with col2 :
+    option_transaction = st.radio("Select type d'annonce: ",
+                    ['Location',
+                    'Vente'],
+                    horizontal=True)
+    option_transaction = option_transaction.lower()
+
+if option_site == 'mubawab' and option_transaction == 'location':
+    option_transaction = 'rent'
+    
 
 # Map the selected option to the corresponding table name
-table_name = f"real_estate_table_{option}_vente"
+table_name1 = f"real_estate_table_{option_site}_{option_transaction}"
 
 try:
     logging.info('Connecting to postgres DB ...')
     connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
     # Dynamically format the query based on the selected option
-    query1 = f"SELECT * FROM {table_name};"
+    query1 = f"SELECT * FROM {table_name1};"
 
     #query2 = """ SELECT neighbourhood_city, neighbourhood_city_coded, city FROM feature_store_appartement;"""
     df = pd.read_sql_query(query1, connection)
@@ -51,13 +65,20 @@ except Exception as e:
 #     logging.error('Error while deleting outliers')
 #     raise e
 
+if option_transaction == 'location':
+    option_transaction = 'rent'
+elif option_transaction == 'vente':
+    option_transaction = 'sell'
+
+table_name2 = f"maps_table_{option_site}_{option_transaction}"
+
 df['adress'] = df['secteur'] + ', ' + df['ville']
 
 # Connecting and Fetching all rows from database Maps_data
 try:
     #logging.info('Connecting to postgres DB ...')
     #connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
-    query = """ SELECT * FROM maps_table_avito_sell;"""
+    query = f"SELECT * FROM {table_name2};"
     df_maps = pd.read_sql_query(query, connection)
     logging.info('Connection to postgres db was successful')
 

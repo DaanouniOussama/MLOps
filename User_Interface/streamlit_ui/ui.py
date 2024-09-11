@@ -21,13 +21,13 @@ st.set_page_config(
 # Top horizontal selection
 col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
-    option_site = st.radio('Select data source :',
+    option_site = st.radio("Sélectionner la source de données :",
                     ['Avito',
                     'Mubawab'],
                     horizontal=True)
     option_site = option_site.lower()
 with col2 :
-    option_transaction = st.radio("Select type d'annonce: ",
+    option_transaction = st.radio("Sélectionner le type d'annonce: ",
                     ['Location',
                     'Vente'],
                     horizontal=True)
@@ -115,8 +115,8 @@ df_merged['color'] = df_merged['price'].apply(price_to_color)
 ##### ^^^^^^^^^^^ @@@@@@@@@@@@ End Calculation     @@@@@@@@@@@@ ^^^^^^^^^^^ #####
 
 # Create a sidebar for navigation
-st.sidebar.title('Moroccan Real-estate Monitor')
-window = st.sidebar.selectbox("Choose a window", ["Dashboard", "Advanced analysis", "AI"])
+st.sidebar.title("Moniteur de l'immobilier marocain")
+window = st.sidebar.selectbox("Choisissez une fenêtre", ["Dashboard", "Advanced analysis"]) #, "AI"
 
 
                   
@@ -127,9 +127,9 @@ if window == "Dashboard":
 
 ##### ^^^^^^^^^^^ @@@@@@@@@@@@   Advanced analysis   @@@@@@@@@@@@ ^^^^^^^^^^^ #####
 
-#if window == "Advanced analysis":
+if window == "Advanced analysis":
 
-    #advanced_analytics(df)
+    advanced_analytics(df,option_site,option_transaction)
 
 #if window == "AI":
 

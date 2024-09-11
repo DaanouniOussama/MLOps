@@ -11,10 +11,10 @@ def dashboard(df_merged,df):
         # Add "All Cities" to the city list
         city_list = ['All Cities'] + list(df.ville.unique())[::-1]
         
-        selected_city = st.selectbox('Select a city', city_list)
+        selected_city = st.selectbox('Sélectionnez une ville', city_list)
 
         real_estate_levels = df['real_estate_type'].unique()
-        selected_real_estate = st.selectbox('Select the type of real-estate', real_estate_levels)
+        selected_real_estate = st.selectbox('Sélectionnez le type de bien immobilier', sorted(real_estate_levels))
         
         # Modify filtering logic to handle "All Cities" option
         if selected_city == 'All Cities':
@@ -51,31 +51,31 @@ def dashboard(df_merged,df):
         
     )
     # Dashboard Main Panel
-    col = st.columns((1.5, 4.5, 2), gap='medium')
+    col = st.columns((1.6, 4.5, 2), gap='medium')
     with col[0]:
-        st.markdown('#### Mean price of square meter by city')
+        st.markdown('###### Prix moyen du mètre carré par ville')
         #st.write(df_selected_city)
         #st.write(df_selected_city)
-        st.metric(str(df_selected_city.ville.unique()[0]),int(df_selected_city.price.mean()/df_selected_city.surface_totale.mean()),delta='1K',delta_color='normal')
-        neighbourhood = st.selectbox('Select neighbourhood',sorted(df_selected_city.secteur.unique()))
-        st.metric('Mean price of square meter', int(df_selected_city[df_selected_city['secteur']==neighbourhood].price.mean()/df_selected_city[df_selected_city['secteur']==neighbourhood].surface_totale.mean()),delta='1K',delta_color='normal')
+        st.metric(str(df_selected_city.ville.unique()[0]),f"{int(df_selected_city.price.mean()/df_selected_city.surface_totale.mean()):,}".replace(',', ' ') + " MAD",delta='',delta_color='normal')
+        neighbourhood = st.selectbox('Sélectionnez le quartier',sorted(df_selected_city.secteur.unique()))
+        st.metric('Prix ​​moyen du mètre carré',f"{int(df_selected_city[df_selected_city['secteur']==neighbourhood].price.mean()/df_selected_city[df_selected_city['secteur']==neighbourhood].surface_totale.mean()):,}".replace(',', ' ') + " MAD",delta='',delta_color='normal')
 
 
     with col[1]:
-        st.markdown('#### Geographic Distribution of Property Prices in Morocco')
+        st.markdown("##### Répartition géographique des prix de l'immobilier au Maroc")
         #st.write(df)
         # Render the map in Streamlit
         st.pydeck_chart(r)
 
-        st.write(df_merged)
+        #st.write(df_merged)
 
 
 
     with col[2]:
-        st.markdown('#### Real-Estate offer type distribution')
+        st.markdown("##### La distribution des prix de l'immobilier")
 
         # Create a histogram with KDE line using Plotly
-        fig = px.histogram(df_selected_city, x='price', nbins=50, marginal='box', title=f'Price Distribution in {selected_city}')
+        fig = px.histogram(df_selected_city, x='price', nbins=50, marginal='box', title=f'La Distribution des prix a {selected_city}')
 
         # Display the histogram with KDE line
         st.plotly_chart(fig)

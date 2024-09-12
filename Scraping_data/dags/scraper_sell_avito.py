@@ -11,7 +11,7 @@ def scrapper()->pd.DataFrame:
     max_price = 10000000
     min_size = 30
     max_size = 1500
-    real_estate = ['appartements'] # 'appartements' , villas_riad 
+    real_estate = ['appartements','villas_riad'] # 'appartements' , villas_riad 
     # extra=balcony,elevator,terrace,heater,airconditioner,furnished,furnished_kitchen,janitor,duplex,parking,security,phone_cable
     cities = ['casablanca']  # 'tanger', 'rabat', 'marrakech', 'agadir'
 

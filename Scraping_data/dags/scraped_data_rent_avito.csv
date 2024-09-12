@@ -1,1 +1,35 @@
 titre,Type,transaction,ville,secteur,surface_totale,surface_habitable,chambres,salle_bains,salons,pieces,etage,terrasse,balcon,parking,ascenseur,securite,climatisation,cuisine_equipee,concierge,duplex,chauffage,meuble,garage,jardin,piscine,prix
+Appartement 70 m² à Casablanca,Appartements,louer,Casablanca,Bourgogne,70,70,2,1,1,3,5,No,No,No,No,No,No,No,No,No,No,No,No,No,No,6000
+Appartement haut standing Racine,Appartements,louer,Casablanca,Racine,122,122,2,2,1,3,4,No,No,No,No,No,No,No,No,No,No,No,No,No,No,15000
+Appartement à louer 90 m² à Casablanca,Appartements,louer,Casablanca,Oasis,120,90,2,2,1,3,1,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,8500
+BEL APPART 3 CH SALON ASC PARK AIN SEBAA 5200 DH,Appartements,louer,Casablanca,Ain Sebaa,96,96,3,2,1,4,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,5200
+bel appartement vide,Appartements,louer,Casablanca,Les Princesses,200,200,4,3,2,6,2,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,16000
+Appartement à louer 120 m² à Casablanca,Appartements,louer,Casablanca,Gauthier,120,120,3,3,1,4,5,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,7500
+Bel Apt Meublé EnsoleilléSécurisé TramAbdelmoumene,Appartements,louer,Casablanca,Quartier des Hôpitaux,60,60,2,1,1,3,5,No,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,6000
+Studio 56m Meublé BD Tan Tan Proche Vinecia ice,Appartements,louer,Casablanca,Bourgogne,56,56,1,1,1,2,2,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,No,6800
+Location studio meublé neuf Palmiers,Appartements,louer,Casablanca,Palmier,50,50,1,1,1,2,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,8000
+Des Luxes Studio Meublé Neuf Ensoleillé,Appartements,louer,Casablanca,Gauthier,40,40,1,1,1,2,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,6800
+Apt Meublé RésidenceSécurisé Anfel Yaacoub,Appartements,louer,Casablanca,Casablanca Finance City,80,80,2,2,1,3,2,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,6000
+Neuf appart haut standing a californie,Appartements,louer,Casablanca,Californie,100,100,2,2,1,3,2,No,No,No,No,No,No,No,No,No,No,No,No,No,No,7000
+Studio 50m Proche Carrefour Fourate,Appartements,louer,Casablanca,Maarif,50,50,1,1,1,2,1,No,Yes,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,5250
+Studio meublé Hôpitaux,Appartements,louer,Casablanca,Quartier des Hôpitaux,65,60,1,1,1,2,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,6500
+Appartement Spacieux à Louer au Maarif Extension,Appartements,louer,Casablanca,Autre secteur,135,125,3,2,1,4,3,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,6500
+Appart T4 à Ain sebaa garden 3 chambres salon,Appartements,louer,Casablanca,Ain Sebaa,118,96,3,2,1,4,1,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,4500
+Appartement meublé à louer 128 m² à Triangle d'or,Appartements,louer,Casablanca,Triangle d'Or,128,128,2,2,1,3,2,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,9500
+Appartement vide 3 chambres Émile zola,Appartements,louer,Casablanca,Belvédère,100,100,3,1,1,4,4,No,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,5500
+Duplex près de casa Near à louer,Appartements,louer,Casablanca,Sidi Maarouf,137,137,2,2,2,4,0,Yes,No,No,No,Yes,No,No,Yes,Yes,No,No,No,No,No,4800
+Bel apt 3Chambres/2S Ensoleillé Roudani Maarif,Appartements,louer,Casablanca,Maarif,100,100,3,2,1,4,2,No,Yes,No,Yes,Yes,No,No,Yes,No,Yes,No,No,No,No,4500
+شقق للكراء 90 m² في الدار البيضاء,Appartements,louer,Casablanca,Nassim,90,90,2,2,2,4,5,No,No,No,No,No,No,No,No,No,No,No,No,No,No,4500
+Appartement à louer maarif,Appartements,louer,Casablanca,Maarif,55,40,1,1,1,2,1,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,6500
+bel appartement meublé a Belvédère,Appartements,louer,Casablanca,Belvédère,100,100,2,1,2,4,5,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,6500
+Appartement à louer quartier Almaz,Appartements,louer,Casablanca,Sidi Maarouf,113,90,2,2,1,3,2,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,6500
+Petit studio loft/Meublé/Sécurisé/Macdo Maarif/40M,Appartements,louer,Casablanca,Maarif,50,50,1,1,0,1,2,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,3500
+super studio meublé HD a maarif extension,Appartements,louer,Casablanca,Maârif Extension,43,43,1,1,1,2,4,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,8500
+NEUF APPART htsdg a californie,Appartements,louer,Casablanca,Californie,70,70,2,2,1,3,2,No,No,No,No,No,No,No,No,No,No,No,No,No,No,4300
+Apt meublé très H-Standing/Sécurisé/Oliveri Maarif,Appartements,louer,Casablanca,Racine,100,100,2,2,1,3,4,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,9500
+Neuf appart haut standing a californie,Appartements,louer,Casablanca,Californie,100,100,2,2,1,3,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,6500
+Luxe Studio Meublé Ensoleillé à McDonald,Appartements,louer,Casablanca,Maarif,60,60,1,1,1,2,2,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,5800
+Neuf Studio Meublé luxe Haut Standing Ensoleilé,Appartements,louer,Casablanca,Palmier,50,50,1,1,1,2,1,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,7000
+شقق للكراء 61 m² في الدار البيضاء,Appartements,louer,Casablanca,Sidi Maarouf,61,61,2,1,1,3,3,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,4000
+Appartement vide racine 3chambres 5eme étages,Appartements,louer,Casablanca,Racine,160,160,3,2,1,4,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,14000
+Appartement à louer 98 m² à Casablanca,Appartements,louer,Casablanca,Nassim,98,98,3,2,1,4,2,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,6000

@@ -1,1 +1,28 @@
 titre,Type,ville,secteur,surface_totale,chambres,salle_bains,pieces,etat,age_bien,etage,standing,terrasse,balcon,parking,ascenseur,securite,climatisation,cuisine_equipee,concierge,chauffage,garage,jardin,piscine,salon_marocain,salon_euro,prix
+Studio rénové avec 2 grandes terrasses,Appartement,Casablanca,Moulay Youssef,88,1,1,2,Nouveau,1-5 ans,Not_defined,Not_defined,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,Yes,1300000
+Bel appartement à vendre à Mandarona. 2 belles chambres. Bien meublé,Appartement,Casablanca,Mandarona,66,2,2,3,Bon état,1-5 ans,3,Not_defined,No,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,Yes,1150000
+Vente Appartement Val Fleury Casablanca,Appartement,Casablanca,Plateau (Al Batha),126,3,2,4,Bon état,10-20 ans,2,Not_defined,No,No,No,Yes,No,Yes,No,Yes,No,Yes,No,No,No,No,2000000
+Appartement 3 chambre neuf,Appartement,Casablanca,Oulfa,85,3,2,4,Nouveau,Moins d'un an,2,Not_defined,Yes,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,1140000
+2 Apparts Haut standing 2&3 étage 95m² &1er 112m²,Appartement,Casablanca,Almaz,95,2,2,1,Nouveau,Moins d'un an,3,Not_defined,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,1000000
+Appartement de 167m2 a al forat maarif extension,Appartement,Casablanca,Maârif Extension,167,2,2,3,Nouveau,5-10 ans,4,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,2100000
+Appartement Hamza en plein quartier Californie,Appartement,Casablanca,Californie,104,3,2,4,Bon état,10-20 ans,3,Not_defined,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,No,1250000
+Appartement résidence Nadia,Appartement,Casablanca,Plateau (Al Batha),146,1,2,3,Bon état,20-30 ans,5,Not_defined,No,No,No,No,No,No,Yes,No,No,Yes,No,No,Yes,No,1850000
+Superbe appartement à vendre à omar riffi. 1 belle chambre. Bien meublé,Appartement,Casablanca,Benjdia,57,1,1,1,Nouveau,5-10 ans,3,Not_defined,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,Yes,1150000
+À vendre appartement 2chambres neuf maarif extension,Appartement,Casablanca,Maârif Extension,89,2,2,5,Nouveau,1-5 ans,4,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,1550000
+Villa rénovée à vendre en résidence fermée à Californie,Villa,Casablanca,Californie,450,5,4,17,Nouveau,1-5 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,7500000
+Sublime villa 458 m2 vue mer avec rooftop,Villa,Casablanca,Ain Diab,458,4,3,5,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,7950000
+Villa Angle de luxe 1000 m2 en plein coeur d’anfa,Villa,Casablanca,Anfa,1000,4,5,6,Bon état,10-20 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,21000000
+Villa à vendre complètement rénové Ain Diab,Villa,Casablanca,Ain Diab,645,4,3,6,Bon état,10-20 ans,Not_defined,Not_defined,No,No,No,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,14500000
+Villa en vente à CALIFORNIE,Villa,Casablanca,Californie,400,4,4,5,Bon état,5-10 ans,Not_defined,Not_defined,No,No,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,8500000
+Villa à vendre à CIL HAY SALAM,Villa,Casablanca,CIL (Hay Salam),400,4,3,5,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,10000000
+Vente villa californie,Villa,Casablanca,Californie,280,4,3,4,Nouveau,Moins d'un an,Not_defined,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,5950000
+Villa à vendre à ANFA,Villa,Casablanca,Ain Diab,300,5,5,6,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,7000000
+Villa Quartier Almaz,Villa,Casablanca,Almaz,320,6,4,3,Nouveau,1-5 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,4000000
+Villa quartier Mandarona,Villa,Casablanca,Mandarona,270,4,3,7,Bon état,10-20 ans,Not_defined,Not_defined,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,Yes,Yes,4900000
+Villa à rafraîchir sur El Manar,Villa,Casablanca,El Manar - El Hank,450,4,2,7,À rénover,20-30 ans,Not_defined,Not_defined,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,9800000
+Villa pour habitation ou bureau,Villa,Casablanca,CIL (Hay Salam),746,4,2,8,À rénover,30-50 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,Yes,11500000
+Villa de Prestige au Cœur de Californie,Villa,Casablanca,Californie,3000,5,5,10,Bon état,1-5 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,50000000
+Villa a vendre Ain Diab,Villa,Casablanca,Ain Diab,360,4,4,5,Bon état,10-20 ans,Not_defined,Not_defined,Yes,No,No,Yes,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,8000000
+Villa Coup de cœur Californie,Villa,Casablanca,Californie,462,5,4,8,Bon état,10-20 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,8500000
+Coquette Villa Isolée Californie,Villa,Casablanca,Californie,622,5,3,10,Bon état,10-20 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,8000000
+Villa de Charme Californie,Villa,Casablanca,Californie,2527,5,4,10,Bon état,10-20 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,25000000

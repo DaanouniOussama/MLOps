@@ -11,7 +11,7 @@ def scrapper_rent()->pd.DataFrame:
     max_price = 70000
     min_size = 30
     max_size = 1500
-    real_estate = [ 'villas_riad' , 'appartements'] # 'appartements' , villas_riad 
+    real_estate = ['appartements'] # 'appartements' , villas_riad 
     # extra=balcony,elevator,terrace,heater,airconditioner,furnished,furnished_kitchen,janitor,duplex,parking,security,phone_cable
     cities = ['casablanca']  # 'tanger', 'rabat', 'marrakech', 'agadir'
 
@@ -154,8 +154,10 @@ def scrapper_rent()->pd.DataFrame:
 
                     if (Salons == 'Missing') or (Surface_habitable == 'Missing') or (Étage == 'Missing'):
                         continue
-
-                    etage = re.sub(r'[^\d]', '', Étage)
+                    if Étage == "Rez de chaussée":
+                        etage = 0
+                    else :
+                        etage = re.sub(r'[^\d]', '', Étage)
                     etage = int(etage)
                     print('etage : ', etage)
                     salons = int(Salons)

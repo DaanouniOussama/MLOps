@@ -27,11 +27,11 @@ def scrapper_mubawab_vente():
             
             
             # URL : https://www.mubawab.ma/fr/st/casablanca/appartements-a-vendre:prmn:200000
-            my_url = f"https://www.mubawab.ma/fr/st/{ville.lower()}/{immobilier}-a-vendre:prmn:200000"
+            my_url = f"https://www.mubawab.ma/fr/st/{ville.lower()}/{immobilier}-a-vendre:prmn:250000"
 
             # visit the website with the url : my_url
-            response = httpx.get(my_url, timeout=10.0, follow_redirects=True)
-            time.sleep(2)
+            response = httpx.get(my_url, timeout=100, follow_redirects=True)
+            time.sleep(20)
 
             # Parse html
             html = response.text
@@ -60,8 +60,8 @@ def scrapper_mubawab_vente():
             i = 0            
             for link in [item['URL'] for item in extracted_data]:
                 
-                response = httpx.get(link, timeout=10.0, follow_redirects=True)
-                time.sleep(2)
+                response = httpx.get(link, timeout=100, follow_redirects=True)
+                time.sleep(20)
 
                 # Parse html
                 html = response.text
@@ -76,9 +76,14 @@ def scrapper_mubawab_vente():
                     
                     ville_secteur = market_soup.find('h3', class_='greyTit').text.strip()
 
-                    # Split the text into 'secteur' and 'ville'
-                    secteur = ville_secteur.split('à')[0].strip()
-                    ville = ville_secteur.split('à')[1].strip()
+                    # Check if 'à' exists in the string, indicating the presence of both 'secteur' and 'ville'
+                    if 'à' in ville_secteur:
+                        secteur = ville_secteur.split('à')[0].strip()
+                        ville = ville_secteur.split('à')[1].strip()
+                    else:
+                        # Only the 'ville' is available
+                        continue
+
                     print(f'ville : {ville}')
                     print(f'secteur : {secteur}')
                     

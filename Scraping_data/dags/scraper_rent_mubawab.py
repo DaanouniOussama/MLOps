@@ -7,6 +7,9 @@ import re
 
 
 def scrapper_mubawab_location():
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    }
 
     real_estate = ['appartements', 'villas-et-maisons-de-luxe']
 
@@ -27,11 +30,11 @@ def scrapper_mubawab_location():
             
             
             # URL : https://www.mubawab.ma/fr/st/casablanca/appartements-a-vendre:prmn:200000
-            my_url = f"https://www.mubawab.ma/fr/st/{ville.lower()}/{immobilier}-a-louer:prmn:2000"
+            my_url = f"https://www.mubawab.ma/fr/st/{ville.lower()}/{immobilier}-a-louer:prmn:2500"
 
             # visit the website with the url : my_url
-            response = httpx.get(my_url, timeout=10.0, follow_redirects=True)
-            time.sleep(2)
+            response = httpx.get(my_url, timeout=100, follow_redirects=True)
+            time.sleep(10)
 
             # Parse html
             html = response.text
@@ -60,8 +63,8 @@ def scrapper_mubawab_location():
             i = 0            
             for link in [item['URL'] for item in extracted_data]:
                 
-                response = httpx.get(link, timeout=10.0, follow_redirects=True)
-                time.sleep(2)
+                response = httpx.get(link, timeout=100, headers=headers, follow_redirects=True)
+                time.sleep(20)
 
                 # Parse html
                 html = response.text
@@ -70,22 +73,30 @@ def scrapper_mubawab_location():
                 i = i + 1
                 
                 try:
-                    logging.info('Extrating title, ville and secteur ...')
-                    title = market_soup.find('h1' , class_ = 'searchTitle').text.strip()
+                    logging.info('Extracting title, ville and secteur ...')
+                    
+                    # Extract the title
+                    title = market_soup.find('h1', class_='searchTitle').text.strip()
                     print(title)
                     
+                    # Extract 'ville_secteur'
                     ville_secteur = market_soup.find('h3', class_='greyTit').text.strip()
-
-                    # Split the text into 'secteur' and 'ville'
-                    secteur = ville_secteur.split('à')[0].strip()
-                    ville = ville_secteur.split('à')[1].strip()
-                    print(f'ville : {ville}')
-                    print(f'secteur : {secteur}')
                     
+                    # Check if 'à' exists in the string, indicating the presence of both 'secteur' and 'ville'
+                    if 'à' in ville_secteur:
+                        secteur = ville_secteur.split('à')[0].strip()
+                        ville = ville_secteur.split('à')[1].strip()
+                    else:
+                        # Only the 'ville' is available
+                        continue
+
+                    print(f'ville: {ville}')
+                    print(f'secteur: {secteur}')
 
                 except Exception as e:
                     logging.error('Error while extracting ville et secteur')
                     raise e
+
                     
                 try:  
 

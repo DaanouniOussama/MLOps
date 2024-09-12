@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as soup
 import pandas as pd
 import httpx
 import time 
+import re
 
 
 def scrapper()->pd.DataFrame:
@@ -10,7 +11,7 @@ def scrapper()->pd.DataFrame:
     max_price = 10000000
     min_size = 30
     max_size = 1500
-    real_estate = [ 'villas_riad' , 'appartements'] # 'appartements' , villas_riad 
+    real_estate = ['appartements'] # 'appartements' , villas_riad 
     # extra=balcony,elevator,terrace,heater,airconditioner,furnished,furnished_kitchen,janitor,duplex,parking,security,phone_cable
     cities = ['casablanca']  # 'tanger', 'rabat', 'marrakech', 'agadir'
 
@@ -133,7 +134,7 @@ def scrapper()->pd.DataFrame:
                     globals()['Surface_habitable'] = 'Missing'
                     globals()['Salons'] = 'Missing'    
                     globals()['Étage'] = 'Missing'  
-                    globals()['Nombre_etage'] = 'Missing'                    
+                    #globals()['Nombre_etage'] = 'Missing'                    
                     
                     # Find all list items and extract the data
                     items = market_soup.find_all('li', class_='sc-qmn92k-1 jJjeGO')
@@ -144,13 +145,18 @@ def scrapper()->pd.DataFrame:
                         globals()[label] = value
 
                     # Check if either Étage or Nombre_etage is available
-                    if globals().get("Nombre_d'étage") != 'Missing':
-                        globals()['Étage'] = globals()["Nombre_d'étage"]
+                    #if globals().get("Nombre_d'étage") != 'Missing':
+                     #   globals()['Étage'] = globals()["Nombre_d'étage"]
 
                     if (Salons == 'Missing') or (Surface_habitable == 'Missing') or (Âge_du_bien == 'Missing') or (Étage == 'Missing'):
                         continue
-
-                    etage = int(Étage)
+                    
+                    if Étage == "Rez de chaussée":
+                        etage = 0
+                    else :
+                        etage = re.sub(r'[^\d]', '', Étage)
+                    print(etage)
+                    etage = int(etage)
                     print('etage : ', etage)
                     salons = int(Salons)
                     surface_habitable = int(Surface_habitable)

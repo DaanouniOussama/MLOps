@@ -10,127 +10,159 @@ from dashboard import dashboard
 from advanced_analytics import advanced_analytics
 from ai import ai
 
+# Define valid users (for simplicity)
+users = {
+    "oussama": "password123",
+    "admin": "admin123"
+}
 
-st.set_page_config(
-        page_title="Moroccan Real-estate Monitor",
-        page_icon="📈",
-        layout="wide",
-        initial_sidebar_state="expanded")
+# Function to check login
+def check_login(username, password):
+    if username in users and users[username] == password:
+        return True
+    return False
 
+# Main app function
+def main():
+    # Session state to track login
+    if "logged_in" not in st.session_state:
+        st.session_state["logged_in"] = False
 
-# Top horizontal selection
-col1, col2, col3 = st.columns([1, 1, 1])
-with col1:
-    option_site = st.radio("Sélectionner la source de données :",
-                    ['Avito',
-                    'Mubawab'],
-                    horizontal=True)
-    option_site = option_site.lower()
-with col2 :
-    option_transaction = st.radio("Sélectionner le type d'annonce: ",
-                    ['Location',
-                    'Vente'],
-                    horizontal=True)
-    option_transaction = option_transaction.lower()
+    if not st.session_state["logged_in"]:
+        login_form()
+    else:
+        run_app()
 
-if option_site == 'mubawab' and option_transaction == 'location':
-    option_transaction = 'rent'
-    
+# Login form function
+def login_form():
+    st.title("Login to Moroccan Real-estate Monitor")
 
-# Map the selected option to the corresponding table name
-table_name1 = f"real_estate_table_{option_site}_{option_transaction}"
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
 
-try:
-    logging.info('Connecting to postgres DB ...')
-    connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
-    # Dynamically format the query based on the selected option
-    query1 = f"SELECT * FROM {table_name1};"
+    if st.button("Login"):
+        if check_login(username, password):
+            st.session_state["logged_in"] = True
+            st.success("Login successful!")
+        else:
+            st.error("Invalid username or password")
+# Main app content after login
+def run_app():
 
-    #query2 = """ SELECT neighbourhood_city, neighbourhood_city_coded, city FROM feature_store_appartement;"""
-    df = pd.read_sql_query(query1, connection)
-    #feature_store = pd.read_sql_query(query2, connection)
-    logging.info('Connection to postgres db was successful')
-
-except Exception as e:
-    logging.error('error while connecting and extracting data from Postgres DB')
-    raise e
-
-# Outliers deletion
-# price outliers
-# try:
-#     df = df[df['price'] <= df['price'].quantile(0.97)]
-#     df = df[df['surface_totale'] <= df['surface_totale'].quantile(0.97)]
-#     logging.info('Deleting outliers')
-# except Exception as e:
-#     logging.error('Error while deleting outliers')
-#     raise e
-
-if option_transaction == 'location':
-    option_transaction = 'rent'
-elif option_transaction == 'vente':
-    option_transaction = 'sell'
-
-table_name2 = f"maps_table_{option_site}_{option_transaction}"
-
-df['adress'] = df['secteur'] + ', ' + df['ville']
-
-# Connecting and Fetching all rows from database Maps_data
-try:
-    #logging.info('Connecting to postgres DB ...')
-    #connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
-    query = f"SELECT * FROM {table_name2};"
-    df_maps = pd.read_sql_query(query, connection)
-    logging.info('Connection to postgres db was successful')
-
-except Exception as e:
-    logging.error('error while connecting and extracting data from Postgres DB')
-    raise e
+    st.set_page_config(
+            page_title="Moroccan Real-estate Monitor",
+            page_icon="📈",
+            layout="wide",
+            initial_sidebar_state="expanded")
 
 
-df_maps = df_maps.dropna()
+    # Top horizontal selection
+    col1, col2, col3 = st.columns([1, 1, 1])
+    with col1:
+        option_site = st.radio("Sélectionner la source de données :",
+                        ['Avito',
+                        'Mubawab'],
+                        horizontal=True)
+        option_site = option_site.lower()
+    with col2 :
+        option_transaction = st.radio("Sélectionner le type d'annonce: ",
+                        ['Location',
+                        'Vente'],
+                        horizontal=True)
+        option_transaction = option_transaction.lower()
 
-#df_maps = df_maps[['latitude','longitude']]
-df_maps = df_maps.loc[(df_maps['laltitude']>21.0) & (df_maps['laltitude']<36.0) & (df_maps['longitude']>-17.0) & (df_maps['longitude']<-1.0)]
+    if option_site == 'mubawab' and option_transaction == 'location':
+        option_transaction = 'rent'
+        
 
-df_maps = df_maps.rename(columns={"laltitude": "latitude"})
+    # Map the selected option to the corresponding table name
+    table_name1 = f"real_estate_table_{option_site}_{option_transaction}"
 
-#st.map(df_maps, zoom=6)
+    try:
+        logging.info('Connecting to postgres DB ...')
+        connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="172.19.0.2", port=5432)
+        # Dynamically format the query based on the selected option
+        query1 = f"SELECT * FROM {table_name1};"
 
-# merge df with df_maps
-df_merged = pd.merge(df,df_maps, left_on='adress', right_on='neighbourhood_city')
+        #query2 = """ SELECT neighbourhood_city, neighbourhood_city_coded, city FROM feature_store_appartement;"""
+        df = pd.read_sql_query(query1, connection)
+        #feature_store = pd.read_sql_query(query2, connection)
+        logging.info('Connection to postgres db was successful')
+
+    except Exception as e:
+        logging.error('error while connecting and extracting data from Postgres DB')
+        raise e
+
+    if option_transaction == 'location':
+        option_transaction = 'rent'
+    elif option_transaction == 'vente':
+        option_transaction = 'sell'
+
+    table_name2 = f"maps_table_{option_site}_{option_transaction}"
+
+    df['adress'] = df['secteur'] + ', ' + df['ville']
+
+    # Connecting and Fetching all rows from database Maps_data
+    try:
+        #logging.info('Connecting to postgres DB ...')
+        #connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
+        query = f"SELECT * FROM {table_name2};"
+        df_maps = pd.read_sql_query(query, connection)
+        logging.info('Connection to postgres db was successful')
+
+    except Exception as e:
+        logging.error('error while connecting and extracting data from Postgres DB')
+        raise e
 
 
-# Define a function to normalize the prices and map them to colors
-def price_to_color(price):
-    min_price = df_merged['price'].min()
-    max_price = df_merged['price'].max()
-    # Normalize price to a range of 0 to 255
-    normalized_price = (price - min_price) / (max_price - min_price) * 255
-    return [255 - normalized_price, normalized_price, 0, 160]  # RGB with alpha
+    df_maps = df_maps.dropna()
 
-# Apply the function to the DataFrame
-df_merged['color'] = df_merged['price'].apply(price_to_color)
+    #df_maps = df_maps[['latitude','longitude']]
+    df_maps = df_maps.loc[(df_maps['laltitude']>21.0) & (df_maps['laltitude']<36.0) & (df_maps['longitude']>-17.0) & (df_maps['longitude']<-1.0)]
 
+    df_maps = df_maps.rename(columns={"laltitude": "latitude"})
 
-##### ^^^^^^^^^^^ @@@@@@@@@@@@ End Calculation     @@@@@@@@@@@@ ^^^^^^^^^^^ #####
+    #st.map(df_maps, zoom=6)
 
-# Create a sidebar for navigation
-st.sidebar.title("Moniteur de l'immobilier marocain")
-window = st.sidebar.selectbox("Choisissez une fenêtre", ["Dashboard", "Advanced analysis"]) #, "AI"
+    # merge df with df_maps
+    df_merged = pd.merge(df,df_maps, left_on='adress', right_on='neighbourhood_city')
 
 
-                  
-##### ^^^^^^^^^^^ @@@@@@@@@@@@ Dashboard     @@@@@@@@@@@@ ^^^^^^^^^^^ #####
+    # Define a function to normalize the prices and map them to colors
+    def price_to_color(price):
+        min_price = df_merged['price'].min()
+        max_price = df_merged['price'].max()
+        # Normalize price to a range of 0 to 255
+        normalized_price = (price - min_price) / (max_price - min_price) * 255
+        return [255 - normalized_price, normalized_price, 0, 160]  # RGB with alpha
 
-if window == "Dashboard":
-    dashboard(df_merged,df)
+    # Apply the function to the DataFrame
+    df_merged['color'] = df_merged['price'].apply(price_to_color)
 
-##### ^^^^^^^^^^^ @@@@@@@@@@@@   Advanced analysis   @@@@@@@@@@@@ ^^^^^^^^^^^ #####
 
-if window == "Advanced analysis":
+    ##### ^^^^^^^^^^^ @@@@@@@@@@@@ End Calculation     @@@@@@@@@@@@ ^^^^^^^^^^^ #####
 
-    advanced_analytics(df,option_site,option_transaction)
+    # Create a sidebar for navigation
+    st.sidebar.title("Moniteur de l'immobilier marocain")
+    window = st.sidebar.selectbox("Choisissez une fenêtre", ["Dashboard", "Advanced analysis"]) #, "AI"
 
-#if window == "AI":
 
-    #ai(df, feature_store)
+                    
+    ##### ^^^^^^^^^^^ @@@@@@@@@@@@ Dashboard     @@@@@@@@@@@@ ^^^^^^^^^^^ #####
+
+    if window == "Dashboard":
+        dashboard(df_merged,df)
+
+    ##### ^^^^^^^^^^^ @@@@@@@@@@@@   Advanced analysis   @@@@@@@@@@@@ ^^^^^^^^^^^ #####
+
+    if window == "Advanced analysis":
+
+        advanced_analytics(df,option_site,option_transaction)
+
+    #if window == "AI":
+
+        #ai(df, feature_store)
+
+
+if __name__ == "__main__":
+    main()

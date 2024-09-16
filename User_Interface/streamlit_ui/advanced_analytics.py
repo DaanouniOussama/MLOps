@@ -25,7 +25,7 @@ def advanced_analytics(df_merged,option_site,option_transaction):
             df_selected_city = df_merged[(df_merged.ville == selected_city) & (df_merged.real_estate_type==selected_real_estate)]
 
 
-    st.write(df_selected_city)
+    #st.write(df_selected_city)
     # Let users select features to group by
     if (option_site == 'avito') and (option_transaction == 'sell'):
         boolean_features = df_merged.columns[14:28]

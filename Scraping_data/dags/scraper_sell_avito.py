@@ -11,7 +11,7 @@ def scrapper()->pd.DataFrame:
     max_price = 10000000
     min_size = 30
     max_size = 1500
-    real_estate = ['appartements','villas_riad'] # 'appartements' , villas_riad 
+    real_estate = ['villas_riad' , 'appartements'] # 'appartements' , villas_riad 
     # extra=balcony,elevator,terrace,heater,airconditioner,furnished,furnished_kitchen,janitor,duplex,parking,security,phone_cable
     cities = ['casablanca']  # 'tanger', 'rabat', 'marrakech', 'agadir'
 
@@ -27,11 +27,11 @@ def scrapper()->pd.DataFrame:
         for immobilier in real_estate:               
             try:
                 # URL
-                my_url = f"https://www.avito.ma/fr/{city}/{immobilier}-à_vendre?price={min_price}-{max_price}-&size={min_size}-{max_size}"
+                my_url = f"https://www.avito.ma/fr/{city.lower()}/{immobilier}-à_vendre?price={min_price}-{max_price}-&size={min_size}-{max_size}"
     
                 # visit the website with the url : my_url
-                response = httpx.get(my_url, timeout=10.0, follow_redirects=True)
-                time.sleep(2)
+                response = httpx.get(my_url, timeout=100.0, follow_redirects=True)
+                time.sleep(10)
                 logging.info('Defining links and accessing websites have been successful')
 
             except Exception as e:
@@ -94,13 +94,15 @@ def scrapper()->pd.DataFrame:
                 for link in [item['URL'] for item in extracted_data]:
                     
                     Salle_bain = extracted_data[i]['Salle de bain']
+                    Salle_bain = re.sub(r'[^\d]', '', Salle_bain)
                     Salle_bain = int(Salle_bain)
                     Chambres = extracted_data[i]['Chambres']
+                    Chambres = re.sub(r'[^\d]', '', Chambres)
                     Chambres = int(Chambres)
                     Surface_totale = extracted_data[i]['Surface totale']
                     Surface_totale = int(Surface_totale.replace('m²',''))
-                    response = httpx.get(link)
-                    time.sleep(2)
+                    response = httpx.get(link, timeout=100.0, follow_redirects=True)
+                    time.sleep(10)
 
                     # Parse html
                     html = response.text
@@ -134,21 +136,22 @@ def scrapper()->pd.DataFrame:
                     globals()['Surface_habitable'] = 'Missing'
                     globals()['Salons'] = 'Missing'    
                     globals()['Étage'] = 'Missing'  
-                    #globals()['Nombre_etage'] = 'Missing'                    
+                    globals()['Nombre_d_étage'] = 'Missing'                    
                     
                     # Find all list items and extract the data
                     items = market_soup.find_all('li', class_='sc-qmn92k-1 jJjeGO')
                     for item in items:
                         label = item.find('span', class_='sc-1x0vz2r-0 jZyObG').text.strip()
-                        label = label.replace(" ", "_")
+                        label = label.replace(" ", "_").replace("'", "_")  # Replace spaces and apostrophes
                         value = item.find('span', class_='sc-1x0vz2r-0 gSLYtF').text.strip()
                         globals()[label] = value
+                        print(label)
 
-                    # Check if either Étage or Nombre_etage is available
-                    #if globals().get("Nombre_d'étage") != 'Missing':
-                     #   globals()['Étage'] = globals()["Nombre_d'étage"]
+                    #Check if either Étage or Nombre_etage is available
+                    if globals().get("Nombre_d_étage") != 'Missing':
+                       globals()['Étage'] = globals()["Nombre_d_étage"]
 
-                    if (Salons == 'Missing') or (Surface_habitable == 'Missing') or (Âge_du_bien == 'Missing') or (Étage == 'Missing'):
+                    if (globals().get('Salons') == 'Missing') or (globals().get('Surface_habitable') == 'Missing') or (globals().get('Âge_du_bien') == 'Missing') or (globals().get('Étage') == 'Missing'):
                         continue
                     
                     if Étage == "Rez de chaussée":

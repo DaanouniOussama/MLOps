@@ -1,30 +1,24 @@
 Type,transaction,ville,ville_secteur,surface_totale,surface_habitable,chambres,salle_bains,salons,pieces,etage,age_bien,terrasse,balcon,parking,ascenseur,securite,climatisation,cuisine_equipee,concierge,duplex,chauffage,meuble,garage,jardin,piscine,prix
-0,vendre,4,"Errahma, Casablanca",93,93,2,2,1,3,1,0,1,1,1,1,1,0,1,1,0,0,0,0,0,0,771900
-0,vendre,4,"Casablanca Finance City, Casablanca",39,39,1,1,1,2,1,0,1,1,1,1,0,1,1,1,0,1,0,0,0,0,800000
-0,vendre,4,"Ain Sebaa, Casablanca",106,106,3,2,1,4,4,0,1,1,1,1,1,0,1,1,0,0,0,0,0,0,1177000
-0,vendre,4,"Maarif, Casablanca",55,49,1,1,1,2,3,1,0,1,1,1,0,0,0,1,0,0,0,0,0,0,1090000
-0,vendre,4,"Oulfa, Casablanca",70,70,1,1,1,2,4,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,430000
-0,vendre,4,"Maarif, Casablanca",74,74,2,2,1,3,3,0,0,1,1,1,0,0,0,1,0,0,0,0,0,0,1230000
-0,vendre,4,"Quartier des Hôpitaux, Casablanca",349,281,4,3,4,8,5,2,1,1,1,1,0,1,1,1,0,0,0,0,0,0,3650000
-0,vendre,4,"Sidi Maarouf, Casablanca",82,82,2,2,1,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,752400
-0,vendre,4,"Oulfa, Casablanca",58,58,2,1,1,3,4,2,0,1,0,0,1,0,0,0,0,0,0,0,0,0,280000
-0,vendre,4,"Palmier, Casablanca",153,153,3,2,2,5,3,3,1,1,1,1,1,0,1,1,0,1,0,0,0,0,2650000
-0,vendre,4,"Casablanca Finance City, Casablanca",84,84,3,2,2,5,3,0,0,1,1,1,1,0,0,1,0,0,0,0,0,0,880000
-0,vendre,4,"Les Princesses, Casablanca",59,59,1,1,1,2,7,2,0,1,1,1,0,0,0,1,0,0,0,0,0,0,960000
-0,vendre,4,"Nassim, Casablanca",141,141,3,2,3,6,2,2,0,1,1,1,0,1,1,1,0,0,0,0,0,0,1850000
-0,vendre,4,"Bourgogne, Casablanca",132,120,3,2,1,4,7,4,1,1,1,1,1,1,1,1,0,1,0,0,0,0,1550000
-0,vendre,4,"Maarif, Casablanca",94,94,3,1,1,4,1,4,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1030000
-0,vendre,4,"Errahma, Casablanca",94,94,2,2,1,3,1,0,1,1,1,1,1,0,1,1,0,0,0,0,0,0,780200
-0,vendre,4,"Oulfa, Casablanca",105,102,2,2,2,4,2,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,950000
-0,vendre,4,"Maarif, Casablanca",62,62,2,2,1,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1239995
-0,vendre,4,"Hay Alfalah, Casablanca",115,115,2,1,2,4,4,3,0,1,1,1,0,0,1,1,0,0,1,0,0,0,760000
-0,vendre,4,"Les Princesses, Casablanca",118,118,3,2,1,4,1,2,0,1,1,1,1,0,1,1,0,0,0,0,0,0,1875000
-0,vendre,4,"Almaz, Casablanca",78,78,3,2,1,4,3,2,1,1,1,1,1,1,1,0,0,0,0,0,0,0,830000
-0,vendre,4,"La Gironde, Casablanca",99,99,2,1,2,4,3,3,0,0,1,1,0,0,0,1,0,0,0,0,0,0,900000
-0,vendre,4,"Quartier des Hôpitaux, Casablanca",148,148,3,2,2,5,4,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2220000
-0,vendre,4,"Bourgogne, Casablanca",72,72,2,1,1,3,1,3,0,0,1,0,1,0,1,0,0,0,0,0,0,0,720000
-0,vendre,4,"Aïn Chock, Casablanca",70,70,2,2,1,3,0,4,1,0,1,0,1,0,0,1,0,0,0,0,0,0,770000
-0,vendre,4,"Aïn Borja, Casablanca",71,71,2,1,1,3,3,3,0,1,1,1,1,0,0,1,0,0,0,0,0,0,660000
-0,vendre,4,"Quartier des Hôpitaux, Casablanca",50,36,1,1,1,2,1,2,0,0,1,1,0,1,1,1,0,1,0,0,0,0,790000
-0,vendre,4,"Maarif, Casablanca",127,112,3,2,2,5,3,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,2200000
-0,vendre,4,"Abdelmoumen, Casablanca",115,115,3,2,2,5,4,3,0,0,1,1,1,1,1,1,0,0,1,0,0,0,1500000
+1,vendre,4,"Californie, Casablanca",450,3450,6,5,3,9,2,1,1,1,1,0,1,1,1,0,0,1,1,1,1,1,7500000
+1,vendre,4,"Autre secteur, Casablanca",520,560,4,4,3,7,2,0,1,1,0,0,1,1,1,0,0,1,0,1,1,1,7200000
+1,vendre,4,"Californie, Casablanca",376,500,5,4,5,10,1,3,1,1,1,0,1,1,1,0,0,1,1,1,1,1,4900000
+1,vendre,4,"C.I.L, Casablanca",452,350,4,3,3,7,3,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9800000
+1,vendre,4,"Sidi Maarouf, Casablanca",375,375,5,5,5,10,3,1,1,1,0,0,0,1,1,0,0,0,1,1,1,0,7500000
+1,vendre,4,"Hay Hassani, Casablanca",320,100,5,2,2,7,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3500000
+1,vendre,4,"2 Mars, Casablanca",140,277,5,2,2,7,2,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3500000
+1,vendre,4,"Route d'Azemmour, Casablanca",452,500,5,7,6,11,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4500000
+1,vendre,4,"2 Mars, Casablanca",210,140,6,2,2,8,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4600000
+1,vendre,4,"Californie, Casablanca",450,450,4,4,3,7,2,3,1,1,1,0,1,1,0,0,0,1,0,1,1,1,7500000
+1,vendre,4,"Hay Laymouna, Casablanca",604,300,7,4,3,10,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9500000
+1,vendre,4,"Autre secteur, Casablanca",292,290,3,3,2,5,1,2,1,1,1,0,1,1,0,0,0,0,0,1,1,1,4950000
+1,vendre,4,"Laimoune, Casablanca",570,550,6,4,3,9,3,4,1,1,1,0,0,1,1,0,0,1,1,1,1,0,9400000
+1,vendre,4,"Almaz, Casablanca",320,320,6,5,2,8,3,1,1,1,1,0,1,1,1,0,0,1,0,1,1,1,4000000
+1,vendre,4,"Aïn Diab, Casablanca",480,480,5,4,5,10,2,1,1,1,1,0,0,1,0,0,0,1,0,0,1,1,9000000
+1,vendre,4,"Autre secteur, Casablanca",160,240,3,2,1,4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2800000
+1,vendre,4,"Californie, Casablanca",618,520,6,6,4,10,3,3,1,1,0,0,1,1,0,0,0,0,0,1,1,1,6500000
+1,vendre,4,"Californie, Casablanca",618,520,6,6,3,9,3,3,1,1,0,0,1,1,0,0,0,0,0,1,1,1,6500000
+1,vendre,4,"Californie, Casablanca",790,550,4,3,2,6,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9500000
+1,vendre,4,"Hay Inara, Casablanca",136,300,4,5,5,9,2,3,1,1,1,0,0,0,1,0,0,0,0,1,1,0,3400000
+1,vendre,4,"Zone Industrielle, Casablanca",240,160,3,3,2,5,2,0,1,1,1,0,1,1,1,0,0,1,0,1,1,0,2800000
+1,vendre,4,"Californie, Casablanca",423,510,5,4,4,9,2,2,1,1,1,0,1,1,1,0,0,1,0,1,1,1,8500000
+0,vendre,4,"Les Princesses, Casablanca",75,75,2,1,1,3,2,0,0,1,1,1,1,1,1,1,0,1,0,0,0,0,1260000

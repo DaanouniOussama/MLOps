@@ -1,37 +1,35 @@
 titre,Type,ville,secteur,surface_totale,chambres,salle_bains,pieces,etat,age_bien,etage,standing,terrasse,balcon,parking,ascenseur,securite,climatisation,cuisine_equipee,concierge,chauffage,garage,jardin,piscine,salon_marocain,salon_euro,prix
-"Location, Superbe Appartement deux chambres 80m²",Appartement,Casablanca,Riviera,80,2,2,4,Bon état,1-5 ans,2,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,12000
-Tres beau studio neuf en location palmier,Appartement,Casablanca,Palmier,50,1,1,2,Nouveau,Moins d'un an,3,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,7000
-2 suites terrasse vide plein sud vue sur piscine,Appartement,Casablanca,Casablanca Finance City,140,2,2,3,Nouveau,1-5 ans,Not_defined,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,13500
-Appartement à louer sur GAUTHIER,Appartement,Casablanca,Gauthier,91,2,1,3,Bon état,5-10 ans,Not_defined,Not_defined,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,9000
-Appartement en location sur GAUTHIER,Appartement,Casablanca,Gauthier,240,3,2,4,Bon état,5-10 ans,4,Not_defined,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,15000
-Appartement à louer à PALMIER,Appartement,Casablanca,Palmier,190,4,2,5,Bon état,5-10 ans,3,Not_defined,Yes,No,No,Yes,Yes,No,No,Yes,No,Yes,No,No,No,No,12000
-Appartement en location sur RACINE,Appartement,Casablanca,Racine,175,3,2,4,Bon état,5-10 ans,2,Not_defined,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,No,No,15000
-Appartement meublé à louer à RACINE,Appartement,Casablanca,Racine,180,3,2,4,Bon état,5-10 ans,5,Not_defined,No,No,No,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,18000
-Appartement meublé en location à AIN DIAB,Appartement,Casablanca,Ain Diab,104,2,2,3,Bon état,5-10 ans,Not_defined,Not_defined,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,10000
-Très bel appartement en location à Maârif. 2 chambres. Bien meublé,Appartement,Casablanca,Maârif,55,2,2,2,Bon état,Moins d'un an,3,Not_defined,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,7500
-Appartement en location à Maârif. 1 Pièce. Bien meublé,Appartement,Casablanca,Maârif,55,1,1,1,Nouveau,Moins d'un an,3,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,6500
-Apt a louer au maarif,Appartement,Casablanca,Maârif,63,2,1,3,À rénover,5-10 ans,4,Not_defined,No,No,No,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,4500
-"120 m², triangle d'or, bd d'anfa, 3 chambres",Appartement,Casablanca,Triangle d'Or,120,3,3,5,Nouveau,10-20 ans,4,Not_defined,No,No,No,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,11500
-Studio neuf meublé Maarif Très bien situé,Appartement,Casablanca,Maârif Extension,45,1,1,2,Nouveau,Moins d'un an,2,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,7000
-Appartement 75 m2 très bon standing 6800 dhs/mois,Appartement,Casablanca,Gauthier,75,2,1,3,Bon état,10-20 ans,5,Not_defined,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,6800
-Appartement COZY meublé,Appartement,Casablanca,Mandarona,66,2,2,3,Bon état,1-5 ans,3,Not_defined,No,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,8000
-Location sublime studio Palmier,Appartement,Casablanca,Palmier,56,1,1,2,Nouveau,Moins d'un an,1,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,8700
-Bel Appartement meublé de 118m2 á Val Fleuri,Appartement,Casablanca,Val Fleury,118,2,2,3,Bon état,5-10 ans,3,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,9500
-Villa a louer VAL D'ANFA,Villa,Casablanca,Anfa,530,5,3,7,Bon état,20-30 ans,Not_defined,Not_defined,Yes,No,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,42000
-Villa à louer à CALIFORNIE,Villa,Casablanca,Californie,450,4,2,5,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,42000
-"Villa sans vis à vis, CIL",Villa,Casablanca,CIL (Hay Salam),700,4,5,7,Bon état,10-20 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,Yes,No,No,38000
-Villa moderne à louer sur Ain Diab,Villa,Casablanca,Ain Diab,350,4,4,5,Bon état,1-5 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,35000
-Magnifique studio en location meublée au CIL,Villa,Casablanca,CIL (Hay Salam),75,1,1,4,Nouveau,1-5 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,7500
-Villa à louer à CALIFORNIE,Villa,Casablanca,Californie,550,5,2,6,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,35000
-Villa à louer à ANFA SUPERIEUR,Villa,Casablanca,Anfa,500,4,4,5,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,65000
-Villa à louer neuve moderne à Longchamps,Villa,Casablanca,Ain Diab,900,5,4,7,Nouveau,Moins d'un an,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,No,No,65000
-Villa à louer à CIL HAY SALAM,Villa,Casablanca,CIL (Hay Salam),500,4,2,5,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,30000
-Villa en location sur POLO,Villa,Casablanca,Polo,430,4,3,5,Bon état,5-10 ans,Not_defined,Not_defined,No,No,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,23000
-Villa neuve à louer au cœur de Californie,Villa,Casablanca,Californie,450,4,5,12,Nouveau,Moins d'un an,Not_defined,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,50000
-Villa moderne à louer à Ain diab résidence fermée,Villa,Casablanca,Ain Diab,380,4,3,16,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,26000
-"Villa neuve jamais habitée, vue mer, Ain Diab",Villa,Casablanca,Ain Diab Extension,600,5,7,8,Nouveau,Moins d'un an,Not_defined,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Yes,60000
-Magnifique Villa de Maître Anfa Supérieur,Villa,Casablanca,Anfa Supérieur,800,4,3,8,Bon état,1-5 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,60000
-Villa Coup de Cœur Ain Diab,Villa,Casablanca,Ain Diab,500,4,4,10,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,30000
-Villa Coup de Cœur AIN DIAB,Villa,Casablanca,Ain Diab,694,4,3,6,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,45000
-Villa usage professionnelle,Villa,Casablanca,Sidi Maarouf,500,6,4,10,Bon état,20-30 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,40000
-Villa Coup de cœur Californie,Villa,Casablanca,Californie,520,4,3,6,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,35000
+Á louer bijoux appartement á Marina 3 ch Ain diab,Appartement,Casablanca,Anfa,175,3,3,4,Nouveau,Moins d'un an,3,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,19700
+Superbe studio meublé sur maarif,Appartement,Casablanca,Maârif,46,1,1,2,Bon état,Moins d'un an,3,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,5800
+"Appartement moderne, 2 chambres, Palmier",Appartement,Casablanca,Palmier,110,2,2,3,Nouveau,Moins d'un an,3,Not_defined,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,Yes,9000
+Appartement en location à Les Hôpitaux. 4 grandes pièces. Terrasse et ascenseur,Appartement,Casablanca,Les Hôpitaux,125,3,2,4,Bon état,10-20 ans,5,Not_defined,Yes,No,No,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,6500
+Studio meublé racine,Appartement,Casablanca,Triangle d'Or,55,1,1,1,Bon état,1-5 ans,1,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,7500
+Superbe studio de 50 m² à la location,Appartement,Casablanca,Triangle d'Or,50,1,1,2,Bon état,Moins d'un an,4,Not_defined,Yes,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,Yes,11000
+Superbe appartement à louer à racine. 1 chambre terrasse 3 pièces. Meublé,Appartement,Casablanca,Maârif,110,1,1,3,Nouveau,1-5 ans,1,Not_defined,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,7900
+Magnifique studio Haut Standing Gauthier,Appartement,Casablanca,Gauthier,50,1,2,2,Nouveau,Moins d'un an,1,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,8000
+Magnifique appartement vue sur AERIA MALL,Appartement,Casablanca,Casablanca Finance City,95,2,2,3,Nouveau,Moins d'un an,5,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,9700
+Á louer appartement meublé á CFC 2CH,Appartement,Casablanca,Casablanca Finance City,100,2,1,3,Bon état,1-5 ans,4,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,12000
+Á louer Appartement spacieux 2 CH Palmier,Appartement,Casablanca,Palmier,130,2,2,3,Bon état,Moins d'un an,6,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,9000
+Á louer jolie studio 70m² Casa fianace city,Appartement,Casablanca,Casablanca Finance City,70,1,1,2,Bon état,Moins d'un an,6,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,10000
+Á louer Appartemnt Neuf Casa Finance City 2CH,Appartement,Casablanca,Casablanca Finance City,99,2,2,2,Bon état,1-5 ans,3,Not_defined,Yes,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,11500
+Á louer jolie appartement meublé 2CH palmier,Appartement,Casablanca,Palmier,120,2,2,3,Nouveau,1-5 ans,Not_defined,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,13000
+Á louer jolie appartement meublé 2 ch Oasis,Appartement,Casablanca,Oasis,90,2,1,2,Nouveau,Moins d'un an,5,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,Yes,12000
+Á louer Superbe Appartement de 3 CH Ain Diab,Appartement,Casablanca,Ain Diab,152,3,3,4,Bon état,Moins d'un an,2,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,20000
+À louer appartement meublé à CFC,Appartement,Casablanca,Casablanca Finance City,9000,2,2,2,Bon état,1-5 ans,5,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,12000
+Á louer luxueux appartement avec piscine ‍️,Appartement,Casablanca,Palmier,125,2,2,3,Nouveau,Moins d'un an,Not_defined,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,20000
+Á louer Neuf studio Meublé á Oasis,Appartement,Casablanca,Oasis,54,1,1,2,Nouveau,Moins d'un an,Not_defined,Not_defined,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,8000
+Belle Villa à la location vide à Ain Diab,Villa,Casablanca,Ain Diab,350,4,3,5,Nouveau,1-5 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,38000
+Très belle villa moderne à la location,Villa,Casablanca,Ain Diab,350,4,4,6,Nouveau,Moins d'un an,Not_defined,Not_defined,Yes,No,No,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,No,Yes,36000
+Opportunité belle villa à à la location à cil,Villa,Casablanca,CIL (Hay Salam),450,4,3,5,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,32000
+"Villa d'exception, neuve jamais habitée, Ain Diab",Villa,Casablanca,Ain Diab Extension,330,4,4,7,Nouveau,1-5 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Yes,40000
+Une magnifique villa meublée à louer,Villa,Casablanca,Laymoune,450,4,4,7,Nouveau,1-5 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,30000
+Villa avec piscine à louer à Ain Diab,Villa,Casablanca,Ain Diab,460,4,3,10,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,32000
+Villa meublé en location sur CALIFORNIE,Villa,Casablanca,Californie,400,4,4,5,Bon état,5-10 ans,Not_defined,Not_defined,No,No,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,48000
+Villa en location a AIN DIAB,Villa,Casablanca,Ain Diab,360,3,3,4,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,30000
+Location villa de luxe à Californie,Villa,Casablanca,Californie,1005,5,4,8,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,55000
+Magnifique villa à louer à Ain Diab. 4 chambres. Meublé,Villa,Casablanca,Ain Diab,600,4,3,5,Bon état,5-10 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,34000
+A louer Villa Vide usage bureau ou habit Oasis,Villa,Casablanca,Oasis,400,4,3,6,Bon état,10-20 ans,Not_defined,Not_defined,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,35000
+Belle villa jumelée en location à Oulfa,Villa,Casablanca,Oulfa,300,4,3,7,Nouveau,Moins d'un an,Not_defined,Not_defined,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,No,Yes,Yes,15000
+Villa en location au quartier france ville,Villa,Casablanca,Franceville,300,3,2,4,Bon état,10-20 ans,Not_defined,Not_defined,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,15000
+Villa Cil a louer,Villa,Casablanca,CIL (Hay Salam),650,3,4,5,Bon état,20-30 ans,Not_defined,Not_defined,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,29000
+Villa individuelle a louer Ain Diab,Villa,Casablanca,Ain Diab,560,4,4,5,Bon état,5-10 ans,Not_defined,Not_defined,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,28000

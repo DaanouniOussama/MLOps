@@ -1,30 +1,24 @@
 titre,Type,transaction,ville,secteur,surface_totale,surface_habitable,chambres,salle_bains,salons,pieces,etage,age_bien,terrasse,balcon,parking,ascenseur,securite,climatisation,cuisine_equipee,concierge,duplex,chauffage,meuble,garage,jardin,piscine,prix
-Appartement à vendre 93 m² à Casablanca,Appartements,vendre,Casablanca,Errahma,93,93,2,2,1,3,1,Neuf,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,771900
-Appartement à vendre 39 m² à Casablanca,Appartements,vendre,Casablanca,Casablanca Finance City,39,39,1,1,1,2,1,Neuf,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,800000
-Appartement 106 m² à Casablanca,Appartements,vendre,Casablanca,Ain Sebaa,106,106,3,2,1,4,4,Neuf,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,1177000
-Studio 55m Meublé Proche Carrefour Fourate,Appartements,vendre,Casablanca,Maarif,55,49,1,1,1,2,3,1-5 ans,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,1090000
-Appartement à vendre à Oulfa,Appartements,vendre,Casablanca,Oulfa,70,70,1,1,1,2,4,1-5 ans,No,No,No,No,No,No,No,No,No,No,No,No,No,No,430000
-Appartement 74m Neuf A Maarif Ex,Appartements,vendre,Casablanca,Maarif,74,74,2,2,1,3,3,Neuf,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,1230000
-Appartement à vendre 281 m² à Casablanca,Appartements,vendre,Casablanca,Quartier des Hôpitaux,349,281,4,3,4,8,5,6-10 ans,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,3650000
-Appartement à vendre 82 m² à Casablanca,Appartements,vendre,Casablanca,Sidi Maarouf,82,82,2,2,1,3,1,Neuf,No,No,No,No,No,No,No,No,No,No,No,No,No,No,752400
-شقة للبيع طابق 4 الولفة فرح السلام,Appartements,vendre,Casablanca,Oulfa,58,58,2,1,1,3,4,6-10 ans,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,280000
-Appartement à vendre 153 m² à Casablanca,Appartements,vendre,Casablanca,Palmier,153,153,3,2,2,5,3,11-20 ans,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,2650000
-Très bel apt/3Chambres/Résidence Sécurisée/Busway,Appartements,vendre,Casablanca,Casablanca Finance City,84,84,3,2,2,5,3,Neuf,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,880000
-Studio 59m Haut Standing A Les Princesses,Appartements,vendre,Casablanca,Les Princesses,59,59,1,1,1,2,7,6-10 ans,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,960000
-Duplex haut standing sans vis-à-vis,Appartements,vendre,Casablanca,Nassim,141,141,3,2,3,6,2,6-10 ans,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,1850000
-Appartement 132m² 7ème sans vis-à-vis face Lyautey,Appartements,vendre,Casablanca,Bourgogne,132,120,3,2,1,4,7,21+ ans,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,1550000
-Appartement 94m² RDC impasse à Maârif extension,Appartements,vendre,Casablanca,Maarif,94,94,3,1,1,4,1,21+ ans,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,1030000
-Appartement à vendre 94 m² à Casablanca,Appartements,vendre,Casablanca,Errahma,94,94,2,2,1,3,1,Neuf,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,780200
-Apt Spacieux/Ensoleillé/Sécurisé/Mosquée Hdj Fateh,Appartements,vendre,Casablanca,Oulfa,105,102,2,2,2,4,2,Neuf,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,950000
-BIEN BEAUX APPARTEMENTS de Ht STANDING,Appartements,vendre,Casablanca,Maarif,62,62,2,2,1,3,2,Neuf,No,No,No,No,No,No,No,No,No,No,No,No,No,No,1239995
-Appartement à vendre 115 m² à Casablanca,Appartements,vendre,Casablanca,Hay Alfalah,115,115,2,1,2,4,4,11-20 ans,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,760000
-Appartement Très moderne 118 m²,Appartements,vendre,Casablanca,Les Princesses,118,118,3,2,1,4,1,6-10 ans,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,1875000
-Appartement à vendre 78 m² à Casablanca,Appartements,vendre,Casablanca,Almaz,78,78,3,2,1,4,3,6-10 ans,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,830000
-appartement à vendre a la Gironde,Appartements,vendre,Casablanca,La Gironde,99,99,2,1,2,4,3,11-20 ans,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,900000
-Appartement à vendre 148 m² à Casablanca,Appartements,vendre,Casablanca,Quartier des Hôpitaux,148,148,3,2,2,5,4,11-20 ans,No,No,No,No,No,No,No,No,No,No,No,No,No,No,2220000
-Joli Appartement 2Chs 72 m² à Bourgogne,Appartements,vendre,Casablanca,Bourgogne,72,72,2,1,1,3,1,11-20 ans,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,720000
-Appartement à vendre 70 m² à Casablanca,Appartements,vendre,Casablanca,Aïn Chock,70,70,2,2,1,3,0,21+ ans,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,770000
-appartement à vendre a ben tachfin,Appartements,vendre,Casablanca,Aïn Borja,71,71,2,1,1,3,3,11-20 ans,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,660000
-lux studio à vendre abdelmoumen,Appartements,vendre,Casablanca,Quartier des Hôpitaux,50,36,1,1,1,2,1,6-10 ans,No,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,790000
-Appartement 127m2 à Les Princesses Casablanca,Appartements,vendre,Casablanca,Maarif,127,112,3,2,2,5,3,Neuf,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,2200000
-Appartement meublé 3 Chb sur Jardin Abdelmoumen,Appartements,vendre,Casablanca,Abdelmoumen,115,115,3,2,2,5,4,11-20 ans,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,1500000
+Villa à vendre(Californie),Villas et Riads,vendre,Casablanca,Californie,450,3450,6,5,3,9,2,1-5 ans,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,7500000
+BOUSKOURA VILLE VERTE BELLE VILLA NEUVE A VENDRE,Villas et Riads,vendre,Casablanca,Autre secteur,520,560,4,4,3,7,2,Neuf,Yes,Yes,No,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,7200000
+Villa jumelée avec piscine à Mandarouna Florida,Villas et Riads,vendre,Casablanca,Californie,376,500,5,4,5,10,1,11-20 ans,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,4900000
+Villa à vendre au c.i.l,Villas et Riads,vendre,Casablanca,C.I.L,452,350,4,3,3,7,3,21+ ans,No,No,No,No,No,No,No,No,No,No,No,No,No,No,9800000
+Villa à vendre sidi maarouf marjana,Villas et Riads,vendre,Casablanca,Sidi Maarouf,375,375,5,5,5,10,3,1-5 ans,Yes,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,Yes,No,7500000
+فيلا حي الهناء الحي الحسني,Villas et Riads,vendre,Casablanca,Hay Hassani,320,100,5,2,2,7,1,11-20 ans,No,No,No,No,No,No,No,No,No,No,No,No,No,No,3500000
+فيلا شوكة تيتر للبيع 277م توجد بحي الأندلس,Villas et Riads,vendre,Casablanca,2 Mars,140,277,5,2,2,7,2,21+ ans,No,No,No,No,No,No,No,No,No,No,No,No,No,No,3500000
+A vendre villa avec piscine à dar bouazza,Villas et Riads,vendre,Casablanca,Route d'Azemmour,452,500,5,7,6,11,3,11-20 ans,No,No,No,No,No,No,No,No,No,No,No,No,No,No,4500000
+فيلا جديدة تيتر للبيع 210م بامتداد شارع 2 مارس,Villas et Riads,vendre,Casablanca,2 Mars,210,140,6,2,2,8,1,Neuf,No,No,No,No,No,No,No,No,No,No,No,No,No,No,4600000
+Villa 450m à Californie,Villas et Riads,vendre,Casablanca,Californie,450,450,4,4,3,7,2,11-20 ans,Yes,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,Yes,Yes,7500000
+VILLA HAY LAYMOUNE,Villas et Riads,vendre,Casablanca,Hay Laymouna,604,300,7,4,3,10,2,6-10 ans,No,No,No,No,No,No,No,No,No,No,No,No,No,No,9500000
+Villa d'Exception à Vendre,Villas et Riads,vendre,Casablanca,Autre secteur,292,290,3,3,2,5,1,6-10 ans,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,4950000
+MAGNIFIQUE VILLA A VENDRE A CASA 570m²,Villas et Riads,vendre,Casablanca,Laimoune,570,550,6,4,3,9,3,21+ ans,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,No,9400000
+Villa en Bande Quartier Almaz,Villas et Riads,vendre,Casablanca,Almaz,320,320,6,5,2,8,3,1-5 ans,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,4000000
+Villa à vendre Ain diab,Villas et Riads,vendre,Casablanca,Aïn Diab,480,480,5,4,5,10,2,1-5 ans,Yes,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,Yes,Yes,9000000
+villa jumelée à vendre,Villas et Riads,vendre,Casablanca,Autre secteur,160,240,3,2,1,4,2,Neuf,No,No,No,No,No,No,No,No,No,No,No,No,No,No,2800000
+superbe villa a vendre au quartier Californie,Villas et Riads,vendre,Casablanca,Californie,618,520,6,6,4,10,3,11-20 ans,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,6500000
+superbe villa,Villas et Riads,vendre,Casablanca,Californie,618,520,6,6,3,9,3,11-20 ans,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,6500000
+Villa 790 m² 4 chambres plein sud,Villas et Riads,vendre,Casablanca,Californie,790,550,4,3,2,6,2,11-20 ans,No,No,No,No,No,No,No,No,No,No,No,No,No,No,9500000
+"Villa 136m² Inara Ain Chock 3,4MDH",Villas et Riads,vendre,Casablanca,Hay Inara,136,300,4,5,5,9,2,11-20 ans,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,3400000
+Villa de 240m à Bouskoura,Villas et Riads,vendre,Casablanca,Zone Industrielle,240,160,3,3,2,5,2,Neuf,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,2800000
+Villa en Résidence Fermée 510 m²,Villas et Riads,vendre,Casablanca,Californie,423,510,5,4,4,9,2,6-10 ans,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,8500000
+Sublime appartement neuf Vente les princesses 75 m2,Appartements,vendre,Casablanca,Les Princesses,75,75,2,1,1,3,2,Neuf,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,1260000

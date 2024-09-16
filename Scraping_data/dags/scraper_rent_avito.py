@@ -27,11 +27,11 @@ def scrapper_rent()->pd.DataFrame:
         for immobilier in real_estate:               
             try:
                 # URL
-                my_url = f"https://www.avito.ma/fr/{city}/{immobilier}-à_louer?price={min_price}-{max_price}-&size={min_size}-{max_size}"
+                my_url = f"https://www.avito.ma/fr/{city.lower()}/{immobilier}-à_louer?price={min_price}-{max_price}-&size={min_size}-{max_size}"
     
                 # visit the website with the url : my_url
                 response = httpx.get(my_url, timeout=50.0, follow_redirects=True)
-                time.sleep(2)
+                time.sleep(10)
                 logging.info('Defining links and accessing websites have been successful')
 
             except Exception as e:
@@ -92,15 +92,18 @@ def scrapper_rent()->pd.DataFrame:
 
                 i = 0            
                 for link in [item['URL'] for item in extracted_data]:
-                    
+                                        
                     Salle_bain = extracted_data[i]['Salle de bain']
+                    Salle_bain = re.sub(r'[^\d]', '', Salle_bain)
                     Salle_bain = int(Salle_bain)
                     Chambres = extracted_data[i]['Chambres']
+                    Chambres = re.sub(r'[^\d]', '', Chambres)
                     Chambres = int(Chambres)
+                    
                     Surface_totale = extracted_data[i]['Surface totale']
                     Surface_totale = int(Surface_totale.replace('m²',''))
-                    response = httpx.get(link, timeout=50.0)
-                    time.sleep(2)
+                    response = httpx.get(link, timeout=100.0, follow_redirects=True)
+                    time.sleep(10)
 
                     # Parse html
                     html = response.text
@@ -134,19 +137,19 @@ def scrapper_rent()->pd.DataFrame:
                     globals()['Surface_habitable'] = 'Missing'
                     globals()['Salons'] = 'Missing'    
                     globals()['Étage'] = 'Missing'  
-                    globals()["Nombre_d'étage"] = 'Missing'                      
+                    globals()['Nombre_d_étage'] = 'Missing'                    
                     
                     # Find all list items and extract the data
                     items = market_soup.find_all('li', class_='sc-qmn92k-1 jJjeGO')
                     for item in items:
                         label = item.find('span', class_='sc-1x0vz2r-0 jZyObG').text.strip()
-                        label = label.replace(" ", "_")
+                        label = label.replace(" ", "_").replace("'", "_")  # Replace spaces and apostrophes
                         value = item.find('span', class_='sc-1x0vz2r-0 gSLYtF').text.strip()
                         globals()[label] = value
 
                     # Check if either Étage or Nombre_etage is available
-                    if globals().get("Nombre_d'étage") != 'Missing':
-                        globals()['Étage'] = globals()["Nombre_d'étage"]
+                    if globals().get("Nombre_d_étage") != 'Missing':
+                        globals()['Étage'] = globals()["Nombre_d_étage"]
 
                     print(Salons)
                     print(Surface_habitable)

@@ -27,18 +27,26 @@ from feature_engineering_rent_mubawab import preprocess_mubawab_rent
 from ingest_feature_store_rent_mubawab import copy_process_to_feature_store_mubawab_rent
 from lalt_long_calculation_rent_mubawab import lati_long_mubawab_rent
 from ingesting_maps_data_rent_mubawab import copy_csv_to_table_maps_mubawab_rent
+import random 
+# Random hour between 0-23 for each DAG
+avito_sell_hour = random.randint(0, 23)
+avito_rent_hour = random.randint(0, 23)
+mubawab_sell_hour = random.randint(0, 23)
+mubawab_rent_hour = random.randint(0, 23)
 
 default_args = {
     'owner': 'admin',
     'depends_on_past': False,
     'start_date': datetime(2024, 9, 1),
-    'email_on_failure': False,
-    'email_on_retry': False,
-    'retries': 0,
-    #'retry_delay': timedelta(minutes=1),
+    'email': ['o.daanouni1@gmail.com'],  # Replace with your email
+    'email_on_failure': True,  # Enable email alerts on failure
+    'email_on_success': True,  # Enable email alerts on success
+    'email_on_retry': False,  # You can enable this if you want to be notified on retry
+    'retries': 1,  # Retry one time
+    'retry_delay': timedelta(days=2),  # Retry after 2 days
 }
 
-with DAG(dag_id = 'dag_data_engineering_avito_sell', default_args=default_args, schedule_interval=timedelta(days=30)) as dag :
+with DAG(dag_id = 'dag_data_engineering_avito_sell', default_args=default_args, schedule_interval=f'0 {avito_sell_hour} * * 1') as dag :
 
     Connexion = PostgresOperator(
         task_id = 'create_postgres_table',
@@ -172,7 +180,7 @@ with DAG(dag_id = 'dag_data_engineering_avito_sell', default_args=default_args, 
 
 
 
-with DAG(dag_id = 'dag_data_engineering_avito_rent', default_args=default_args, schedule_interval=timedelta(days=30)) as dag :
+with DAG(dag_id = 'dag_data_engineering_avito_rent', default_args=default_args, schedule_interval=f'0 {avito_rent_hour} * * 2') as dag :
 
     Connexion = PostgresOperator(
         task_id = 'create_postgres_table',
@@ -305,7 +313,7 @@ with DAG(dag_id = 'dag_data_engineering_avito_rent', default_args=default_args, 
 
 # DAG for Mubawab
 
-with DAG(dag_id = 'dag_data_engineering_mubawab_sell', default_args=default_args, schedule_interval=timedelta(days=30)) as dag :
+with DAG(dag_id = 'dag_data_engineering_mubawab_sell', default_args=default_args, schedule_interval=f'0 {mubawab_sell_hour} * * 3') as dag :
 
     Connexion = PostgresOperator(
         task_id = 'create_postgres_table',
@@ -436,7 +444,7 @@ with DAG(dag_id = 'dag_data_engineering_mubawab_sell', default_args=default_args
     Connexion >> scrape_task >> ingest_task >> create_table_feature_store_task >> feature_engineering_task >> copy_process_to_feature_store_task >> create_table_maps_connexion >> long_lalt_calculation >> ingestion
  
 
-with DAG(dag_id = 'dag_data_engineering_mubawab_rent', default_args=default_args, schedule_interval=timedelta(days=30)) as dag :
+with DAG(dag_id = 'dag_data_engineering_mubawab_rent', default_args=default_args, schedule_interval=f'0 {mubawab_rent_hour} * * 4') as dag :
 
     Connexion = PostgresOperator(
         task_id = 'create_postgres_table',

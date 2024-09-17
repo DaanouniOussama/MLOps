@@ -166,7 +166,7 @@ def run_app():
 
     # Profiling Window
     if window == "Profiling":
-        profiling(df)
+        profiling(df,option_site,option_transaction)
     #if window == "AI":
 
         #ai(df, feature_store)

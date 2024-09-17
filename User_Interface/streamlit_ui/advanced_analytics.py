@@ -30,9 +30,6 @@ def advanced_analytics(df_merged,option_site,option_transaction):
     if (option_site == 'avito') and (option_transaction == 'sell'):
         boolean_features = df_merged.columns[14:28]
         selected_boolean_features  = st.multiselect('Select Features to Group By', boolean_features)
-    elif (option_site == 'mubawab') and (option_transaction == 'sell'):
-        boolean_features = df_merged.columns[13:27]
-        selected_boolean_features  = st.multiselect('Select Features to Group By', boolean_features)
     else:
         boolean_features = df_merged.columns[13:27]
         selected_boolean_features  = st.multiselect('Select Features to Group By', boolean_features)

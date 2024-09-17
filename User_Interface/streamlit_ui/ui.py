@@ -8,6 +8,7 @@ import altair as alt
 import plotly.graph_objects as go
 from dashboard import dashboard
 from advanced_analytics import advanced_analytics
+from profiling import profiling
 from ai import ai
 
 # Define valid users (for simplicity)
@@ -44,6 +45,7 @@ def login_form():
         if check_login(username, password):
             st.session_state["logged_in"] = True
             st.success("Login successful!")
+            st.experimental_rerun()  # Force re-run after login to avoid double-click issue
         else:
             st.error("Invalid username or password")
 # Main app content after login
@@ -80,7 +82,7 @@ def run_app():
 
     try:
         logging.info('Connecting to postgres DB ...')
-        connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="172.19.0.2", port=5432)
+        connection = psycopg2.connect(database="Real_estate", user="airflow", password="airflow", host="localhost", port=54320)
         # Dynamically format the query based on the selected option
         query1 = f"SELECT * FROM {table_name1};"
 
@@ -144,7 +146,8 @@ def run_app():
 
     # Create a sidebar for navigation
     st.sidebar.title("Moniteur de l'immobilier marocain")
-    window = st.sidebar.selectbox("Choisissez une fenêtre", ["Dashboard", "Advanced analysis"]) #, "AI"
+    # Add 'Profiling' option to sidebar
+    window = st.sidebar.selectbox("Choisissez une fenêtre", ["Dashboard", "Advanced analysis", "Profiling"])
 
 
                     
@@ -159,6 +162,11 @@ def run_app():
 
         advanced_analytics(df,option_site,option_transaction)
 
+    ##### ^^^^^^^^^^^ @@@@@@@@@@@@   Profiling   @@@@@@@@@@@@ ^^^^^^^^^^^ #####
+
+    # Profiling Window
+    if window == "Profiling":
+        profiling(df)
     #if window == "AI":
 
         #ai(df, feature_store)

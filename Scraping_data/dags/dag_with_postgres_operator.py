@@ -124,7 +124,8 @@ with DAG(dag_id = 'dag_data_engineering_avito_sell', default_args=default_args, 
                 Garage INT,
                 Jardin INT,
                 Piscine INT,
-                Prix INT
+                Prix INT,
+                unix_time BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
                 /* Ville_secteur_coded INT */
             );
         """
@@ -150,7 +151,8 @@ with DAG(dag_id = 'dag_data_engineering_avito_sell', default_args=default_args, 
                 id SERIAL PRIMARY KEY,
                 neighbourhood_city VARCHAR(100),
                 longitude FLOAT,
-                laltitude FLOAT
+                laltitude FLOAT,
+                unix_time BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
             );
         """
     )
@@ -254,7 +256,8 @@ with DAG(dag_id = 'dag_data_engineering_avito_rent', default_args=default_args, 
                 Garage INT,
                 Jardin INT,
                 Piscine INT,
-                Prix INT
+                Prix INT,
+                unix_time BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
                 /* Ville_secteur_coded INT */
             );
         """
@@ -280,7 +283,8 @@ with DAG(dag_id = 'dag_data_engineering_avito_rent', default_args=default_args, 
                 id SERIAL PRIMARY KEY,
                 neighbourhood_city VARCHAR(100),
                 longitude FLOAT,
-                laltitude FLOAT
+                laltitude FLOAT,
+                unix_time BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
             );
         """
     )
@@ -385,7 +389,8 @@ with DAG(dag_id = 'dag_data_engineering_mubawab_sell', default_args=default_args
                 Piscine INT,
                 Salon_marocain INT,
                 Salon_euro INT,
-                Prix INT
+                Prix INT,
+                unix_time BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
                 /* Ville_secteur_coded INT */
             );
         """
@@ -411,7 +416,8 @@ with DAG(dag_id = 'dag_data_engineering_mubawab_sell', default_args=default_args
                 id SERIAL PRIMARY KEY,
                 neighbourhood_city VARCHAR(100),
                 longitude FLOAT,
-                laltitude FLOAT
+                laltitude FLOAT,
+                unix_time BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
             );
         """
     )
@@ -514,7 +520,8 @@ with DAG(dag_id = 'dag_data_engineering_mubawab_rent', default_args=default_args
                 Piscine INT,
                 Salon_marocain INT,
                 Salon_euro INT,
-                Prix INT
+                Prix INT,
+                unix_time BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
                 /* Ville_secteur_coded INT */
             );
         """
@@ -540,7 +547,8 @@ with DAG(dag_id = 'dag_data_engineering_mubawab_rent', default_args=default_args
                 id SERIAL PRIMARY KEY,
                 neighbourhood_city VARCHAR(100),
                 longitude FLOAT,
-                laltitude FLOAT
+                laltitude FLOAT,
+                unix_time BIGINT DEFAULT EXTRACT(EPOCH FROM NOW())
             );
         """
     )

@@ -34,13 +34,6 @@ Git
 
 Docker (optional, for full environment setup)
 
-Installation
-bash
-Copy
-Edit
-git clone https://github.com/your-username/real-estate-supply-analysis.git
-cd real-estate-supply-analysis
-pip install -r requirements.txt
 📈 Features
 Filtered data scraping (e.g. by location, price range, surface)
 
@@ -52,20 +45,7 @@ Profile analysis of market segments
 
 Scalable design for daily/weekly updates
 
-📁 Project Structure
-bash
-Copy
-Edit
-real-estate-supply-analysis/
-│
-├── data/                   # Raw and processed data
-├── notebooks/              # Jupyter notebooks for exploration
-├── app/                    # Streamlit dashboard code
-├── scraper/                # Web scraping scripts
-├── models/                 # Machine learning or prediction models
-├── requirements.txt        # Python dependencies
-└── README.md
-📌 Future Improvements
+
 Add support for more real-estate platforms
 
 Integrate price prediction using ML models
